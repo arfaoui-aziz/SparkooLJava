@@ -17,11 +17,14 @@ public class User {
     private String bloodGroup;
     private Float salaire;
     private String occupation;
+    private String dateOfBirth;
     private String placeofbirth;
     private String academicyear;
     private String classe;
     private String last_login;
     private String roles;
+
+
 
     public User(String id, String username, String email, int enabled, String password, String firstName, String lastName, String gender, String userType, String joiningDate, String address, String phone, String picture, String bloodGroup, Float salaire, String occupation, String placeofbirth, String academicyear, String classe, String last_login, String roles) {
         this.id = id;
@@ -47,6 +50,21 @@ public class User {
         this.roles = roles;
     }
 
+    public User(String id,String firstName, String lastName, String gender, String roles , String userType,String dateOfBirth ,String joiningDate ,String email , Float salaire , String phone , String address) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.roles = roles;
+        this.userType = userType;
+        this.dateOfBirth = dateOfBirth;
+        this.joiningDate = joiningDate;
+        this.email = email;
+        this.salaire = salaire;
+        this.phone = phone;
+        this.address = address;
+
+    }
 
     public String getId() {
         return id;
@@ -216,6 +234,14 @@ public class User {
         this.roles = roles;
     }
 
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -235,6 +261,7 @@ public class User {
                 ", bloodGroup='" + bloodGroup + '\'' +
                 ", salaire=" + salaire +
                 ", occupation='" + occupation + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", placeofbirth='" + placeofbirth + '\'' +
                 ", academicyear='" + academicyear + '\'' +
                 ", classe='" + classe + '\'' +

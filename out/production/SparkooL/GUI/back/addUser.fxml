@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
+
 <AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.AddUser">
    <children>
       <BorderPane layoutX="30.0" layoutY="30.0" prefHeight="760.0" prefWidth="1340.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -52,7 +56,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Mohamed Aziz Arfaoui">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -312,7 +316,7 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Teachers">
+                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Users">
                                        <font>
                                           <Font name="DIN Alternate Bold" size="24.0" />
                                        </font>
@@ -325,12 +329,12 @@
                   </HBox>
                   <HBox prefHeight="39.0" prefWidth="1025.0">
                      <children>
-                        <Label fx:id="gotoTeacher" onMousePressed="#gotoTeacher" style="-fx-cursor: hand;" text="Teachers" textFill="#5f8bc5">
+                        <Label fx:id="gotoUser" onMousePressed="#gotoUser" style="-fx-cursor: hand;" text="Users" textFill="#5f8bc5">
                            <HBox.margin>
                               <Insets left="15.0" />
                            </HBox.margin>
                         </Label>
-                        <Label text=" &gt; Add Teacher" textFill="#485460" />
+                        <Label text=" &gt; Add User" textFill="#485460" />
                      </children>
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -341,7 +345,7 @@
                         <Insets top="25.0" />
                      </VBox.margin>
                      <children>
-                        <Text fill="#5f8bc5" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Teacher">
+                        <Text fill="#5f8bc5" strokeType="OUTSIDE" strokeWidth="0.0" text="Add User">
                            <font>
                               <Font name="DIN Alternate Bold" size="24.0" />
                            </font>
@@ -360,39 +364,50 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
+                                    <JFXTextField fx:id="id" focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXDatePicker defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Date Of Birth" />
+                                    <JFXComboBox fx:id="gender" prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
+                                    <JFXDatePicker fx:id="dateB" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Date Of Birth" />
                                  </children></HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="salaire" focusColor="#5f8bc5" labelFloat="true" promptText="Salaire" />
+                                 </children>
+                              </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
                                     <Label text="Reset All" textFill="#5f8bc5" />
-                                 </children></HBox>
+                                 </children>
+                              </HBox>
                            </children>
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
+                                    <JFXTextField fx:id="firstN" focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
+                                    <JFXComboBox fx:id="role" prefHeight="27.0" prefWidth="156.0" promptText="Role" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
+                                    <JFXDatePicker fx:id="joiningD" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Joining Date" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="phone" focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
@@ -402,22 +417,27 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXComboBox prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
+                                    <JFXTextField fx:id="lastN" focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="E-Mail" />
+                                    <JFXComboBox fx:id="userT" prefHeight="27.0" prefWidth="156.0" promptText="UserType" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Photo" />
+                                    <JFXTextField fx:id="mail" focusColor="#5f8bc5" labelFloat="true" promptText="E-mail" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
+                                    <JFXTextField fx:id="address" focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onMousePressed="#AddUser" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
                                  </children>
                               </HBox>
                            </children>

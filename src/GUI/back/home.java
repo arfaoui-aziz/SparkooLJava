@@ -26,7 +26,7 @@ public class home {
     }
     @FXML
     private void logOut(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/sample/login.fxml"));
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("../login.fxml"));
         Parent root=fxml.load();
         logout.getScene().setRoot(root);
     }

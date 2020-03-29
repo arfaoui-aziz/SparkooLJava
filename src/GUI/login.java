@@ -33,8 +33,9 @@ public class login {
     public void confirm(ActionEvent event) throws IOException, SQLException {
 
       String userN= Username.getText();
-        String psw =pass.getText();
+      String psw =pass.getText();
 // String password = bcrypt.hashpw(psw,bcrypt.gensalt(12));
+
 
 
         ServiceUser user = new ServiceUser();
