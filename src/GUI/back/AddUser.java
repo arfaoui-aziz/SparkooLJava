@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -65,7 +66,8 @@ public class AddUser {
 
     @FXML
     private JFXTextField address;
-
+    @FXML
+    private Button btnAdd;
 
     @FXML
     public void initialize() {
@@ -89,7 +91,7 @@ public class AddUser {
         gotoUser.getScene().setRoot(root);
     }
     @FXML
-    void AddUser(MouseEvent event) {
+    void AddUser(MouseEvent event) throws IOException {
         String Id = id.getText();
         String FirstName = firstN.getText();
         String LastName = lastN.getText();
@@ -105,6 +107,9 @@ public class AddUser {
         ServiceUser user = new ServiceUser();
         User u = new User(Id,FirstName,LastName,Gender,Roles,UserType,DateOfBirth,JoiningDate,Email,Salaire,Phone,Address);
         user.ajouter(u);
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("Users.fxml"));
+        Parent root=fxml.load();
+        btnAdd.getScene().setRoot(root);
     }
 
 
