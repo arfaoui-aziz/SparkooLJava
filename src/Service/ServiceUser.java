@@ -16,7 +16,7 @@ public class ServiceUser implements IServiceUser<User> {
     public void ajouter(User u) {
         try {
           // String requeteInsert = "INSERT INTO user (id,username,email,enabled,password,roles,firstName,lastName,gender,userType,joiningDate,address,phone,salaire,birthDay) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-            String requeteInsert = "INSERT INTO `sparkool`.`user` (`id`, `username`, `email`, `enabled`, `password`, `roles`, `firstName`, `lastName`, `gender`, `userType`, `joiningDate`, `address`, `phone`, `salaire`, `birthDay`) VALUES ( '" + u.getId() + "', '" + u.getFirstName()+'.'+u.getLastName() + "', '" + u.getEmail() + "',1, '" + bcrypt.hashpw(u.getId(),bcrypt.gensalt()) + "', '" + u.getRoles() + "', '" + u.getFirstName() + "', '" + u.getLastName() + "', '" + u.getGender() +"','" + u.getUserType() +"','"+u.getJoiningDate()+"', '"+ u.getAddress()+"','"+ u.getPhone()+"','"+ u.getSalaire()+"','"+ u.getDateOfBirth()+"');";
+            String requeteInsert = "INSERT INTO `sparkool`.`user` (`id`, `username`,`username_canonical` ,`email`, `email_canonical`, `enabled`, `password`, `roles`, `firstName`, `lastName`, `gender`, `userType`, `joiningDate`, `address`, `phone`, `salaire`, `birthDay`) VALUES ( '" + u.getId() + "', '" + u.getFirstName()+'.'+u.getLastName() + "' , '" + u.getFirstName()+'.'+u.getLastName() + "' , '" + u.getEmail() + "', '" + u.getEmail() + "',1, '" + bcrypt.hashpw(u.getId(),bcrypt.gensalt()) + "', '" + u.getRoles() + "', '" + u.getFirstName() + "', '" + u.getLastName() + "', '" + u.getGender() +"','" + u.getUserType() +"','"+u.getJoiningDate()+"', '"+ u.getAddress()+"','"+ u.getPhone()+"','"+ u.getSalaire()+"','"+ u.getDateOfBirth()+"');";
 
 
             ste = cnx.createStatement();
