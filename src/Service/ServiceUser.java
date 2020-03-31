@@ -33,9 +33,5 @@ public class ServiceUser implements IServiceUser {
         return 0;
         }
 
-
-
-
-
     }
 

@@ -56,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -66,7 +67,7 @@
     </FindUsagesManager>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectId" id="1ZiuzTbHk1uEjCN2G7LeI1QiCMo" />
+  <component name="ProjectId" id="1ZiX2YqSMVlNcnFFJbXV5NwfZ1y" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -79,22 +80,24 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jfoenix-9.0.8.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WorkshopPIDEV2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\aziz_\Documents\JavaWorkSpace\SparkooL\src\Test" />
-      <recent name="C:\Users\aziz_\Documents\JavaWorkSpace\SparkooL\src\GUI" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Test" />
+      <recent name="Service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\aziz_\Documents\JavaWorkSpace\SparkooL\src\GUI" />
-      <recent name="C:\Users\aziz_\Documents\JavaWorkSpace\SparkooL\src\Utils" />
+      <recent name="C:\Users\Sonia\Desktop\Nouveau dossier\Sparkit Saprkool\src\GUI\css" />
+      <recent name="C:\Users\Sonia\Desktop\Nouveau dossier\Sparkit Saprkool\src\GUI" />
+      <recent name="C:\Users\Sonia\Desktop\Nouveau dossier\Sparkit Saprkool\src\gui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -129,12 +132,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Test.Main" />
-      <module name="SparkooL" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\aziz_\Documents\JavaLib\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="MAIN_CLASS_NAME" value="Test.Test" />
+      <module name="Sparkit Saprkool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.*" />
+          <option name="PATTERN" value="sample.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,17 +195,31 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1585322686786" duration="10175000" />
+      <workItem from="1585426850930" duration="8075000" />
+      <workItem from="1585494682638" duration="8408000" />
+      <workItem from="1585583729944" duration="6762000" />
+      <workItem from="1585593458146" duration="8256000" />
+      <workItem from="1585672362898" duration="4085000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/back/home.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

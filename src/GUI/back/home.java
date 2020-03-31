@@ -19,11 +19,22 @@ public class home {
     private HBox gotoTeacher;
 
     @FXML
+    private HBox gotoSchoolLife;
+
+    @FXML
     private void gotoTeatcher(MouseEvent event) throws IOException {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("Users.fxml"));
         Parent root=fxml.load();
         gotoTeacher.getScene().setRoot(root);
     }
+
+    @FXML
+    private void gotoSchoolLife(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("AllEvents.fxml"));
+        Parent root=fxml.load();
+        gotoSchoolLife.getScene().setRoot(root);
+    }
+
     @FXML
     private void logOut(MouseEvent event) throws IOException {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("/sample/login.fxml"));

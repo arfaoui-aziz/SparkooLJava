@@ -18,11 +18,22 @@ public class Users {
     private HBox btnAdd;
 
     @FXML
+    private HBox btnSchoolL;
+
+    @FXML
     private void addTeacher(MouseEvent event) throws IOException {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("addUser.fxml"));
         Parent root=fxml.load();
         btnAdd.getScene().setRoot(root);
     }
+
+    @FXML
+    private void addSchoolLife(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("addUser.fxml"));
+        Parent root=fxml.load();
+        btnSchoolL.getScene().setRoot(root);
+    }
+
     @FXML
     private void logOut(MouseEvent event) throws IOException {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("/sample/login.fxml"));

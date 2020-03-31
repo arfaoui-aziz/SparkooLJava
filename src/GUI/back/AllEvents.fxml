@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXDatePicker?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -17,9 +15,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.AddUser">
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.AllEvents">
    <children>
-      <BorderPane layoutX="30.0" layoutY="30.0" prefHeight="700.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="730.4" prefWidth="1310.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <HBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                <children>
@@ -323,7 +321,7 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Teachers">
+                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="School Life">
                                        <font>
                                           <Font name="DIN Alternate Bold" size="24.0" />
                                        </font>
@@ -332,112 +330,59 @@
                               </VBox>
                            </children>
                         </HBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="39.0" prefWidth="1025.0">
-                     <children>
-                        <Label fx:id="gotoTeacher" onMousePressed="#gotoTeacher" style="-fx-cursor: hand;" text="Teachers" textFill="#5f8bc5">
+                        <HBox fx:id="btnSchoolL" alignment="CENTER" onMousePressed="#addSchoolLife" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icons8-add.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Add New Event" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
                            <HBox.margin>
-                              <Insets left="15.0" />
+                              <Insets left="800.0" />
                            </HBox.margin>
-                        </Label>
-                        <Label text=" &gt; Add Teacher" textFill="#485460" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox prefHeight="39.0" prefWidth="1025.0">
-                     <VBox.margin>
-                        <Insets top="25.0" />
-                     </VBox.margin>
-                     <children>
-                        <Text fill="#5f8bc5" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Teacher">
-                           <font>
-                              <Font name="DIN Alternate Bold" size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
-                        </Text>
+                        </HBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">
+                     <children>
+                        <TableView fx:id="tabEvent" prefHeight="490.0" prefWidth="832.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
+                           <columns>
+                              <TableColumn fx:id="e_id" prefWidth="30.0" text="ID" />
+                              <TableColumn fx:id="e_nom" prefWidth="57.0" text="Name" />
+                              <TableColumn fx:id="e_type" prefWidth="109.0" text="Type Of Event" />
+                              <TableColumn fx:id="e_desc" prefWidth="90.0" text="Description" />
+                              <TableColumn fx:id="e_date" minWidth="0.0" prefWidth="50.0" text="Date " />
+                              <TableColumn fx:id="e_place" prefWidth="50.0" text="Place" />
+                              <TableColumn fx:id="e_nb" prefWidth="90.0" text="Participants" />
+                              <TableColumn fx:id="e_theme" prefWidth="70.0" text="Theme" />
+                              <TableColumn fx:id="e_dest" prefWidth="90.0" text="Destination" />
+                              <TableColumn fx:id="e_award" prefWidth="60.0" text="Award" />
+                              <TableColumn fx:id="e_budget" prefWidth="60.0" text="Budget" />
+                              <TableColumn fx:id="e_price" prefWidth="60.0" text="Price" />
+                              <TableColumn prefWidth="29.0" />
+                           </columns>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXDatePicker defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Date Of Birth" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
-                                 </children></HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <Label text="Reset All" textFill="#5f8bc5" />
-                                 </children></HBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXComboBox prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="E-Mail" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <JFXTextField focusColor="#5f8bc5" labelFloat="true" promptText="Photo" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </children>
                   </HBox>
                </children>
             </VBox>
          </center>
       </BorderPane>
    </children>
+
 </AnchorPane>

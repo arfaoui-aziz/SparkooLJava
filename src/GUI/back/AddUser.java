@@ -15,6 +15,7 @@ public class AddUser {
 
     @FXML
     private Label gotoTeacher;
+    private Label gotoSchoolLife;
 
     @FXML
     private void logOut(MouseEvent event) throws IOException {
@@ -28,5 +29,12 @@ public class AddUser {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("Users.fxml"));
         Parent root=fxml.load();
         gotoTeacher.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void gotoSchoolLife(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("Users.fxml"));
+        Parent root=fxml.load();
+        gotoSchoolLife.getScene().setRoot(root);
     }
 }
