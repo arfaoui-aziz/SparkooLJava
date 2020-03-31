@@ -8,7 +8,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
-public class AddUser {
+public class ModifyTeacher {
 
     @FXML
     private Label logout;
@@ -23,10 +23,4 @@ public class AddUser {
         logout.getScene().setRoot(root);
     }
 
-    @FXML
-    private void gotoTeacher(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("Users.fxml"));
-        Parent root=fxml.load();
-        gotoTeacher.getScene().setRoot(root);
-    }
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.forget">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@../GUI/image/Untitled-9.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="350.0" prefWidth="200.0" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="150.0">
+         <right>
+            <Pane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #5f8bc5;" stylesheets="@../GUI/css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../GUI/image/33.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="40.0" layoutY="148.0" prefHeight="108.0" prefWidth="268.0" text="Enter your email to reset your password " textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font name="Al Tarikh Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </right>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: fff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="57.0" layoutY="69.0" text="Forget Password" textFill="#5f8bc5">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mail" focusTraversable="false" layoutX="67.0" layoutY="121.0" promptText="Email" styleClass="field" stylesheets="@../GUI/css/style.css" />
+                  <Button fx:id="btn" layoutX="121.0" layoutY="160.0" mnemonicParsing="false" style="-fx-cursor: hand;" styleClass="button1" stylesheets="@../GUI/css/style.css" text="SEND" />
+                  <Label fx:id="lbl" layoutX="134.0" layoutY="240.0" textFill="#eb0c0c" />
+                  <Label fx:id="btn_back" layoutX="126.0" layoutY="200.0" onMousePressed="#back" style="-fx-cursor: hand;" text="Go Back" textFill="#5f8bc5">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+      <Text fill="WHITE" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created By SparkIT" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="560.0">
+         <font>
+            <Font name="DIN Alternate Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

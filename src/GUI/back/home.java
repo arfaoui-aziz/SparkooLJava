@@ -20,7 +20,7 @@ public class home {
 
     @FXML
     private void gotoTeatcher(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("Users.fxml"));
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("teachers.fxml"));
         Parent root=fxml.load();
         gotoTeacher.getScene().setRoot(root);
     }

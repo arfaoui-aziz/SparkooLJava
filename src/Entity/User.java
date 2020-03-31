@@ -1,6 +1,7 @@
 package Entity;
 
 public class User {
+
     private String id;
     private String username;
     private String email;
@@ -22,6 +23,7 @@ public class User {
     private String classe;
     private String last_login;
     private String roles;
+    private String birthDay;
 
     public User(String id, String username, String email, int enabled, String password, String firstName, String lastName, String gender, String userType, String joiningDate, String address, String phone, String picture, String bloodGroup, Float salaire, String occupation, String placeofbirth, String academicyear, String classe, String last_login, String roles) {
         this.id = id;
@@ -47,6 +49,18 @@ public class User {
         this.roles = roles;
     }
 
+
+
+    public User(String id, String email, String firstName, String lastName, String gender, String address, String phone, String picture) {
+        this.id = id;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.address = address;
+        this.phone = phone;
+        this.picture = picture;
+    }
 
     public String getId() {
         return id;
@@ -214,32 +228,5 @@ public class User {
 
     public void setRoles(String roles) {
         this.roles = roles;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", enabled=" + enabled +
-                ", password='" + password + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender='" + gender + '\'' +
-                ", userType='" + userType + '\'' +
-                ", joiningDate='" + joiningDate + '\'' +
-                ", address='" + address + '\'' +
-                ", phone='" + phone + '\'' +
-                ", picture='" + picture + '\'' +
-                ", bloodGroup='" + bloodGroup + '\'' +
-                ", salaire=" + salaire +
-                ", occupation='" + occupation + '\'' +
-                ", placeofbirth='" + placeofbirth + '\'' +
-                ", academicyear='" + academicyear + '\'' +
-                ", classe='" + classe + '\'' +
-                ", last_login='" + last_login + '\'' +
-                ", roles='" + roles + '\'' +
-                '}';
     }
 }

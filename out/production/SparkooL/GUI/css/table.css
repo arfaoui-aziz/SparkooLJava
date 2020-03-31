@@ -7,19 +7,28 @@
     -fx-font-family: "DIN Alternate";
     -fx-font-size: 13px;
     -fx-font-weight: bold;
-    -fx-alignment: CENTER;
+    -fx-alignment: Left;
 }
 .table-view .cell{
     -fx-cell-size: 35;
     -fx-alignment: center;
-    -fx-background-color: #29292D;
-    -fx-border-color: #29292D;
-    -fx-text-fill: lightgray;
-    -fx-alignment: CENTER;
+    -fx-border-color: #fff;
+    -fx-text-fill: #485460;
+    -fx-alignment: LEFT;
+
 
 }
-.table-row-cell:selected {
-    -fx-background-color: whitesmoke;
+.table-view .cell:selected{
+    -fx-cell-size: 35;
+    -fx-alignment: center;
+    -fx-border-color: #fff;
+    -fx-text-fill: rgba(72, 84, 96, 0);
+    -fx-alignment: LEFT;
+    -fx-background-color: rgba(141, 159, 183, 0.08);
+
+}
+.table-row:hover {
+    -fx-background-color: #a6ff6c;
 
 
 }

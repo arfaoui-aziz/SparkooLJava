@@ -6,23 +6,17 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-
+import com.jfoenix.controls.*;
 import java.io.IOException;
 
-public class Users {
+public class AddTeacher {
 
     @FXML
     private Label logout;
 
     @FXML
-    private HBox btnAdd;
+    private Label gotoTeacher;
 
-    @FXML
-    private void addTeacher(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("addUser.fxml"));
-        Parent root=fxml.load();
-        btnAdd.getScene().setRoot(root);
-    }
     @FXML
     private void logOut(MouseEvent event) throws IOException {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("/sample/login.fxml"));
@@ -30,4 +24,10 @@ public class Users {
         logout.getScene().setRoot(root);
     }
 
+    @FXML
+    private void gotoTeacher(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("teachers.fxml"));
+        Parent root=fxml.load();
+        gotoTeacher.getScene().setRoot(root);
+    }
 }

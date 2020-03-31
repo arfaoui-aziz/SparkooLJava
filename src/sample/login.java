@@ -1,4 +1,5 @@
-package GUI;
+package sample;
+
 import Service.ServiceUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,13 +11,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
-
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class login {
     @FXML
-    private TextField Username;
+    private TextField mail;
 
     @FXML
     private PasswordField pass;
@@ -31,18 +31,17 @@ public class login {
     private Label lblForget;
 
     public void confirm(ActionEvent event) throws IOException, SQLException {
-
-      String userN= Username.getText();
+       /* String userN= mail.getText();
         String psw =pass.getText();
 // String password = bcrypt.hashpw(psw,bcrypt.gensalt(12));
 
 
         ServiceUser user = new ServiceUser();
-        int acces = user.login(userN ,psw);
+        int acces = user.preauth(userN ,psw);
 
         if ( acces == 1){
 
-           FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
+            FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
             Parent root=fxml.load();
             btn.getScene().setRoot(root);
             lbl.setText("valid");
@@ -52,8 +51,11 @@ public class login {
         }
         else{
             lbl.setText("invalid");
-        }
+        }*/
 
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
+        Parent root=fxml.load();
+        btn.getScene().setRoot(root);
 
 
     }

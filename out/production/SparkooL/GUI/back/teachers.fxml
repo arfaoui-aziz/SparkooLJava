@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.Users">
+
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.Teachers">
    <children>
       <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="730.0" prefWidth="1310.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -321,14 +322,14 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox fx:id="btnAdd" alignment="CENTER" onMousePressed="#addTeacher" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                        <HBox fx:id="btnAdd" alignment="CENTER" onMousePressed="#addTeacher" prefHeight="39.0" prefWidth="120.0" style="-fx-cursor: hand;">
                            <children>
                               <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/icons8-add.png" />
+                                    <Image url="@../image/add.png" />
                                  </image>
                               </ImageView>
-                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Add Teacher" textFill="#485460">
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Add New Teacher" textFill="#485460">
                                  <padding>
                                     <Insets left="6.0" />
                                  </padding>
@@ -338,23 +339,63 @@
                               </Label>
                            </children>
                            <HBox.margin>
-                              <Insets left="800.0" />
+                              <Insets left="470.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox fx:id="btnDelete" alignment="CENTER" onMousePressed="#delete" prefHeight="39.0" prefWidth="107.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/delete.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Delete Teacher" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox fx:id="btnAdd2" alignment="CENTER" onMousePressed="#addTeacher" prefHeight="39.0" prefWidth="107.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/update.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="16.0" prefWidth="111.0" styleClass="lbl" stylesheets="@../css/style.css" text="Modify Teacher" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
                            </HBox.margin>
                         </HBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">
                      <children>
-                        <TableView prefHeight="490.0" prefWidth="832.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
+                        <TableView fx:id="tabTeacher" prefHeight="500.0" prefWidth="860.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
                           <columns>
-                            <TableColumn prefWidth="57.0" text="ID" />
-                            <TableColumn prefWidth="98.0" text="Photo" />
-                              <TableColumn prefWidth="129.0" text="Name" />
-                              <TableColumn prefWidth="73.0" text="Gender" />
-                              <TableColumn minWidth="0.0" prefWidth="139.0" text="Address" />
-                              <TableColumn prefWidth="122.0" text="Phone" />
-                              <TableColumn prefWidth="181.0" text="Email" />
-                              <TableColumn prefWidth="29.0" />
+                            <TableColumn fx:id="cl_id" prefWidth="66.0" text="ID" />
+                            <TableColumn fx:id="cl_photo" prefWidth="89.0" text="Photo" />
+                              <TableColumn fx:id="cl_name" prefWidth="129.0" text="First Name" />
+                              <TableColumn fx:id="cl_name1" prefWidth="129.0" text="Last Name" />
+                              <TableColumn fx:id="cl_gender" prefWidth="73.0" text="Gender" />
+                              <TableColumn fx:id="cl_address" minWidth="0.0" prefWidth="139.0" text="Address" />
+                              <TableColumn fx:id="cl_phone" prefWidth="122.0" text="Phone" />
+                              <TableColumn fx:id="cl_email" prefWidth="107.0" text="Email" />
                           </columns>
                            <HBox.margin>
                               <Insets top="10.0" />

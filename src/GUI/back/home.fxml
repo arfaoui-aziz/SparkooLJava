@@ -330,7 +330,7 @@
                                  <children>
                                     <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../image/teacher.png" />
+                                          <Image url="@../image/Screen%20Shot%202020-03-26%20at%2010.45.47%20PM.png" />
                                        </image>
                                        <VBox.margin>
                                           <Insets top="30.0" />
@@ -371,7 +371,7 @@
                                  <children>
                                     <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../image/student.png" />
+                                          <Image url="@../image/Screen%20Shot%202020-03-26%20at%2010.46.05%20PM.png" />
                                        </image>
                                        <VBox.margin>
                                           <Insets top="30.0" />
@@ -415,7 +415,7 @@
                                  <children>
                                     <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../image/parent.png" />
+                                          <Image url="@../image/Screen%20Shot%202020-03-26%20at%2010.46.43%20PM.png" />
                                        </image>
                                        <VBox.margin>
                                           <Insets top="30.0" />
@@ -459,7 +459,7 @@
                                  <children>
                                     <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../image/subject.png" />
+                                          <Image url="@../image/Screen%20Shot%202020-03-26%20at%2010.47.00%20PM.png" />
                                        </image>
                                        <VBox.margin>
                                           <Insets top="30.0" />
@@ -520,7 +520,7 @@
                                        <children>
                                           <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../image/note.png" />
+                                                <Image url="@../image/Screen%20Shot%202020-03-26%20at%2011.03.47%20PM.png" />
                                              </image>
                                              <VBox.margin>
                                                 <Insets top="30.0" />
@@ -562,7 +562,7 @@
                                        <children>
                                           <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../image/note.png" />
+                                                <Image url="@../image/Screen%20Shot%202020-03-26%20at%2011.03.47%20PM.png" />
                                              </image>
                                              <VBox.margin>
                                                 <Insets top="30.0" />
@@ -607,7 +607,7 @@
                                        <children>
                                           <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../image/stat.png" />
+                                                <Image url="@../image/Screen%20Shot%202020-03-26%20at%2011.11.19%20PM.png" />
                                              </image>
                                              <VBox.margin>
                                                 <Insets top="30.0" />
@@ -649,7 +649,7 @@
                                        <children>
                                           <ImageView fitHeight="117.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../image/event.png" />
+                                                <Image url="@../image/Screen%20Shot%202020-03-26%20at%2011.11.52%20PM.png" />
                                              </image>
                                              <VBox.margin>
                                                 <Insets top="30.0" />
