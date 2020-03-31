@@ -8,7 +8,7 @@ public class DataBase {
     private static DataBase instance;
     private Connection cnx;
 
-    private final String URL = "jdbc:mysql://localhost:3306/sparkool";
+    private final String URL = "jdbc:mysql://localhost:3306/sparkool?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC";
     //?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC
    /* SET @@global.time_zone = '+00:00';
       SET @@session.time_zone = '+00:00';

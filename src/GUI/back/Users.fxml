@@ -61,7 +61,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="MohamedAzizArfaoui">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -321,7 +321,7 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Teachers">
+                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Users">
                                        <font>
                                           <Font name="DIN Alternate Bold" size="24.0" />
                                        </font>
@@ -337,7 +337,7 @@
                                     <Image url="@../image/icons8-add.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="addUser" onMousePressed="#addUser" styleClass="lbl" stylesheets="@../css/style.css" text="Add Teacher" textFill="#485460">
+                              <Label fx:id="addUser" onMousePressed="#addUser" styleClass="lbl" stylesheets="@../css/style.css" text="Add User" textFill="#485460">
                                  <padding>
                                     <Insets left="6.0" />
                                  </padding>
@@ -354,15 +354,15 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">
                      <children>
-                        <TableView prefHeight="490.0" prefWidth="832.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
+                        <TableView fx:id="tabUsers" prefHeight="490.0" prefWidth="832.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
                           <columns>
-                            <TableColumn prefWidth="57.0" text="ID" />
-                            <TableColumn prefWidth="98.0" text="Photo" />
-                              <TableColumn prefWidth="129.0" text="Name" />
-                              <TableColumn prefWidth="73.0" text="Gender" />
-                              <TableColumn minWidth="0.0" prefWidth="139.0" text="Address" />
-                              <TableColumn prefWidth="122.0" text="Phone" />
-                              <TableColumn prefWidth="181.0" text="Email" />
+                            <TableColumn fx:id="id" prefWidth="57.0" text="ID" />
+                            <TableColumn fx:id="userN" prefWidth="98.0" text="Username" />
+                              <TableColumn fx:id="name" prefWidth="129.0" text="Name" />
+                              <TableColumn fx:id="gender" prefWidth="73.0" text="Gender" />
+                              <TableColumn fx:id="address" minWidth="0.0" prefWidth="139.0" text="Address" />
+                              <TableColumn fx:id="phone" prefWidth="122.0" text="Phone" />
+                              <TableColumn fx:id="email" prefWidth="181.0" text="Email" />
                               <TableColumn prefWidth="29.0" />
                           </columns>
                            <HBox.margin>

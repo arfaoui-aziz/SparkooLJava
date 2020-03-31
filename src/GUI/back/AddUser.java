@@ -19,6 +19,7 @@ import com.jfoenix.controls.JFXTextField;
 
 import java.io.IOException;
 
+import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
@@ -91,7 +92,7 @@ public class AddUser {
         gotoUser.getScene().setRoot(root);
     }
     @FXML
-    void AddUser(MouseEvent event) throws IOException {
+    void AddUser(MouseEvent event) throws IOException, SQLException {
         String Id = id.getText();
         String FirstName = firstN.getText();
         String LastName = lastN.getText();

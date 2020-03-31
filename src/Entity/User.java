@@ -25,6 +25,16 @@ public class User {
     private String roles;
 
 
+    public User(String id, String username, String firstName, String lastName, String gender, String address, String phone, String email) {
+        this.id = id;
+        this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+    }
 
     public User(String id, String username, String email, int enabled, String password, String firstName, String lastName, String gender, String userType, String joiningDate, String address, String phone, String picture, String bloodGroup, Float salaire, String occupation, String placeofbirth, String academicyear, String classe, String last_login, String roles) {
         this.id = id;
