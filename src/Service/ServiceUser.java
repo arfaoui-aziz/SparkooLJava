@@ -1,22 +1,28 @@
 package Service;
 
+import Entity.User;
 import IService.IServiceUser;
-import Utils.DataBase;
 import Utils.bcrypt;
+import com.company.Utils.DataBase;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class ServiceUser implements IServiceUser {
-    private Connection cnx = DataBase.getInstance().getCnx();
+
+    private Connection cnx = DataBase.getInstance().getConnection();
     private Statement ste;
 
 
 
     @Override
-    public int login(String userN, String psw) throws SQLException {
+    public int preauth(String userN, String psw) throws SQLException {
 
 
         Statement ste = cnx.createStatement();
@@ -28,14 +34,30 @@ public class ServiceUser implements IServiceUser {
             if (bcrypt.checkpw(psw,crypted))
                 return 1;
             else return 2;
-            }
-
-        return 0;
         }
 
-
-
+        return 0;
 
 
     }
 
+    ObservableList<User> data = FXCollections.observableArrayList();
+
+    @Override
+    public List<User> readAll() throws SQLException {
+        try {
+            Connection cnx = DataBase.getInstance().getConnection();
+            String sql= "Select * from user ";
+            PreparedStatement stat= cnx.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+            while (rs.next()){
+                data.add(new User(rs.getString("id"),rs.getString("username"),rs.getString("email"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("gender"),rs.getString("address"),rs.getString("phone"),rs.getString("picture"),rs.getString("occupation")));
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return data;
+    }
+
+
+}

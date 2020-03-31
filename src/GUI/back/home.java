@@ -16,13 +16,13 @@ public class home {
 
 
     @FXML
-    private HBox gotoTeacher;
+    private HBox gotoParents;
 
     @FXML
-    private void gotoTeatcher(MouseEvent event) throws IOException {
+    private void gotoParent(MouseEvent event) throws IOException {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("Users.fxml"));
         Parent root=fxml.load();
-        gotoTeacher.getScene().setRoot(root);
+        gotoParents.getScene().setRoot(root);
     }
     @FXML
     private void logOut(MouseEvent event) throws IOException {
