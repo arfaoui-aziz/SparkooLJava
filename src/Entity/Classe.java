@@ -3,9 +3,15 @@ package Entity;
 public class Classe {
     private int classId;
     private String className;
-    private String classNbr ;
+    private int classNbr ;
 
-    public Classe(String className, String classNbr) {
+    public Classe(int classId, String className, int classNbr) {
+        this.classId = classId;
+        this.className = className;
+        this.classNbr = classNbr;
+    }
+
+    public Classe(String className, int classNbr) {
         this.className = className;
         this.classNbr = classNbr;
     }
@@ -26,11 +32,11 @@ public class Classe {
         this.className = className;
     }
 
-    public String getClassNbr() {
+    public int getClassNbr() {
         return classNbr;
     }
 
-    public void setClassNbr(String classNbr) {
+    public void setClassNbr(int classNbr) {
         this.classNbr = classNbr;
     }
 

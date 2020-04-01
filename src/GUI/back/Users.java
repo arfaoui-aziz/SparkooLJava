@@ -123,7 +123,7 @@ public class Users implements Initializable {
 
     @FXML
     private void logOut(MouseEvent event) throws IOException {
-        FXMLLoader fxml = new FXMLLoader(getClass().getResource("/GUI/login.fxml"));
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("../login.fxml"));
         Parent root = fxml.load();
         logout.getScene().setRoot(root);
     }
