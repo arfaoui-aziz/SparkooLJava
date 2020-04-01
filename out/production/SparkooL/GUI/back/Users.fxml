@@ -330,11 +330,11 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox fx:id="btnAdd" alignment="CENTER" onMousePressed="#addUser" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                        <HBox fx:id="btnAdd" alignment="CENTER" onMousePressed="#addUser" prefHeight="39.0" prefWidth="120.0" style="-fx-cursor: hand;">
                            <children>
                               <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/icons8-add.png" />
+                                    <Image url="@../image/add.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="addUser" onMousePressed="#addUser" styleClass="lbl" stylesheets="@../css/style.css" text="Add User" textFill="#485460">
@@ -347,14 +347,54 @@
                               </Label>
                            </children>
                            <HBox.margin>
-                              <Insets left="800.0" />
+                              <Insets left="470.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox fx:id="btnDelete" alignment="CENTER" onMousePressed="#DeleteUser" prefHeight="30.0" prefWidth="107.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/delete.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Delete User" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox fx:id="btnUpdate" alignment="CENTER" onMousePressed="#UpdateUser" prefHeight="39.0" prefWidth="107.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/update.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Modify User" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
                            </HBox.margin>
                         </HBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">
                      <children>
-                        <TableView fx:id="tabUsers" prefHeight="490.0" prefWidth="1200.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
+                        <TableView fx:id="tabUsers" prefHeight="490.0" prefWidth="832.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
                           <columns>
                             <TableColumn fx:id="id" prefWidth="57.0" text="ID" />
                             <TableColumn fx:id="userN" prefWidth="98.0" text="Username" />
@@ -363,7 +403,7 @@
                               <TableColumn fx:id="address" minWidth="0.0" prefWidth="139.0" text="Address" />
                               <TableColumn fx:id="phone" prefWidth="122.0" text="Phone" />
                               <TableColumn fx:id="email" prefWidth="181.0" text="Email" />
-                              <TableColumn fx:id="button" minWidth="150.0" prefWidth="29.0" />
+                              <TableColumn prefWidth="29.0" />
                           </columns>
                            <HBox.margin>
                               <Insets top="10.0" />

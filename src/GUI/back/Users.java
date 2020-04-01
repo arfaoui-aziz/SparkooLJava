@@ -31,7 +31,9 @@ public class Users implements Initializable {
     private HBox btnAdd;
 
     @FXML
-    private Label addUser;
+    private HBox btnUpdate;
+
+
 
     @FXML
     private TableView<User> tabUsers;
@@ -79,12 +81,44 @@ public class Users implements Initializable {
 
         tabUsers.setItems(UserData);
     }
+    @FXML
+    void DeleteUser(MouseEvent event) throws SQLException {
+       String UserId = tabUsers.getSelectionModel().getSelectedItem().getId();
+        tabUsers.getItems().removeAll(tabUsers.getSelectionModel().getSelectedItem());
+        ServiceUser user = new ServiceUser();
+        user.supprimer(UserId);
+
+    }
+     @FXML
+     private void addUser(MouseEvent event) throws IOException {
+         FXMLLoader fxml = new FXMLLoader(getClass().getResource("addUser.fxml"));
+         Parent root = fxml.load();
+         btnAdd.getScene().setRoot(root);
+     }
+
 
     @FXML
-    private void addUser(MouseEvent event) throws IOException {
-        FXMLLoader fxml = new FXMLLoader(getClass().getResource("addUser.fxml"));
+    void UpdateUser(MouseEvent event) throws IOException {
+
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("UpdateUser.fxml"));
+
         Parent root = fxml.load();
-        btnAdd.getScene().setRoot(root);
+        btnUpdate.getScene().setRoot(root);
+        UpdateUser upUser = fxml.getController();
+        String idu = tabUsers.getSelectionModel().getSelectedItem().getId();
+        String firstNu = tabUsers.getSelectionModel().getSelectedItem().getFirstName();
+        String lastNu = tabUsers.getSelectionModel().getSelectedItem().getLastName();
+        String username = tabUsers.getSelectionModel().getSelectedItem().getUsername();
+        String genderu = tabUsers.getSelectionModel().getSelectedItem().getGender();
+        String roleu = tabUsers.getSelectionModel().getSelectedItem().getRoles();
+        String userTu = tabUsers.getSelectionModel().getSelectedItem().getUserType();
+        String dateBu = tabUsers.getSelectionModel().getSelectedItem().getDateOfBirth();
+        String joiningDu = tabUsers.getSelectionModel().getSelectedItem().getJoiningDate();
+        String mailu = tabUsers.getSelectionModel().getSelectedItem().getEmail();
+        Float salaireu = tabUsers.getSelectionModel().getSelectedItem().getSalaire();
+        String phoneu = tabUsers.getSelectionModel().getSelectedItem().getPhone();
+        String addressu = tabUsers.getSelectionModel().getSelectedItem().getAddress();
+        upUser.setDefaultText(idu,firstNu,lastNu,genderu,roleu,userTu,dateBu,joiningDu,mailu,salaireu,phoneu,addressu);
     }
 
     @FXML

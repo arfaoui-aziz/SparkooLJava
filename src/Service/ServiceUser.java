@@ -26,7 +26,7 @@ public class ServiceUser implements IServiceUser<User> {
 
             ste = cnx.createStatement();
             ste.executeUpdate(requeteInsert);
-            System.out.println("User ajoutée !");
+
 
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
@@ -61,6 +61,23 @@ public class ServiceUser implements IServiceUser<User> {
             UserData.add(new User(rs.getString("id") ,rs.getString("username"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("gender"),rs.getString("address"),rs.getString("phone"),rs.getString("email")));
         }
         return UserData;
+    }
+
+    @Override
+    public void supprimer(String id) throws SQLException {
+        String requeteDelete = "DELETE FROM `user` WHERE id=?";
+        PreparedStatement pst = cnx.prepareStatement(requeteDelete);
+        pst.setString(1, id);
+        pst.executeUpdate();
+    }
+
+    @Override
+    public void update(User u, String id) throws SQLException {
+        PreparedStatement pst=cnx.prepareStatement("UPDATE user SET firstName= '" +u.getFirstName()+ "',lastName='"+u.getLastName()+"',roles='"+u.getRoles()+"',email='"+u.getEmail()+"',email_canonical='"+u.getEmail()+"',userType='"+u.getUserType()+"',phone='"+u.getPhone()+"',address='"+u.getAddress()+"',salaire='"+u.getSalaire()+"',birthDay='"+u.getDateOfBirth()+"',gender='"+u.getGender()+"' WHERE id='"+id+"' ;");
+        pst.executeUpdate();
+        /*String requeteUpdate = "UPDATE user SET nom= '" + u.getId() + "', '"u.getFirstName()+'.'+u.getLastName()"' ,'"u.getFirstName()+'.'+u.getLastName()"' ,'"u.getEmail()"', '"u.getEmail()"',1,'"bcrypt.hashpw(u.getId(),bcrypt.gensalt())"', '"u.getRoles()"', '" + u.getFirstName()"', '"u.getLastName()"', '"u.getGender()"','"u.getUserType() "','"u.getJoiningDate()"', '" u.getAddress()"','" u.getPhone()"','" u.getSalaire()"','" u.getDateOfBirth()"' ;";
+        PreparedStatement pst = cnx.prepareStatement(requeteUpdate);
+        pst.executeUpdate();*/
     }
 
 
