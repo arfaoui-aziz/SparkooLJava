@@ -51,7 +51,7 @@ public class User {
 
 
 
-    public User(String id, String email, String firstName, String lastName, String gender, String address, String phone, String picture) {
+    public User(String id, String email, String firstName, String lastName, String gender, String address, String phone, String picture,String birthDay) {
         this.id = id;
         this.email = email;
         this.firstName = firstName;
@@ -60,6 +60,7 @@ public class User {
         this.address = address;
         this.phone = phone;
         this.picture = picture;
+        this.birthDay = birthDay;
     }
 
     public String getId() {
@@ -228,5 +229,13 @@ public class User {
 
     public void setRoles(String roles) {
         this.roles = roles;
+    }
+
+    public String getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
     }
 }

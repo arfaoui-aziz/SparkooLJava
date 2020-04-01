@@ -20,7 +20,6 @@ public class ServiceUser implements IServiceUser {
     private Statement ste;
 
 
-
     @Override
     public int preauth(String userN, String psw) throws SQLException {
 
@@ -51,7 +50,7 @@ public class ServiceUser implements IServiceUser {
             PreparedStatement stat= cnx.prepareStatement(sql);
             ResultSet rs = stat.executeQuery();
             while (rs.next()){
-                data.add(new User(rs.getString("id"),rs.getString("email"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("gender"),rs.getString("address"),rs.getString("phone"),rs.getString("picture")));
+                data.add(new User(rs.getString("id"),rs.getString("email"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("gender"),rs.getString("address"),rs.getString("phone"),rs.getString("picture"),rs.getString("birthDay")));
 
             }
         } catch (SQLException ex) {
@@ -61,15 +60,33 @@ public class ServiceUser implements IServiceUser {
     }
 
     @Override
-    public void delete(String id) throws SQLException {
+    public void add(User u) throws SQLException {
         try {
-            PreparedStatement pt = cnx.prepareStatement(" DELETE FROM `user` WHERE id = '" + id + "' ;");
+            String requeteInsert = "INSERT INTO `user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `firstName`, `lastName`, `gender`, `userType`, `joiningDate`, `address`, `phone`, `picture`, `bloodGroup`, `salaire`, `birthDay`, `occupation`, `classe_id`, `placeobirth`, `academicyear`) VALUES ('"+u.getId()+"', '" + u.getFirstName()+'.'+u.getLastName() + "', '" + u.getFirstName()+'.'+u.getLastName() + "', '"+u.getEmail()+"', '"+u.getEmail()+"', '1', NULL, '" + bcrypt.hashpw(u.getId(),bcrypt.gensalt()) + "', NULL, NULL, NULL, '', '"+u.getFirstName()+"', '"+u.getLastName()+"', '"+u.getGender()+"', 'Teacher', '', '"+u.getAddress()+"', '"+u.getPhone()+"', '"+u.getPicture()+"', NULL, NULL, '"+u.getBirthDay()+"', NULL, NULL, NULL, NULL);";
 
-            pt.execute();
+
+            ste = cnx.createStatement();
+            ste.executeUpdate(requeteInsert);
+
+
         } catch (SQLException ex) {
-            Logger.getLogger(ServiceUser.class.getName()).log(Level.SEVERE, null, ex);
-
-
+            System.err.println(ex.getMessage());
         }
+
+    }
+
+
+    @Override
+    public void delete(String id) throws SQLException {
+        String rqt = "DELETE FROM `user` WHERE id=?";
+        PreparedStatement ste = cnx.prepareStatement(rqt);
+        ste.setString(1, id);
+        ste.executeUpdate();
+    }
+
+    @Override
+    public void update(User u, String id) throws SQLException {
+        PreparedStatement ste=cnx.prepareStatement("UPDATE user SET id= '" +u.getId()+ "',firstName= '" +u.getFirstName()+ "',lastName='"+u.getLastName()+"',email='"+u.getEmail()+"',email_canonical='"+u.getEmail()+"',phone='"+u.getPhone()+"',address='"+u.getAddress()+"',birthDay='"+u.getBirthDay()+"',gender='"+u.getGender()+"',picture='"+u.getPicture()+"' WHERE id='"+id+"' ;");
+        ste.executeUpdate();
     }
 }
