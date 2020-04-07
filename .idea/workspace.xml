@@ -2,30 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ad7d99d-c834-4cb1-bfd8-ae8a38f7d153" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/ShowReclamation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/image/icons8-reply.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SparkooL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SparkooL.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/Entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/back/AddUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/back/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/back/home.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/css/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkooL/GUI/css/table.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/forget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/forget.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkooL/GUI/forget.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/GUI/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkooL/GUI/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/IService/IServiceUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/META-INF/SparkooL.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/Service/ServiceUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/Test/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/Utils/DataBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/Utils/bcrypt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/com/company/Entitties/Reclamation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/com/company/IService/IService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/com/company/Service/ServiceReclamation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/com/company/Utils/DataBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SparkooL/com/company/test/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/GUI/back/AddUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GUI/back/AddUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/GUI/back/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GUI/back/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/GUI/back/Users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GUI/back/Users.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/GUI/back/addUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GUI/back/addUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/GUI/back/home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GUI/back/home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/GUI/back/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GUI/back/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/GUI/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/GUI/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/IService/IServiceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/IService/IServiceUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/Service/ServiceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/Service/ServiceUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/AddUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/AddUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/Users.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/Users.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/addUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/addUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IService/IServiceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IService/IServiceUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +79,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,9 +111,10 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mailactivation 2/techsoftemail.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -121,15 +126,18 @@
       <recent name="GUI.back" />
       <recent name="Service" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\acer\untitled\src\GUI\image" />
-      <recent name="C:\Users\acer\untitled\src" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\Desktop\SparkoolGit\src\GUI\image" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="IService" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Service" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\untitled\src\GUI\image" />
+      <recent name="C:\Users\acer\untitled\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
@@ -240,13 +248,21 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <changelist id="3ad7d99d-c834-4cb1-bfd8-ae8a38f7d153" name="Default Changelist" comment="" />
       <created>1359379246138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1585692326290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585692326290</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -255,35 +271,69 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1585689585201">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1586207222906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585689585201" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1585685577087">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586207222906" />
+    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1585692324558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585685577087" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1585691808843">
+    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585692324558" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1586289254425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585691808843" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1585691808843">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586289254425" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1586292136520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585691808843" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1585691808843">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586292136520" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1586292136519">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585691808843" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1585691808843">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586292136519" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1586292136519">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585691808843" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1585687423538">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586292136519" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1586292136519">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585687423538" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586292136519" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586212629830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586212629830" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1586212629830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586212629830" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1586212629830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586212629830" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1586212629830">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586212629830" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1586289262293">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586289262293" />
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586283144711">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586283144711" />
+    <state x="342" y="221" key="new project wizard" timestamp="1585779816341">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="221" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585779816341" />
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1586127700281">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586127700281" />
   </component>
 </project>

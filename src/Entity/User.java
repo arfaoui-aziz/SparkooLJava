@@ -23,33 +23,23 @@ public class User {
     private String last_login;
     private String roles;
 
-    public User(String id, String username, String email, int enabled, String password, String firstName, String lastName, String gender, String userType, String joiningDate, String address, String phone, String picture, String bloodGroup, Float salaire, String occupation, String placeofbirth, String academicyear, String classe, String last_login, String roles) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.enabled = enabled;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.userType = userType;
-        this.joiningDate = joiningDate;
-        this.address = address;
-        this.phone = phone;
-        this.picture = picture;
-        this.bloodGroup = bloodGroup;
-        this.salaire = salaire;
-        this.occupation = occupation;
-        this.placeofbirth = placeofbirth;
-        this.academicyear = academicyear;
-        this.classe = classe;
-        this.last_login = last_login;
-        this.roles = roles;
-    }
+
 
     public User(String id) {
         this.id = id;
 
+    }
+
+    public User(String id, String email, String firstName, String lastName, String gender, String address, String phone, String picture, String occupation) {
+        this.id = id;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.address = address;
+        this.phone = phone;
+        this.picture = picture;
+        this.occupation = occupation;
     }
 
     public User(String id, String username, String email, String firstName, String lastName, String gender, String address, String phone, String picture, String occupation) {

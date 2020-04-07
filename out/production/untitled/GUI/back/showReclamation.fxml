@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.AddUser">
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.ShowReclamation">
    <children>
       <BorderPane layoutX="30.0" layoutY="30.0" prefHeight="760.0" prefWidth="1340.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -43,11 +44,6 @@
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                                 <image>
-                                    <Image url="@../image/search.png" />
-                                 </image>
-                              </ImageView>
                            </children>
                         </HBox>
                      </children>
@@ -62,7 +58,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Youssef Ghedas">
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="youssef ghedas">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -322,7 +318,7 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Parents">
+                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Parents Claims">
                                        <font>
                                           <Font name="DIN Alternate Bold" size="24.0" />
                                        </font>
@@ -331,189 +327,93 @@
                               </VBox>
                            </children>
                         </HBox>
+                        <HBox fx:id="btnRep" alignment="CENTER" onMousePressed="#replyClaim" prefHeight="35.0" prefWidth="125.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icons8-reply.png" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Reply Claim" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="550.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox fx:id="btnShow" alignment="CENTER" onMousePressed="#showClaim" prefHeight="35.0" prefWidth="114.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/eye.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Show Claim" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="39.0" prefWidth="1025.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="gotoTeacher" onMousePressed="#gotoTeacher" style="-fx-cursor: hand;" text="Parents" textFill="#5f8bc5">
+                        <HBox prefHeight="39.0" prefWidth="1025.0">
+                           <children>
+                              <Label fx:id="gotoParents" onMousePressed="#gotoParents" style="-fx-cursor: hand;" text="Parents" textFill="#5f8bc5">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text=" &gt; Parents Claims" textFill="#485460" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXComboBox fx:id="SearType" prefHeight="25.0" prefWidth="169.0" promptText="Selet Claim Type">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <Button fx:id="btnSearch" mnemonicParsing="false" onMousePressed="#readSear" styleClass="button1" stylesheets="@../css/style.css" text="Search">
                            <HBox.margin>
                               <Insets left="15.0" />
                            </HBox.margin>
-                        </Label>
-                        <Label text=" &gt; Add Parents" textFill="#485460" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox prefHeight="39.0" prefWidth="1025.0">
-                     <VBox.margin>
-                        <Insets top="25.0" />
-                     </VBox.margin>
-                     <children>
-                        <Text fill="#5f8bc5" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Parent">
-                           <font>
-                              <Font name="DIN Alternate Bold" size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
-                        </Text>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">
+                     <children>
+                        <TableView fx:id="tableRecla" prefHeight="435.0" prefWidth="539.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
+                           <columns>
+                              <TableColumn fx:id="cl_id" prefWidth="57.0" text="ID" />
+                              <TableColumn fx:id="cl_topic" prefWidth="118.0" text="Topic" />
+                              <TableColumn fx:id="cl_date" prefWidth="132.0" text="Date Creation" />
+                              <TableColumn fx:id="cl_content" prefWidth="247.0" text="Content" />
+                           </columns>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblfn" focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
-                                          <Label fx:id="lfn" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblocc" focusColor="#5f8bc5" labelFloat="true" promptText="Occupation" />
-                                          <Label fx:id="locc" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lbladr" focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
-                                          <Label fx:id="ladr" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children></HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <Label text="Reset All" textFill="#5f8bc5" />
-                                 </children></HBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblln" focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
-                                          <Label fx:id="lln" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblid" focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
-                                          <Label fx:id="lid" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblph" focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
-                                          <Label fx:id="lph" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXComboBox fx:id="lblgn" prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
-                                          <Label fx:id="lgn" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblmail" focusColor="#5f8bc5" labelFloat="true" promptText="E-Mail" />
-                                          <Label fx:id="lmail" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblphoto" focusColor="#5f8bc5" labelFloat="true" promptText="Photo" />
-                                          <Label fx:id="lphoto" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <Button fx:id="btnConf" mnemonicParsing="false" onMousePressed="#add" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </children>
                   </HBox>
                </children>
             </VBox>

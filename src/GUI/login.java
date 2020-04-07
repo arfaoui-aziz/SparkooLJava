@@ -32,13 +32,13 @@ public class login {
 
     public void confirm(ActionEvent event) throws IOException, SQLException {
 
-     /* String userN= Username.getText();
+      String userN= Username.getText();
         String psw =pass.getText();
 // String password = bcrypt.hashpw(psw,bcrypt.gensalt(12));
 
 
         ServiceUser user = new ServiceUser();
-        int acces = user.login(userN ,psw);
+        int acces = user.preauth(userN ,psw);
 
         if ( acces == 1){
 
@@ -55,7 +55,7 @@ public class login {
         }
 
 
-*/
+
 
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
         Parent root=fxml.load();

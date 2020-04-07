@@ -16,9 +16,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.AddUser">
+
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.UpdateUser">
    <children>
-      <BorderPane layoutX="30.0" layoutY="30.0" prefHeight="760.0" prefWidth="1340.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="40.0" layoutY="40.0" prefHeight="800.0" prefWidth="1380.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <HBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                <children>
@@ -322,7 +323,7 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Parents">
+                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Teachers">
                                        <font>
                                           <Font name="DIN Alternate Bold" size="24.0" />
                                        </font>
@@ -335,12 +336,12 @@
                   </HBox>
                   <HBox prefHeight="39.0" prefWidth="1025.0">
                      <children>
-                        <Label fx:id="gotoTeacher" onMousePressed="#gotoTeacher" style="-fx-cursor: hand;" text="Parents" textFill="#5f8bc5">
+                        <Label fx:id="gotoTeacher" onMousePressed="#gotoTeacher" style="-fx-cursor: hand;" text="Teachers" textFill="#5f8bc5">
                            <HBox.margin>
                               <Insets left="15.0" />
                            </HBox.margin>
                         </Label>
-                        <Label text=" &gt; Add Parents" textFill="#485460" />
+                        <Label text=" &gt; Add Teacher" textFill="#485460" />
                      </children>
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -351,7 +352,7 @@
                         <Insets top="25.0" />
                      </VBox.margin>
                      <children>
-                        <Text fill="#5f8bc5" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Parent">
+                        <Text fill="#5f8bc5" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Teacher">
                            <font>
                               <Font name="DIN Alternate Bold" size="24.0" />
                            </font>
@@ -370,93 +371,41 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblfn" focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
-                                          <Label fx:id="lfn" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXTextField fx:id="lblfn" focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblocc" focusColor="#5f8bc5" labelFloat="true" promptText="Occupation" />
-                                          <Label fx:id="locc" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXTextField fx:id="lblocc" focusColor="#5f8bc5" labelFloat="true" promptText="Occupation" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lbladr" focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
-                                          <Label fx:id="ladr" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
-                                 </children></HBox>
+                                    <JFXTextField fx:id="lbladr" focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
+                                 </children>
+                              </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
                                     <Label text="Reset All" textFill="#5f8bc5" />
-                                 </children></HBox>
+                                 </children>
+                              </HBox>
                            </children>
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblln" focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
-                                          <Label fx:id="lln" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXTextField fx:id="lblln" focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblid" focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
-                                          <Label fx:id="lid" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXTextField fx:id="lblid" focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblph" focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
-                                          <Label fx:id="lph" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXTextField fx:id="lblph" focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
@@ -466,49 +415,22 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXComboBox fx:id="lblgn" prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
-                                          <Label fx:id="lgn" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXComboBox fx:id="lblgn" prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblmail" focusColor="#5f8bc5" labelFloat="true" promptText="E-Mail" />
-                                          <Label fx:id="lmail" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXTextField fx:id="lblmail" focusColor="#5f8bc5" labelFloat="true" promptText="E-Mail" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="141.0">
-                                       <children>
-                                          <JFXTextField fx:id="lblphoto" focusColor="#5f8bc5" labelFloat="true" promptText="Photo" />
-                                          <Label fx:id="lphoto" textFill="#dd0a0a">
-                                             <VBox.margin>
-                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                       </children>
-                                    </VBox>
+                                    <JFXTextField fx:id="lblphoto" focusColor="#5f8bc5" labelFloat="true" promptText="Photo" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="btnConf" mnemonicParsing="false" onMousePressed="#add" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
+                                    <Button fx:id="btnConf" mnemonicParsing="false" onMousePressed="#update" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
                                  </children>
                               </HBox>
                            </children>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -42,11 +43,6 @@
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                                 <image>
-                                    <Image url="@../image/search.png" />
-                                 </image>
-                              </ImageView>
                            </children>
                         </HBox>
                      </children>
@@ -61,7 +57,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="youssef ghedas">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -87,7 +83,7 @@
          <left>
             <VBox maxWidth="-Infinity" prefWidth="215.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER_LEFT" stylesheets="@../css/style.css">
+                  <HBox fx:id="home" alignment="CENTER_LEFT" onMousePressed="#gotoHome" stylesheets="@../css/style.css">
                      <VBox.margin>
                         <Insets top="40.0" />
                      </VBox.margin>
@@ -330,7 +326,7 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox fx:id="btnAdd" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                        <HBox fx:id="btnAdd" alignment="CENTER" onMousePressed="#addTeacher" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
                            <children>
                               <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -347,10 +343,10 @@
                               </Label>
                            </children>
                            <HBox.margin>
-                              <Insets left="500.0" />
+                              <Insets left="450.0" />
                            </HBox.margin>
                         </HBox>
-                        <HBox fx:id="btnAdd1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                        <HBox fx:id="btnDelete" alignment="CENTER" onMousePressed="#delete" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
                            <children>
                               <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -367,7 +363,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox fx:id="btnAdd2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                        <HBox fx:id="btnUpdate" alignment="CENTER" onMousePressed="#ModifyTeacher" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
                            <children>
                               <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -384,6 +380,37 @@
                               </Label>
                            </children>
                         </HBox>
+                        <HBox fx:id="btnClaim" alignment="CENTER" onMousePressed="#showClaims" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/eye.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Show Claims" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="searchBarr" prefHeight="25.0" prefWidth="173.0" promptText="Search">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../image/search.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">
