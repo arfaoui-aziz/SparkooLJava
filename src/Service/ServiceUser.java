@@ -8,10 +8,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 public class ServiceUser implements IServiceUser {
@@ -89,4 +86,48 @@ public class ServiceUser implements IServiceUser {
         PreparedStatement ste=cnx.prepareStatement("UPDATE user SET id= '" +u.getId()+ "',firstName= '" +u.getFirstName()+ "',lastName='"+u.getLastName()+"',email='"+u.getEmail()+"',email_canonical='"+u.getEmail()+"',phone='"+u.getPhone()+"',address='"+u.getAddress()+"',birthDay='"+u.getBirthDay()+"',gender='"+u.getGender()+"',picture='"+u.getPicture()+"' WHERE id='"+id+"' ;");
         ste.executeUpdate();
     }
+
+    @Override
+    public User readById(String id) throws SQLException {
+        try {
+            Connection cnx = DataBase.getInstance().getConnexion();
+            String sql= "Select * from user where id='"+id+"'";
+            PreparedStatement stat= cnx.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+            while (rs.next()){
+                return new User(rs.getString("id"),rs.getString("email"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("gender"),rs.getString("address"),rs.getString("phone"),rs.getString("picture"),rs.getString("birthDay"));
+
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public int NumberOfTeachers() throws SQLException {
+        int i=0;
+        try {
+            Connection cnx = DataBase.getInstance().getConnexion();
+            String sql= "SELECT * FROM user WHERE userType='Teacher'";
+            PreparedStatement stat= cnx.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+            while (rs.next()){
+               i++;
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return i;
+    }
+
+    @Override
+    public ResultSet StatSexM() throws SQLException {
+        //To change body of generated methods, choose Tools | Templates.ste=con.createStatement();
+        ResultSet rs=ste.executeQuery("select count(*) from `user` where gender='Male'");
+        return rs;
+    }
+
+
+
 }

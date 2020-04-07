@@ -9,7 +9,7 @@ public class DataBase
     private Connection cnx;
     private final String URL = "jdbc:mysql://localhost:8889/Sparkool";
     private final String LOGIN = "root";
-    private final String PASSWORD = "123";
+    private final String PASSWORD = "root";
     private DataBase() {
         try {
             cnx = DriverManager.getConnection(URL, LOGIN, PASSWORD);

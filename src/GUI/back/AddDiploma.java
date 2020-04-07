@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
@@ -35,7 +36,7 @@ public class AddDiploma implements Initializable {
     private JFXTextField inti;
 
     @FXML
-    private JFXComboBox<?> lvl;
+    private JFXComboBox<String> lvl;
 
     @FXML
     private Label btnRes;
@@ -47,15 +48,16 @@ public class AddDiploma implements Initializable {
     private JFXDatePicker bd;
 
     @FXML
-    private JFXTextField sp;
+    private JFXComboBox<String> sp;
 
     @FXML
     private Button btnConf;
 
     @FXML
-    private Label idT;
+    private TextField idT;
 
     ServiceDiploma diploma = new ServiceDiploma();
+
 
 
     @FXML
@@ -78,18 +80,21 @@ public class AddDiploma implements Initializable {
 
     }
     public void initData(String st) {
+        idT.setText(st);
+
     }
 
     @FXML
     void addDiploma(MouseEvent event) throws IOException, SQLException {
         String inti1=inti.getText();
         String sch1=sch.getText();
-        String spe=sp.getText();
+        String spe=sp.getValue();
         String lv=(String) lvl.getValue();
         String do1= bd.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String idT1=idT.getText();
 
-        Diploma d = new Diploma(inti1,sch1,spe,lv,do1,"123");
-diploma.addDiploma(d);
+        Diploma d = new Diploma(inti1,sch1,spe,lv,do1,idT1);
+        diploma.addDiploma(d);
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("teachers.fxml"));
         Parent root=fxml.load();
         btnConf.getScene().setRoot(root);
@@ -102,6 +107,10 @@ diploma.addDiploma(d);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        lvl.getItems().addAll("Bachelor", "Master","Doctoral","Professional");
+        sp.getItems().addAll("Computer Science", "Mathematics","Physics","History and Geography","Literature","Natural Science","Sport");
+
+
 
     }
 }

@@ -1,5 +1,8 @@
 package Entity;
 
+
+import javafx.scene.image.ImageView;
+
 public class User {
 
     private String id;
@@ -62,6 +65,9 @@ public class User {
         this.picture = picture;
         this.birthDay = birthDay;
     }
+
+
+
 
     public String getId() {
         return id;

@@ -2,31 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4285bbb-f924-4eca-b59c-78f471a290fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SparkoolGit.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/back/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/back/error.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/DetailTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/detailTeacher.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_9_0_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_19.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkoolGit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SparkoolGit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/AddDiploma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/AddDiploma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/AddTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/AddTeacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/Teachers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/Teachers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/addDiploma.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/addDiploma.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/addTeacher.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/addTeacher.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/teachers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/teachers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/image/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/image/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/IService/IServiceDiploma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/IService/IServiceDiploma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/IService/IServiceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/IService/IServiceUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/Service/ServiceDiploma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/Service/ServiceDiploma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/Service/ServiceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/Service/ServiceUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/Utils/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/Utils/DataBase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/AddDiploma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/AddDiploma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/back/AddTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/AddTeacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/back/ModifyTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/ModifyTeacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/back/Teachers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/Teachers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/addDiploma.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/addDiploma.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/back/addTeacher.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/addTeacher.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/back/modifyTeacher.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/modifyTeacher.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/back/teachers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/teachers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/image/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/image/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IService/IServiceDiploma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IService/IServiceDiploma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IService/IServiceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IService/IServiceUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceDiploma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceDiploma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/ServiceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -56,8 +67,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -95,7 +107,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585682685538</updated>
-      <workItem from="1585682687078" duration="37241000" />
+      <workItem from="1585682687078" duration="39665000" />
+      <workItem from="1585776683840" duration="139000" />
+      <workItem from="1585872192453" duration="8024000" />
+      <workItem from="1586039046814" duration="1328000" />
+      <workItem from="1586040781775" duration="842000" />
+      <workItem from="1586041913113" duration="9514000" />
+      <workItem from="1586097469583" duration="26542000" />
+      <workItem from="1586143679640" duration="15524000" />
+      <workItem from="1586191571115" duration="11741000" />
+      <workItem from="1586236969792" duration="3093000" />
+      <workItem from="1586283818152" duration="329000" />
     </task>
     <servers />
   </component>
@@ -106,50 +128,79 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1585728095284">
+    <state x="440" y="190" key="#SQL_Dialects" timestamp="1585875104491">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1585728095284" />
+    <state x="440" y="190" key="#SQL_Dialects/0.0.1680.1050@0.0.1680.1050" timestamp="1585875104491" />
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586242104915">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586242104915" />
+    <state x="678" y="242" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1586041554237">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="678" y="242" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586041554237" />
     <state x="434" y="127" key="CommitChangelistDialog2" timestamp="1585682738670">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="434" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585682738670" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1585728710560">
+    <state x="378" y="187" key="DBNavigator.ProjectSettingsDialog" timestamp="1586041216379">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585728710560" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1585728710558">
+    <state x="378" y="187" key="DBNavigator.ProjectSettingsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586041216379" />
+    <state x="602" y="247" key="DetectedRootsChooserDialog" timestamp="1586222979954">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585728710558" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1585728710556">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="602" y="247" key="DetectedRootsChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586222979954" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586242435031">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585728710556" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1585728710559">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586242384816" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586242435031" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586242435030">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585728710559" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1585688137600">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586242384815" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586242435030" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586242435030">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586242384814" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586242435030" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586242435031">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586242384815" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586242435031" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1585738543017">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585688137600" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1585688137599">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.23.1680.954@0.23.1680.954" timestamp="1585738543017" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1585738543016">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585688137599" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1585688137599">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.23.1680.954@0.23.1680.954" timestamp="1585738543016" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1585738543016">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585688137599" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1585688137600">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.23.1680.954@0.23.1680.954" timestamp="1585738543016" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1585738543017">
+      <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585688137600" />
-    <state x="328" y="106" key="SettingsEditor" timestamp="1585682823701">
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.23.1680.954@0.23.1680.954" timestamp="1585738543017" />
+    <state x="328" y="106" key="SettingsEditor" timestamp="1586231951002">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585682823701" />
+    <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586231951002" />
+    <state x="519" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1586283830161">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="519" y="347" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586283830161" />
+    <state x="519" y="347" key="com.intellij.ide.util.TipDialog/0.23.1680.954@0.23.1680.954" timestamp="1586039069633" />
     <state x="629" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585695765694">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -158,9 +209,17 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="295" key="extract.method.dialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585717275601" />
-    <state x="547" y="148" key="refactoring.ChangeSignatureDialog" timestamp="1585724649604">
+    <state x="234" y="229" key="new project wizard" timestamp="1585776814344">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="547" y="148" key="refactoring.ChangeSignatureDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585724649604" />
+    <state x="234" y="229" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1585776814344" />
+    <state x="547" y="148" key="refactoring.ChangeSignatureDialog" timestamp="1586136372510">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="547" y="148" key="refactoring.ChangeSignatureDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586136372510" />
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1586111513680">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="187" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586111513680" />
   </component>
 </project>
