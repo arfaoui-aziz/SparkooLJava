@@ -371,21 +371,57 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField fx:id="id" focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="id" focusColor="#5f8bc5" labelFloat="true" promptText="ID No" />
+                                          <Label fx:id="lid" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXComboBox fx:id="gender" prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXComboBox fx:id="gender" prefHeight="27.0" prefWidth="156.0" promptText="Gender" />
+                                          <Label fx:id="lgender" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXDatePicker fx:id="dateB" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Date Of Birth" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXDatePicker fx:id="dateB" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Date Of Birth" />
+                                          <Label fx:id="lDateB" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children></HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField fx:id="salaire" focusColor="#5f8bc5" labelFloat="true" promptText="Salaire" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="salaire" focusColor="#5f8bc5" labelFloat="true" promptText="Salaire" />
+                                          <Label fx:id="lSalaire" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -399,22 +435,58 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField fx:id="firstN" focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="firstN" focusColor="#5f8bc5" labelFloat="true" promptText="First Name" />
+                                          <Label fx:id="lfn" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXComboBox fx:id="role" prefHeight="27.0" prefWidth="156.0" promptText="Role" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXComboBox fx:id="role" prefHeight="27.0" prefWidth="156.0" promptText="Role" />
+                                          <Label fx:id="lrole" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXDatePicker fx:id="joiningD" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Joining Date" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXDatePicker fx:id="joiningD" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Joining Date" />
+                                          <Label fx:id="ljoiningD" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField fx:id="phone" focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="phone" focusColor="#5f8bc5" labelFloat="true" promptText="Phone" />
+                                          <Label fx:id="lPhone" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
@@ -424,22 +496,58 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField fx:id="lastN" focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="lastN" focusColor="#5f8bc5" labelFloat="true" promptText="Last Name" />
+                                          <Label fx:id="lln" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXComboBox fx:id="userT" prefHeight="27.0" prefWidth="156.0" promptText="UserType" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXComboBox fx:id="userT" prefHeight="27.0" prefWidth="156.0" promptText="UserType" />
+                                          <Label fx:id="luserT" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField fx:id="mail" focusColor="#5f8bc5" labelFloat="true" promptText="E-mail" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="mail" focusColor="#5f8bc5" labelFloat="true" promptText="E-mail" />
+                                          <Label fx:id="lEmail" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXTextField fx:id="address" focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="address" focusColor="#5f8bc5" labelFloat="true" promptText="Address" />
+                                          <Label fx:id="lAddress" textFill="#d70303">
+                                             <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">

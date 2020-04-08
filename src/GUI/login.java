@@ -1,5 +1,6 @@
 package GUI;
 import Service.ServiceUser;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.SQLException;
 
 public class login {
@@ -32,30 +37,27 @@ public class login {
 
     public void confirm(ActionEvent event) throws IOException, SQLException {
 
-      String userN= Username.getText();
-      String psw =pass.getText();
+        String userN = Username.getText();
+        String psw = pass.getText();
 // String password = bcrypt.hashpw(psw,bcrypt.gensalt(12));
 
+        //Mailer.send("sparkooL.sparkit@gmail.com","123456Admin","aziz.arfaou.98@gmail.com");
 
 
         ServiceUser user = new ServiceUser();
-        int acces = user.login(userN ,psw);
+        int acces = user.login(userN, psw);
 
-        if ( acces == 1){
+        if (acces == 1) {
 
-           FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
-            Parent root=fxml.load();
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
+            Parent root = fxml.load();
             btn.getScene().setRoot(root);
             lbl.setText("valid");
-        }
-        else if(acces == 2) {
+        } else if (acces == 2) {
             lbl.setText("MDP invalid");
-        }
-        else{
+        } else {
             lbl.setText("invalid");
         }
-
-
 
     }
 

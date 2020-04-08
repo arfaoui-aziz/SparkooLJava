@@ -37,7 +37,7 @@
                      <children>
                         <HBox alignment="CENTER">
                            <children>
-                              <TextField focusTraversable="false" promptText="Search ..." style="-fx-background-color: transparant;">
+                              <TextField fx:id="searchBar" focusTraversable="false" onKeyReleased="#searchBy" promptText="Search ..." style="-fx-background-color: transparant;">
                                  <HBox.margin>
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
