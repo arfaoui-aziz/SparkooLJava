@@ -3,8 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e4285bbb-f924-4eca-b59c-78f471a290fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/Teachers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/Teachers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/teachers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/GUI/back/teachers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/IService/IServiceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/IService/IServiceUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkoolGit/Service/ServiceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkoolGit/Service/ServiceUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/back/Teachers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/Teachers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/back/teachers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/teachers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/css/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/css/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IService/IServiceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IService/IServiceUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/GUI/css" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -42,6 +51,9 @@
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="Service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/GUI/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -85,33 +97,46 @@
       <workItem from="1586191571115" duration="11741000" />
       <workItem from="1586236969792" duration="3093000" />
       <workItem from="1586283818152" duration="329000" />
-      <workItem from="1586302174079" duration="546000" />
+      <workItem from="1586302174079" duration="22577000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1586304372557</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586304372557</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#SQL_Dialects" timestamp="1585875104491">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#SQL_Dialects/0.0.1680.1050@0.0.1680.1050" timestamp="1585875104491" />
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586242104915">
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586327672526">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586242104915" />
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586327672526" />
     <state x="678" y="242" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1586041554237">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="678" y="242" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586041554237" />
-    <state x="434" y="127" key="CommitChangelistDialog2" timestamp="1585682738670">
+    <state x="578" y="279" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1586315570783">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585682738670" />
+    <state x="578" y="279" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586315570783" />
+    <state x="434" y="127" key="CommitChangelistDialog2" timestamp="1586304372344">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="434" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586304372344" />
     <state x="378" y="187" key="DBNavigator.ProjectSettingsDialog" timestamp="1586041216379">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -120,25 +145,25 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="602" y="247" key="DetectedRootsChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586222979954" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586296480768">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586332607954">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586296480768" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586332607954" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586242435031" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586296480767">
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586332607953">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586296480767" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586332607953" />
     <state width="1638" height="295" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586242435030" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586296480766">
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586332607952">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586296480766" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586332607952" />
     <state width="1638" height="295" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586242435030" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586296480768">
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586332607954">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586296480768" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586332607954" />
     <state width="1638" height="295" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586242435031" />
     <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1585738543017">
       <screen x="0" y="23" width="1680" height="954" />

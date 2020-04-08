@@ -15,6 +15,7 @@ public interface IServiceUser<T> {
     User readById(String id) throws SQLException;
     int NumberOfTeachers() throws SQLException ;
     ResultSet StatSexM() throws SQLException ;
+    List<User> readDangerZone() throws SQLException ;
 
 
 

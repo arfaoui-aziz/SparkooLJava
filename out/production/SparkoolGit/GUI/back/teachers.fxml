@@ -306,7 +306,7 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="101.0">
                                  <children>
                                     <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Teachers">
                                        <font>
@@ -314,7 +314,30 @@
                                        </font>
                                     </Text>
                                  </children>
-                              </VBox>
+                              </HBox>
+                              <HBox fx:id="btnBox" alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="178.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <ImageView fitHeight="21.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../image/icons8-inbox.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="inbox" onMousePressed="#gotoBox" text="Inbox (0) " textFill="#485460">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="7.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
                            </children>
                         </HBox>
                      </children>

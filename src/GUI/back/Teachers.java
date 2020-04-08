@@ -2,6 +2,7 @@ package GUI.back;
 
 import Entity.Delay;
 import Entity.User;
+import Service.ServiceContactTeacher;
 import Service.ServiceDelay;
 import Service.ServiceUser;
 import Utils.DataBase;
@@ -150,6 +151,11 @@ public class Teachers implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         aff();
         searchBy();
+        try {
+            setNbNotShowed();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -291,6 +297,22 @@ public class Teachers implements Initializable {
             soretedData.comparatorProperty().bind(tabTeacher.comparatorProperty());
             tabTeacher.setItems(soretedData);
         });
+    }
+
+
+    private void setNbNotShowed() throws SQLException {
+        ServiceContactTeacher ct = new ServiceContactTeacher();
+
+        inbox.setText("Inbox ("+ct.NumberOfNotShowed()+")");
+
+    }
+
+
+    @FXML
+    void gotoBox(MouseEvent event) throws IOException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("showBox.fxml"));
+        Parent root = fxml.load();
+        btnAdd.getScene().setRoot(root);
     }
 
 

@@ -104,6 +104,7 @@ public class ServiceUser implements IServiceUser {
         return null;
     }
 
+
     @Override
     public int NumberOfTeachers() throws SQLException {
         int i=0;
@@ -128,6 +129,22 @@ public class ServiceUser implements IServiceUser {
         return rs;
     }
 
-
+    @Override
+    public List<User> readDangerZone() throws SQLException {
+        try {
+            Connection cnx = DataBase.getInstance().getConnexion();
+            String sql= "SELECT DISTINCT user.id,user.firstName,user.lastName,user.phone ,COUNT(*) AS nbAbsence FROM user INNER JOIN absent_teacher ON user.id = absent_teacher.id_Teacher GROUP BY absent_teacher.id_Teacher ";
+            PreparedStatement stat= cnx.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+            while (rs.next()){
+                if (Integer.parseInt(rs.getString(5)) > 5) {
+                    data.add(new User(rs.getString("id"),rs.getString("firstName"), rs.getString("lastName"), rs.getString("phone")));
+                }
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return data;
+    }
 
 }
