@@ -36,12 +36,14 @@ public class forget {
     }
     @FXML
     void Mailing(MouseEvent event) throws IOException {
+        String Email = mail.getText();
         Parent root = FXMLLoader.load(getClass().getResource("back/Success.fxml"));
         Stage primaryStage = new Stage();
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(new Scene(root, 280, 400));
         primaryStage.show();
-        Mailer.send("sparkooL.sparkit@gmail.com","123456Admin","aziz.arfaou.98@gmail.com");
+
+        Mailer.send("sparkooL.sparkit@gmail.com","123456Admin",Email);
 
     }
 }

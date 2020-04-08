@@ -426,7 +426,7 @@
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Label text="Reset All" textFill="#5f8bc5" />
+                                    <Button mnemonicParsing="false" onAction="#webcam" onMousePressed="#AddUser" styleClass="button1" stylesheets="@../css/style.css" text="Add WebCam Image" />
                                  </children>
                               </HBox>
                            </children>
