@@ -306,15 +306,31 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                  <children>
                                     <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Teachers">
                                        <font>
                                           <Font name="DIN Alternate Bold" size="24.0" />
                                        </font>
                                     </Text>
+                                    <ImageView fitHeight="21.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../image/icons8-inbox.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="inbox" text="Inbox (0) " textFill="#485460">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="7.0" />
+                                       </HBox.margin>
+                                    </Label>
                                  </children>
-                              </VBox>
+                              </HBox>
                            </children>
                         </HBox>
                      </children>

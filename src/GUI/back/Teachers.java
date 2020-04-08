@@ -53,7 +53,8 @@ public class Teachers implements Initializable {
     @FXML
     private TableColumn<?, ?> cl_id;
 
-
+    @FXML
+    private Label inbox;
 
     @FXML
     private TableColumn<?, ?> cl_name;
