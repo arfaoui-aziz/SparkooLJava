@@ -15,8 +15,7 @@ public class Suceess {
 
     @FXML
     private void closeButtonAction() throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("login.fxml"));
-        Parent root=fxml.load();
-        btn.getScene().setRoot(root);
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.close();
     }
 }

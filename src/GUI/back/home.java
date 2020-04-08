@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -14,7 +15,8 @@ public class home {
     @FXML
     private Label logout;
 
-
+    @FXML
+    private VBox btnstat;
     @FXML
     private HBox gotoTeacher;
     @FXML
@@ -46,6 +48,12 @@ public class home {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("../login.fxml"));
         Parent root=fxml.load();
         logout.getScene().setRoot(root);
+    }
+    @FXML
+    void goToStat(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("stat.fxml"));
+        Parent root=fxml.load();
+        btnstat.getScene().setRoot(root);
     }
 
 }

@@ -593,7 +593,7 @@
                               <Insets top="20.0" />
                            </opaqueInsets>
                            <children>
-                              <VBox alignment="CENTER" prefHeight="72.0" prefWidth="200.0">
+                              <VBox fx:id="btnstat" alignment="CENTER" onMousePressed="#goToStat" prefHeight="72.0" prefWidth="200.0">
                                  <children>
                                     <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics" textAlignment="CENTER" wrappingWidth="141.0146484375">
                                        <font>
