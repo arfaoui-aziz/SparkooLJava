@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
 <AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.home">
    <children>
       <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="710.0" prefWidth="1290.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -53,7 +59,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Sonia Hadouej">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -178,7 +184,7 @@
                         <String fx:value="cursor_hand" />
                      </styleClass>
                   </HBox>
-                  <HBox  fx:id="gotoSchoolLife"  alignment="CENTER_LEFT" onMousePressed="#gotoSchoolLife" stylesheets="@../css/style.css">
+                  <HBox fx:id="gotoSchoolLife" alignment="CENTER_LEFT" onMousePressed="#gotoSchoolLife" stylesheets="@../css/style.css">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>

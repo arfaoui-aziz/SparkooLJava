@@ -1,15 +1,18 @@
 package Service;
 
 import Entity.Club;
-import IService.IService;
+import IService.IServiceClub;
 import java.sql.SQLException;
 import java.util.List;
 import java.sql.*;
 import Utils.DataBase;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 
 
-public class ServiceClub implements IService<Club> {
+public class ServiceClub implements IServiceClub<Club> {
 
     private Connection con;
     private Statement ste;
@@ -35,10 +38,10 @@ public class ServiceClub implements IService<Club> {
 
 
     @Override
-    public boolean delete(String nomclub) throws SQLException {
+    public boolean delete(int idclub) throws SQLException {
 
-        PreparedStatement pre = this.con.prepareStatement("DELETE FROM `sparkool`.`club` WHERE nomClub=? ;");
-        pre.setString(1, nomclub);
+        PreparedStatement pre = this.con.prepareStatement("DELETE FROM `sparkool`.`club` WHERE idClub=? ;");
+        pre.setInt(1, idclub);
         if (pre.executeUpdate() != 0) {
             System.out.println("club Deleted");
             return true;
@@ -49,38 +52,29 @@ public class ServiceClub implements IService<Club> {
     }
 
     @Override
-    public boolean update(String nomclub, String act) throws SQLException {
-        PreparedStatement pre = this.con.prepareStatement("UPDATE `sparkool`.`club` SET activity = ? WHERE nomClub=? ;");
-        pre.setString(1, act);
-        pre.setString(2, nomclub);
-        if (pre.executeUpdate() != 0) {
-            System.out.println("club Updated");
-            return true;
-        } else {
-            System.out.println("Club Name not found!!!");
-            return false;
-        }
-    }
+        public void update(Club c, int id) throws SQLException {
+        PreparedStatement pre = con.prepareStatement("UPDATE `sparkool`.`club` SET nomClub='" + c.getNomClub()+ "',members='" + c.getMembers() + "',activity='" + c.getActivity() + "',budget='" + c.getBudget() + "',dateCreation='" + c.getDateCreation() +  "' WHERE idClub='" + id + "' ;");
+        pre.executeUpdate(); }
+
+    ObservableList<Club> dataClub = FXCollections.observableArrayList();
 
     @Override
     public List<Club> readAll() throws SQLException {
-        List<Club> arr = new ArrayList<>();
-        ste = con.createStatement();
-        ResultSet rs = ste.executeQuery("select * from club");
-        while (rs.next()) {
-            int idClub = rs.getInt(1);
-            String nomClub = rs.getString("nomClub");
-            int members = rs.getInt(3);
-            String activity = rs.getString(4);
-            float budget = rs.getFloat(5);
-            String dateCreation = rs.getString(6);
+        try {
+            Connection cnx = DataBase.getInstance().getCnx();
+            String sql= "select * from club";
+            PreparedStatement stat= cnx.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+            while (rs.next()){
+                dataClub.add(new Club(rs.getInt("idClub"),rs.getString("nomClub"),rs.getInt("members"),rs.getString("activity"),rs.getFloat("budget"),rs.getString("dateCreation")));
 
-
-            Club e = new Club(idClub, nomClub, members, activity, budget, dateCreation);
-            arr.add(e);
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
         }
-        return arr;
+        return dataClub;
     }
+
 
 
     @Override

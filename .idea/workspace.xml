@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/AddClub.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/AddClub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/AllClubs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/UpdateClub.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/UpdateClub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/UpdateEvent.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/UpdateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/back/addCompetition.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IService/IServiceClub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/ControleSaisie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sparkit Saprkool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sparkit Saprkool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/AddEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/AddEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/AllEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/AllEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/AllEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/AllEvents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/addEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/addEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/GUI/back/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/IService/IService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/IService/IService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/META-INF/Sparkit Saprkool.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/Service/ServiceClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/Service/ServiceClub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sparkit Saprkool/Service/ServiceEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sparkit Saprkool/Service/ServiceEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/AddEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/AddEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/AllEvents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/AllEvents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/AllEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/AllEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/addEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/addEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/back/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/back/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IService/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IService/IService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ServiceEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ServiceEvent.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +97,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1ZiX2YqSMVlNcnFFJbXV5NwfZ1y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -82,19 +117,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WorkshopPIDEV2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PIDEVET/PIDEVMahdi/Fxmljardin" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="GUI.back" />
+      <recent name="IService" />
       <recent name="Test" />
       <recent name="Service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sonia\Desktop\Sparkit Saprkool\src\GUI\back" />
       <recent name="C:\Users\Sonia\Desktop\Nouveau dossier\Sparkit Saprkool\src\GUI\css" />
       <recent name="C:\Users\Sonia\Desktop\Nouveau dossier\Sparkit Saprkool\src\GUI" />
       <recent name="C:\Users\Sonia\Desktop\Nouveau dossier\Sparkit Saprkool\src\gui" />
@@ -132,7 +170,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Test.Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.Main" />
       <module name="Sparkit Saprkool" />
       <extension name="coverage">
         <pattern>
@@ -201,11 +239,37 @@
       <workItem from="1585583729944" duration="6762000" />
       <workItem from="1585593458146" duration="8256000" />
       <workItem from="1585672362898" duration="4085000" />
+      <workItem from="1585690265574" duration="915000" />
+      <workItem from="1585729450284" duration="2280000" />
+      <workItem from="1585770506743" duration="605000" />
+      <workItem from="1585771151369" duration="2502000" />
+      <workItem from="1585775521398" duration="1241000" />
+      <workItem from="1585852770464" duration="14883000" />
+      <workItem from="1586031114022" duration="1230000" />
+      <workItem from="1586034739444" duration="6414000" />
+      <workItem from="1586043168934" duration="7726000" />
+      <workItem from="1586060784206" duration="3762000" />
+      <workItem from="1586108701150" duration="14123000" />
+      <workItem from="1586202330151" duration="10247000" />
+      <workItem from="1586273866161" duration="13552000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />

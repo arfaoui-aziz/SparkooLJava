@@ -2,32 +2,51 @@ package GUI.back;
 import IService.IService;
 import Entity.Event;
 import Service.ServiceEvent;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Label;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import javax.xml.soap.Text;
 
 
 public class AllEvents implements Initializable {
     @FXML
     private Label logout;
+    @FXML
+    private Button trierEvent;
+    @FXML
+    private HBox recherche;
+    @FXML
+    private TextField idE;
 
     @FXML
-    private HBox btnSchoolL;
+    private HBox btnAdd;
+
+    @FXML
+    private HBox AllEvents;
+
+    @FXML
+    private HBox AllClubs;
 
     @FXML
     private TableView<Event> tabEvent;
@@ -67,27 +86,48 @@ public class AllEvents implements Initializable {
 
     @FXML
     private TableColumn<?, ?> e_price;
+    @FXML
+    private HBox btnModify;
+
+    @FXML
+    private HBox btnDelete;
 
     @FXML
     private void logOut(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/sample/login.fxml"));
-        Parent root=fxml.load();
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("/sample/login.fxml"));
+        Parent root = fxml.load();
         logout.getScene().setRoot(root);
     }
+
     @FXML
-    void addSchoolLife(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("addEvent.fxml"));
-        Parent root=fxml.load();
-        btnSchoolL.getScene().setRoot(root);
+    void AllEvents(MouseEvent event) throws IOException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("AllEvents.fxml"));
+        Parent root = fxml.load();
+        AllEvents.getScene().setRoot(root);
     }
 
+    @FXML
+    private void AllClubs(MouseEvent event) throws IOException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("AllClubs.fxml"));
+        Parent root = fxml.load();
+        AllClubs.getScene().setRoot(root);
+    }
 
-    public void aff(){
+    @FXML
+    void addSchoolLife(MouseEvent event) throws IOException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("addEvent.fxml"));
+        Parent root = fxml.load();
+        btnAdd.getScene().setRoot(root);
+    }
+
+    ServiceEvent evenm = new ServiceEvent();
+
+
+    public void aff() {
         ObservableList<Event> data = null;
         try {
 
-            ServiceEvent event = new ServiceEvent();
-            data = (ObservableList<Event>) event.readAll() ;
+            data = (ObservableList<Event>) evenm.readAll();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -112,6 +152,101 @@ public class AllEvents implements Initializable {
         aff();
     }
 
+    @FXML
+    private void deleteEvent(MouseEvent event) throws SQLException, IOException {
+        Alert dialogC = new Alert(Alert.AlertType.CONFIRMATION);
+        dialogC.setTitle("Confimation");
+        dialogC.setHeaderText(null);
+        dialogC.setContentText("Do you really want to delete this Event ?");
+        Optional<ButtonType> answer = dialogC.showAndWait();
+        if (answer.get() == ButtonType.OK) {
+            Stage primaryStage = new Stage();
+            int id = tabEvent.getSelectionModel().getSelectedItem().getId();
+            tabEvent.getItems().removeAll(tabEvent.getSelectionModel().getSelectedItem());
+            evenm.delete(id);
+        }
+    }
+
+    @FXML
+    void Update(MouseEvent event) throws IOException {
+
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("UpdateEvent.fxml"));
+
+        Parent root = fxml.load();
+        btnModify.getScene().setRoot(root);
+        UpdateEvent upEvent = fxml.getController();
+        int ide = tabEvent.getSelectionModel().getSelectedItem().getId();
+        String name = tabEvent.getSelectionModel().getSelectedItem().getNomEvent();
+        String typeE = tabEvent.getSelectionModel().getSelectedItem().getTypeEvent();
+        String desc = tabEvent.getSelectionModel().getSelectedItem().getDescription();
+        String date = tabEvent.getSelectionModel().getSelectedItem().getDateEvent();
+        String place = tabEvent.getSelectionModel().getSelectedItem().getPlaceEvent();
+        int nb = tabEvent.getSelectionModel().getSelectedItem().getNbParticipants();
+        String theme = tabEvent.getSelectionModel().getSelectedItem().getTheme();
+        String dest = tabEvent.getSelectionModel().getSelectedItem().getDestination();
+        Float award = tabEvent.getSelectionModel().getSelectedItem().getAward();
+        Float budget = tabEvent.getSelectionModel().getSelectedItem().getBudget();
+        Float price = tabEvent.getSelectionModel().getSelectedItem().getPrice();
+        upEvent.setDefaultText(ide, name, typeE, desc, date, place, nb, theme, dest, award, budget, price);
+    }
+
+    @FXML
+    private void recherche(MouseEvent event) throws SQLException {
+        String nomE = idE.getText();
+        ServiceEvent se = new ServiceEvent();
+        ObservableList<Event> data = FXCollections.observableArrayList(se.SearchEvent(nomE));
+
+        e_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        e_nom.setCellValueFactory(new PropertyValueFactory<>("nomEvent"));
+        e_type.setCellValueFactory(new PropertyValueFactory<>("typeEvent"));
+        e_desc.setCellValueFactory(new PropertyValueFactory<>("description"));
+        e_date.setCellValueFactory(new PropertyValueFactory<>("dateEvent"));
+        e_place.setCellValueFactory(new PropertyValueFactory<>("placeEvent"));
+        e_nb.setCellValueFactory(new PropertyValueFactory<>("nbParticipants"));
+        e_theme.setCellValueFactory(new PropertyValueFactory<>("theme"));
+        e_dest.setCellValueFactory(new PropertyValueFactory<>("destination"));
+        e_award.setCellValueFactory(new PropertyValueFactory<>("award"));
+        e_budget.setCellValueFactory(new PropertyValueFactory<>("budget"));
+        e_price.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tabEvent.setItems(data);
+    }
+
+
+
+    @FXML
+    private void trierEvent(MouseEvent event)  throws IOException,SQLException{
+        ServiceEvent se = new ServiceEvent();
+        ObservableList<Event> data = FXCollections.observableArrayList(se.trier());
+
+
+        e_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        e_nom.setCellValueFactory(new PropertyValueFactory<>("nomEvent"));
+        e_type.setCellValueFactory(new PropertyValueFactory<>("typeEvent"));
+        e_desc.setCellValueFactory(new PropertyValueFactory<>("description"));
+        e_date.setCellValueFactory(new PropertyValueFactory<>("dateEvent"));
+        e_place.setCellValueFactory(new PropertyValueFactory<>("placeEvent"));
+        e_nb.setCellValueFactory(new PropertyValueFactory<>("nbParticipants"));
+        e_theme.setCellValueFactory(new PropertyValueFactory<>("theme"));
+        e_dest.setCellValueFactory(new PropertyValueFactory<>("destination"));
+        e_award.setCellValueFactory(new PropertyValueFactory<>("award"));
+        e_budget.setCellValueFactory(new PropertyValueFactory<>("budget"));
+        e_price.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tabEvent.setItems(data);
+
+
+    }
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 

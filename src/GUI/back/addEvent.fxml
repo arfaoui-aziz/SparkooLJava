@@ -15,6 +15,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import com.jfoenix.controls.JFXComboBox?>
+
 
 <AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.AddEvent">
    <children>
@@ -62,7 +64,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Sonia Hadouej">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -335,15 +337,32 @@
                   </HBox>
                   <HBox prefHeight="39.0" prefWidth="1025.0">
                      <children>
-                        <Label fx:id="gotoTeacher" onMousePressed="#gotoTeacher" style="-fx-cursor: hand;" text="Events" textFill="#5f8bc5">
+                        <Label fx:id="AllEvents" onMousePressed="#AllEvents" style="-fx-cursor: hand;" text="&gt; Events" textFill="#5f8bc5">
                            <HBox.margin>
                               <Insets left="15.0" />
                            </HBox.margin>
                         </Label>
-                        <Label text=" &gt; Add New Event" textFill="#2e2e2e" />
-                        <Label layoutX="60.0" layoutY="10.0" text=" &gt; Add New Sport Activity" textFill="#2e2e2e" />
-                        <Label layoutX="156.0" layoutY="10.0" text=" &gt; Add New Field Trip" textFill="#2e2e2e" />
-                        <Label layoutX="295.0" layoutY="10.0" text=" &gt; Add New Competition" textFill="#2e2e2e" />
+                        <Label  fx:id="GoToNewEvent" onMousePressed="#GoToNewEvent" style="-fx-cursor: hand;" text=" &gt; Add New Event" textFill="#5f8bc5">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label  fx:id="GoToSport"  onMousePressed="#GoToSport" style="-fx-cursor: hand;" text=" &gt; Add New Sport Activity" textFill="#5f8bc5">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+
+                        <Label fx:id="GoToTrip" onMousePressed="#GoToTrip" style="-fx-cursor: hand;" text=" &gt; Add New Field Trip" textFill="#5f8bc5">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="GoToCompetition" onMousePressed="#GoToCompet" style="-fx-cursor: hand;" text=" &gt; Add New Competition" textFill="#5f8bc5">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
                      </children>
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -407,7 +426,7 @@
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button fx:id="addEvent" mnemonicParsing="false" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
+                                    <Button fx:id="addEvent" mnemonicParsing="false" onMousePressed="#AddEvent" styleClass="button1" stylesheets="@../css/style.css" text="CONFIRM" />
                                  </children>
                               </HBox>
                            </children>
@@ -416,7 +435,7 @@
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <JFXDatePicker fx:id="eventDate" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Date *" />
+                                    <JFXDatePicker fx:id="eventDate" onAction="#verifDate" defaultColor="#4e4e4e" prefHeight="29.0" prefWidth="150.0" promptText="Date *" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">

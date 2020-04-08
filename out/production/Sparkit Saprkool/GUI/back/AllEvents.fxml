@@ -2,6 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -37,16 +38,26 @@
                      <children>
                         <HBox alignment="CENTER">
                            <children>
-                              <TextField focusTraversable="false" promptText="Search ..." style="-fx-background-color: transparant;">
+                              <TextField fx:id="idE" focusTraversable="false" promptText="Search ..." style="-fx-background-color: transparant;">
                                  <HBox.margin>
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                                 <image>
-                                    <Image url="@../image/search.png" />
-                                 </image>
-                              </ImageView>
+                              <HBox fx:id="recherche" alignment="CENTER" onMousePressed="#recherche">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                       <image>
+                                          <Image url="@../image/search.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="recherche1" alignment="CENTER" onMousePressed="#recherche" prefHeight="90.0" prefWidth="34.0" />
+                                    <HBox fx:id="recherche11" alignment="CENTER" onMousePressed="#recherche" prefHeight="90.0" prefWidth="62.0">
+                                       <children>
+                                          <Button fx:id="trierEvent" defaultButton="true" mnemonicParsing="false" onMousePressed="#trierEvent" prefHeight="26.0" prefWidth="82.0" text="Sort" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
                            </children>
                         </HBox>
                      </children>
@@ -61,7 +72,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Sonia Hadouej">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -321,54 +332,137 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="School Life">
+                                    <HBox fx:id="AllEvents" alignment="CENTER_LEFT" onMousePressed="#AllEvents" stylesheets="@../css/style.css">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <children>
+                                          <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/event.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fill="#485460" onMousePressed="#AllEvents" strokeType="OUTSIDE" strokeWidth="0.0" text="Events">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="hover_border" />
+                                          <String fx:value="cursor_hand" />
+                                       </styleClass>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox fx:id="AllClubs" alignment="CENTER_LEFT" onMousePressed="#AllClubs" stylesheets="@../css/style.css">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/act.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#485460" onMousePressed="#AllClubs" strokeType="OUTSIDE" strokeWidth="0.0" text="Clubs">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
                                        <font>
-                                          <Font name="DIN Alternate Bold" size="24.0" />
+                                          <Font size="24.0" />
                                        </font>
                                     </Text>
                                  </children>
-                              </VBox>
+                                 <styleClass>
+                                    <String fx:value="hover_border" />
+                                    <String fx:value="cursor_hand" />
+                                 </styleClass>
+                              </HBox>
                            </children>
                         </HBox>
-                        <HBox fx:id="btnSchoolL" alignment="CENTER" onMousePressed="#addSchoolLife" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
-                           <children>
-                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../image/icons8-add.png" />
-                                 </image>
-                              </ImageView>
-                              <Label styleClass="lbl" stylesheets="@../css/style.css" text="Add New Event" textFill="#485460">
-                                 <padding>
-                                    <Insets left="6.0" />
-                                 </padding>
-                                 <font>
-                                    <Font name="DIN Alternate Bold" size="13.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="800.0" />
-                           </HBox.margin>
-                        </HBox>
+                         <HBox fx:id="btnAdd" alignment="CENTER" onMousePressed="#addSchoolLife" prefHeight="39.0" prefWidth="120.0" style="-fx-cursor: hand;">
+                             <children>
+                                 <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                     <image>
+                                         <Image url="@../image/add.png" />
+                                     </image>
+                                 </ImageView>
+                                 <Label styleClass="lbl" stylesheets="@../css/style.css" text="Add New Event" textFill="#485460">
+                                     <padding>
+                                         <Insets left="6.0" />
+                                     </padding>
+                                     <font>
+                                         <Font name="DIN Alternate Bold" size="13.0" />
+                                     </font>
+                                 </Label>
+                             </children>
+                             <HBox.margin>
+                                 <Insets left="470.0" />
+                             </HBox.margin>
+                         </HBox>
+                         <HBox fx:id="btnDelete" alignment="CENTER" onMousePressed="#deleteEvent" prefHeight="39.0" prefWidth="107.0" style="-fx-cursor: hand;">
+                             <children>
+                                 <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                     <image>
+                                         <Image url="@../image/delete.png" />
+                                     </image>
+                                 </ImageView>
+                                 <Label styleClass="lbl" stylesheets="@../css/style.css" text="Delete Event" textFill="#485460">
+                                     <padding>
+                                         <Insets left="6.0" />
+                                     </padding>
+                                     <font>
+                                         <Font name="DIN Alternate Bold" size="13.0" />
+                                     </font>
+                                 </Label>
+                             </children>
+                             <HBox.margin>
+                                 <Insets left="10.0" />
+                             </HBox.margin>
+                         </HBox>
+                         <HBox fx:id="btnModify" alignment="CENTER" onMousePressed="#Update" prefHeight="39.0" prefWidth="107.0" style="-fx-cursor: hand;">
+                             <children>
+                                 <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                     <image>
+                                         <Image url="@../image/update.png" />
+                                     </image>
+                                 </ImageView>
+                                 <Label prefHeight="16.0" prefWidth="111.0" styleClass="lbl" stylesheets="@../css/style.css" text="Modify Event" textFill="#485460">
+                                     <padding>
+                                         <Insets left="6.0" />
+                                     </padding>
+                                     <font>
+                                         <Font name="DIN Alternate Bold" size="13.0" />
+                                     </font>
+                                 </Label>
+                             </children>
+                             <HBox.margin>
+                                 <Insets left="10.0" />
+                             </HBox.margin>
+                         </HBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">
                      <children>
-                        <TableView fx:id="tabEvent" prefHeight="490.0" prefWidth="832.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
+                        <TableView fx:id="tabEvent" prefHeight="490.0" prefWidth="1010.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
                            <columns>
-                              <TableColumn fx:id="e_id" prefWidth="30.0" text="ID" />
-                              <TableColumn fx:id="e_nom" prefWidth="57.0" text="Name" />
-                              <TableColumn fx:id="e_type" prefWidth="109.0" text="Type Of Event" />
-                              <TableColumn fx:id="e_desc" prefWidth="90.0" text="Description" />
-                              <TableColumn fx:id="e_date" minWidth="0.0" prefWidth="50.0" text="Date " />
-                              <TableColumn fx:id="e_place" prefWidth="50.0" text="Place" />
-                              <TableColumn fx:id="e_nb" prefWidth="90.0" text="Participants" />
-                              <TableColumn fx:id="e_theme" prefWidth="70.0" text="Theme" />
-                              <TableColumn fx:id="e_dest" prefWidth="90.0" text="Destination" />
-                              <TableColumn fx:id="e_award" prefWidth="60.0" text="Award" />
-                              <TableColumn fx:id="e_budget" prefWidth="60.0" text="Budget" />
-                              <TableColumn fx:id="e_price" prefWidth="60.0" text="Price" />
-                              <TableColumn prefWidth="29.0" />
+                              <TableColumn fx:id="e_id" prefWidth="43.20001149177551" text="ID" />
+                              <TableColumn fx:id="e_nom" prefWidth="78.39999771118164" text="Name" />
+                              <TableColumn fx:id="e_type" prefWidth="97.60002136230469" text="Type Of Event" />
+                              <TableColumn fx:id="e_desc" prefWidth="92.79994201660156" text="Description" />
+                              <TableColumn fx:id="e_date" minWidth="0.0" prefWidth="99.20001220703125" text="Date " />
+                              <TableColumn fx:id="e_price1" minWidth="0.0" prefWidth="0.0" />
+                              <TableColumn fx:id="e_place" prefWidth="88.0" text="Place" />
+                              <TableColumn fx:id="e_nb" prefWidth="95.20001220703125" text="Participants" />
+                              <TableColumn fx:id="e_theme" prefWidth="84.0" text="Theme" />
+                              <TableColumn fx:id="e_dest" prefWidth="100.7999267578125" text="Destination" />
+                              <TableColumn fx:id="e_award" prefWidth="64.0" text="Award" />
+                              <TableColumn fx:id="e_budget" prefWidth="62.4000244140625" text="Budget" />
+                              <TableColumn fx:id="e_price" prefWidth="172.0001220703125" text="Price" />
                            </columns>
                            <HBox.margin>
                               <Insets top="10.0" />

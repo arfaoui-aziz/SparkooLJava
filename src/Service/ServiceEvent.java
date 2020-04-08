@@ -39,11 +39,10 @@ public class ServiceEvent implements IService<Event> {
     }
 
 
-
     @Override
-    public boolean delete(String nomevenement) throws SQLException {
-        PreparedStatement pre = this.con.prepareStatement("DELETE FROM `sparkool`.`event` WHERE nomEvent=? ;");
-        pre.setString(1, nomevenement );
+    public boolean delete(int idevent) throws SQLException {
+        PreparedStatement pre = this.con.prepareStatement("DELETE FROM `sparkool`.`event` WHERE id=? ;");
+        pre.setInt(1, idevent );
         if (pre.executeUpdate() != 0) {
             System.out.println("event Deleted");
             return true;
@@ -54,17 +53,10 @@ public class ServiceEvent implements IService<Event> {
     }
 
     @Override
-    public boolean update(String nomevenement, String Type ) throws SQLException {
-        PreparedStatement pre = this.con.prepareStatement("UPDATE `sparkool`.`event` SET typeEvent = ? WHERE nomEvent=? ;");
-        pre.setString(1, Type);
-        pre.setString(2, nomevenement);
-        if (pre.executeUpdate() != 0) {
-            System.out.println("event Updated");
-            return true;
-        } else {
-            System.out.println("nom evenement not found!!!");
-            return false;
-        }
+    public void update(Event e, int id) throws SQLException {
+        PreparedStatement pre = con.prepareStatement("UPDATE `sparkool`.`event` SET nomEvent='" + e.getNomEvent() + "',typeEvent='" + e.getTypeEvent() + "',description='" + e.getDescription() + "',dateEvent='" + e.getDateEvent() + "',placeEvent='" + e.getPlaceEvent() + "',nbParticipants='" + e.getNbParticipants() + "',theme='" + e.getTheme() + "',destination='" + e.getDestination() + "',award='" + e.getAward() + "',budget='" + e.getBudget() + "',price='" + e.getPrice() + "' WHERE id='" + id + "' ;");
+        pre.executeUpdate();
+
     }
 
     public boolean updateDescrip(String nomevenement, String Descrip ) throws SQLException {
@@ -233,7 +225,7 @@ public class ServiceEvent implements IService<Event> {
     public List<Event> SearchEvent(String nomE) throws SQLException {
         List<Event> arr=new ArrayList<>();
         ste=con.createStatement();
-        ResultSet rs=ste.executeQuery("select * from event where nomEvent = '"+nomE+"' ");
+        ResultSet rs=ste.executeQuery("select * from event where nomEvent LIKE '%' '"+nomE+"' '%' ");
         while (rs.next()) {
 
             int id = rs.getInt(1);
@@ -253,6 +245,31 @@ public class ServiceEvent implements IService<Event> {
         }
         return arr;
     }
+
+    @Override
+    public List<Event> trier() throws SQLException {
+        List<Event> arr=new ArrayList<>();
+        ste=con.createStatement();
+        ResultSet rs=ste.executeQuery("select * from event order by nbParticipants desc");
+        while (rs.next()) {
+            int id = rs.getInt(1);
+            String nomEvent = rs.getString("nomEvent");
+            String typeEvent = rs.getString(3);
+            String description = rs.getString(4);
+            String dateEvent = rs.getString(5);
+            String placeEvent = rs.getString(6);
+            int nbParticipants = rs.getInt(7);
+            String theme = rs.getString(8);
+            String destination = rs.getString(9);
+            float award = rs.getFloat(10);
+            float budget = rs.getFloat(11);
+            float price = rs.getFloat(12);
+            Event e = new Event(id, nomEvent, typeEvent, description, dateEvent, placeEvent, nbParticipants, theme, destination, award, budget, price);
+            arr.add(e);
+        }
+        return arr;
+    }
+
 
 
 
