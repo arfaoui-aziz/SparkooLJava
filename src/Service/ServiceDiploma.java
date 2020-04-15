@@ -7,6 +7,7 @@ import Utils.DataBase;
 import Utils.bcrypt;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class ServiceDiploma implements IServiceDiploma {
     private Connection cnx = DataBase.getInstance().getConnexion();
@@ -50,5 +51,37 @@ public class ServiceDiploma implements IServiceDiploma {
         PreparedStatement ste=cnx.prepareStatement("UPDATE `diploma` SET `intitule` = '"+d.getIntitule()+"', `ecole` = '"+d.getEcole()+"', `specialite` = '"+d.getSpecialite()+"', `niveau` = '"+d.getNiveau()+"', `date_obtentation` = '"+d.getDate_obtentation()+"' WHERE `diploma`.`id_Teacher` = '"+id+"';\n");
 
         ste.executeUpdate();
+    }
+
+
+
+
+    @Override
+    public int statSpeciality (String s){
+
+
+
+        try {
+            Connection cnx = DataBase.getInstance().getConnexion();
+
+            String sql = "SELECT count(diploma.specialite) AS nbS FROM diploma where specialite = '"+s+"'";
+
+
+            PreparedStatement stat= cnx.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+
+            while (rs.next()){
+
+                return Integer.parseInt(rs.getString("nbS"));
+
+
+            }
+
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+
+        }
+        return 0;
     }
 }

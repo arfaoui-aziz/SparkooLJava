@@ -14,13 +14,19 @@ import javafx.scene.text.Text;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class home implements Initializable {
-
+    @FXML
+    private ImageView statParent;
     @FXML
     private Label logout;
 
+    @FXML
+    private HBox gotoParent;
 
     @FXML
     private HBox gotoTeacher;
@@ -30,12 +36,19 @@ public class home implements Initializable {
 
     @FXML
     private ImageView gotoStats;
-
+    @FXML
+    void gotoStatP(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("statParent.fxml"));
+        Parent root=fxml.load();
+        statParent.getScene().setRoot(root);
+    }
     @FXML
     private void gotoStat(MouseEvent event) throws IOException {
+
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("statsTeacher.fxml"));
         Parent root=fxml.load();
         gotoTeacher.getScene().setRoot(root);
+
     }
 
     @FXML
@@ -69,5 +82,11 @@ public class home implements Initializable {
     }
 
 
+    @FXML
+    void gotoParent(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getClassLoader().getResource("GUI/back/Users.fxml"));
+        Parent root=fxml.load();
+        gotoParent.getScene().setRoot(root);
+    }
 
 }

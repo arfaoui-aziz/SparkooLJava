@@ -89,10 +89,16 @@ public class Teachers implements Initializable {
     private HBox btnDelay;
 
     @FXML
+    private HBox btnCourses;
+
+    @FXML
     private HBox btnAtt;
 
     @FXML
     private JFXTextField fn;
+
+    @FXML
+    private HBox btnSchedule;
 
     @FXML
     private Button btnSearch;
@@ -315,5 +321,22 @@ public class Teachers implements Initializable {
         btnAdd.getScene().setRoot(root);
     }
 
+    @FXML
+    void Courses(MouseEvent event) throws IOException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("courses.fxml"));
+        Parent root = fxml.load();
+        btnCourses.getScene().setRoot(root);
+    }
 
+
+    @FXML
+    void gotoSchedule(MouseEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("scheduleTeacher.fxml"));
+        Parent root = loader.load();
+        btnSchedule.getScene().setRoot(root);
+        ScheduleTeacher controller = loader.getController();
+        controller.initData(tabTeacher.getSelectionModel().getSelectedItem().getId());
+
+    }
 }

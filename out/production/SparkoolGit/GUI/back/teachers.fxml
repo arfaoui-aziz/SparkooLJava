@@ -478,6 +478,40 @@
                               </Label>
                            </children>
                         </HBox>
+                        <HBox fx:id="btnCourses" alignment="CENTER" onMousePressed="#Courses" prefHeight="34.0" prefWidth="72.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/front/icons8-course.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="16.0" prefWidth="111.0" styleClass="lbl" stylesheets="@../css/style.css" text="Courses" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="btnSchedule" alignment="CENTER" onMousePressed="#gotoSchedule" prefHeight="34.0" prefWidth="72.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/front/icons8-month_view.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="16.0" prefWidth="111.0" styleClass="lbl" stylesheets="@../css/style.css" text="Schedule" textFill="#485460">
+                                 <padding>
+                                    <Insets left="6.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="510.0" prefWidth="1025.0">

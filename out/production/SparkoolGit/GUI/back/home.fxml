@@ -136,7 +136,7 @@
                         <String fx:value="cursor_hand" />
                      </styleClass>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" stylesheets="@../css/style.css">
+                  <HBox fx:id="gotoParent" alignment="CENTER_LEFT" onMousePressed="#gotoParent" stylesheets="@../css/style.css">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
@@ -430,12 +430,12 @@
                                           <Font name="DIN Alternate Bold" size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="1200" textAlignment="CENTER">
+                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER">
                                        <font>
                                           <Font name="DIN Alternate Bold" size="14.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="15.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                    <ImageView fx:id="statParent" fitHeight="15.0" fitWidth="77.0" onMousePressed="#gotoStatP" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                                        <image>
                                           <Image url="@../image/eye.jpg" />
                                        </image>

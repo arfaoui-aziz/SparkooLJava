@@ -78,6 +78,34 @@ public class User {
         this.phone = phone;
     }
 
+    public User(String id, String username, String firstName, String lastName, String userType, String picture,String password) {
+        this.id = id;
+        this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userType = userType;
+        this.picture = picture;
+        this.password=password;
+    }
+
+
+    public User(String id, String username, String email, String firstName, String lastName, String gender, String address, String phone, String picture, String occupation) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.address = address;
+        this.phone = phone;
+        this.picture = picture;
+        this.occupation = occupation;
+    }
+
+    public User(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }

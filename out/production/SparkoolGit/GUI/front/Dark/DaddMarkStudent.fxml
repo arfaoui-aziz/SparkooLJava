@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="280.0" style="-fx-background-color: #2a2f33;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.front.Dark.DaddMarkStudent">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="280.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="155.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="107.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/front/icons8-checked_checkbox.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Add Mark" textFill="#e4e4e4">
+                     <font>
+                        <Font name="DIN Alternate Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxWidth="150.0" prefHeight="200.0" prefWidth="261.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="cc" promptText="CC" styleClass="field" stylesheets="@../../css/style.css" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="exan" promptText="Exam" styleClass="field" stylesheets="@../../css/style.css" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="note" promptText="Note" styleClass="field" stylesheets="@../../css/style.css" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="send" mnemonicParsing="false" onMousePressed="#send" styleClass="button2" stylesheets="@../../css/style.css" text="Button" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

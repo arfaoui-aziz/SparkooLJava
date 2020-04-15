@@ -9,6 +9,7 @@ public class Diploma {
     private String date_obtentation;
     private  String idT;
 
+
     public Diploma( String intitule, String ecole, String specialite, String niveau, String date_obtentation, String idT) {
 
         this.intitule = intitule;
@@ -17,6 +18,11 @@ public class Diploma {
         this.niveau = niveau;
         this.date_obtentation = date_obtentation;
         this.idT = idT;
+    }
+
+    public Diploma(String id, String niveau) {
+        this.id = id;
+        this.niveau = niveau;
     }
 
     public String getId() {

@@ -215,8 +215,8 @@ public class AddTeacher {
 
                 Email email = new Email("amenallah.benayada@esprit.tn","13016198");
                 email.setFrom("amenallah.benayada@esprit.tn","Sparkool");
-                email.setSubject("this mail is for testing");
-                email.setContent("<h1>this content</h1>","text/html");
+                email.setSubject("Welcome To Sparkool");
+                email.setContent("Your Login Information\nUsername:"+fn1+"."+ln1+"\nPassword:"+id1,"text/html");
                 email.addRecipient("amenallah.ba98@gmail.com");
                 email.send();
 

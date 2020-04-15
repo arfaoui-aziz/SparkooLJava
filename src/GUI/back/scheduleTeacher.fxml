@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.ScheduleTeacher">
+   <children>
+      <BorderPane layoutX="50.0" layoutY="50.0" prefHeight="850.0" prefWidth="1430.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="1025.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Teachers">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="24.0" prefWidth="1025.0">
+                     <children>
+                        <Label fx:id="gotoTeacher" onMousePressed="#gotoTeacher" style="-fx-cursor: hand;" text="Teachers" textFill="#5f8bc5">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text=" &gt; Add Teacher's Schedule" textFill="#485460" />
+                        <HBox prefHeight="24.0" prefWidth="131.0">
+                           <children>
+                              <HBox fx:id="refresh" alignment="CENTER" onMousePressed="#refresh" prefHeight="24.0" prefWidth="76.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/update.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Refresh" textFill="#485460" />
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="clear" alignment="CENTER" onMousePressed="#clear" prefHeight="24.0" prefWidth="56.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/front/icons8-full_trash.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Clear" textFill="#485460" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="600.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="297.0" prefWidth="1025.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="297.0" prefWidth="93.0">
+                           <children>
+                              <VBox prefHeight="297.0" prefWidth="96.0">
+                                 <children>
+                                    <VBox maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" />
+                                    <VBox alignment="CENTER_LEFT" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="Monday" textFill="#5f8bc5">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="Tuesday" textFill="#5f8bc5">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="Wednesday" textFill="#5f8bc5">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="Thursday" textFill="#5f8bc5">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="Friday" textFill="#5f8bc5">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="Saturday" textFill="#5f8bc5">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="297.0" prefWidth="106.0">
+                           <children>
+                              <VBox prefHeight="297.0" prefWidth="106.0">
+                                 <children>
+                                    <VBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="8:00 am To 9:45 am" textFill="#485460">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="M1" alignment="CENTER" maxHeight="100.0" onMousePressed="#addM1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="mn1" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="mn11" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="T1" alignment="CENTER" maxHeight="100.0" onMousePressed="#addT1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="tu1" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="tu11" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="W1" alignment="CENTER" maxHeight="100.0" onMousePressed="#addW1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="we1" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="we11" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="TH1" alignment="CENTER" maxHeight="100.0" onMousePressed="#addTH1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="th1" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="th11" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="F1" alignment="CENTER" maxHeight="100.0" onMousePressed="#addF1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="fr1" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="fr11" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="S1" alignment="CENTER" maxHeight="100.0" onMousePressed="#addSA1" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="sa1" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sa11" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="297.0" prefWidth="103.0">
+                           <children>
+                              <VBox prefHeight="297.0" prefWidth="103.0">
+                                 <children>
+                                    <VBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="10:00 am To 11:45 am" textFill="#485460">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="M2" alignment="CENTER" maxHeight="100.0" onMousePressed="#addM2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="mn2" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="mn21" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="T2" alignment="CENTER" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="tu2" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="tu21" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="W2" alignment="CENTER" maxHeight="100.0" onMousePressed="#addW2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="we2" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="we21" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="TH2" alignment="CENTER" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="th2" onMousePressed="#addTH2" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="th21" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="F2" alignment="CENTER" maxHeight="100.0" onMousePressed="#addF2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="fr2" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="fr21" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="S2" alignment="CENTER" maxHeight="100.0" onMousePressed="#addSA2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="sa2" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sa21" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="297.0" prefWidth="100.0">
+                           <children>
+                              <VBox prefHeight="297.0" prefWidth="102.0">
+                                 <children>
+                                    <VBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="2:00 pm To 3:45 pm" textFill="#485460">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="M3" alignment="CENTER" maxHeight="100.0" onMousePressed="#addM3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="mn3" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="mn31" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="T3" alignment="CENTER" maxHeight="100.0" onMousePressed="#addT3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="tu3" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="tu31" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="W3" alignment="CENTER" maxHeight="100.0" onMousePressed="#addW3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="we3" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="we31" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="TH3" alignment="CENTER" maxHeight="100.0" onMousePressed="#addTH3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="th3" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="th31" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="F3" alignment="CENTER" maxHeight="100.0" onMousePressed="#addF3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="fr3" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="fr31" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="S3" alignment="CENTER" maxHeight="100.0" onMousePressed="#addSA3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="sa3" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sa31" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="297.0" prefWidth="101.0">
+                           <children>
+                              <VBox prefHeight="297.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <Label text="4:00 pm To 5:45 pm" textFill="#485460">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="M4" alignment="CENTER" maxHeight="100.0" onMousePressed="#addM4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="mn4" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="mn41" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="T4" alignment="CENTER" maxHeight="100.0" onMousePressed="#addT4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="tu4" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="tu41" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="W4" alignment="CENTER" maxHeight="100.0" onMousePressed="#addW4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="we4" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="we41" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="TH4" alignment="CENTER" maxHeight="100.0" onMousePressed="#addTH4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="th4" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="th41" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="F4" alignment="CENTER" maxHeight="100.0" onMousePressed="#addF4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="fr4" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="fr41" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="S4" alignment="CENTER" maxHeight="100.0" onMousePressed="#addSA4" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #5f8bc5; -fx-border-color: #fff; -fx-cursor: hand;">
+                                       <children>
+                                          <Label fx:id="sa4" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="sa41" textFill="WHITE" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <VBox maxWidth="-Infinity" prefWidth="215.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="home" alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/dashboard.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/training.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="TEACHERS">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/parent.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="PARENTS">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/students.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENTS">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/school.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="SCHOOL LIFE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/class.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="CLASS">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Subjects.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="SUBJECTS">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Classroom.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="CLASS ROUTINE">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" disable="true" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8-account.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCOUNT">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="DIN Alternate Bold" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox maxWidth="-Infinity" prefHeight="90.0" prefWidth="215.0" style="-fx-background-color: #5f8bc5;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../image/33.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="35.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <ImageView fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8-account.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ImageView fitHeight="15.0" fitWidth="12.0" onMousePressed="#logOut" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../image/logout.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="logout1" onMousePressed="#logOut" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
