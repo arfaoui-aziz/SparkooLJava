@@ -15,6 +15,7 @@ public class Event {
     float budget;
     float price;
 
+    public Event() {};
     public Event(int id, String nomEvent, String typeEvent, String description, String dateEvent, String placeEvent, int nbParticipants, String theme, String destination, float award, float budget, float price) {
         this.id=id;
         this.nomEvent = nomEvent;

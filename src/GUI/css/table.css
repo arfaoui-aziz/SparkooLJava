@@ -18,6 +18,7 @@
 
 
 }
+
 .table-view .cell:selected{
     -fx-cell-size: 35;
     -fx-alignment: center;

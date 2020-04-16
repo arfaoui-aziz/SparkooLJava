@@ -81,4 +81,34 @@ public class ServiceClub implements IServiceClub<Club> {
     public List<Club> SearchEvent(String nomE) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    public void ADDclub(int id1,String id2) throws SQLException {
+        PreparedStatement pre = this.con.prepareStatement("INSERT INTO `sparkool`.`user_byclub` ( `club_id`, `user_id`) VALUES ( ?, ?);");
+        pre.setString(1, String.valueOf(id1));
+        pre.setString(2, id2);
+        pre.executeUpdate();
+    }
+
+    public boolean testClub(String iduser, int idevent) throws SQLException {
+
+        ste = con.createStatement();
+        ResultSet rs = ste.executeQuery("select * from user_byclub where club_id='" + idevent + " 'And user_id='" + iduser + "'");
+        while (rs.next()) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean deleteParticipC(int idevent) throws SQLException {
+        //PreparedStatement pre = this.con.prepareStatement("DELETE FROM `sparkool`.`user_byevent` WHERE event_id='" + idevent + " 'And user_id='" + iduser + "'");
+        PreparedStatement pre = this.con.prepareStatement("DELETE FROM `sparkool`.`user_byclub` WHERE club_id=? ");
+        pre.setInt(1, idevent);
+        if (pre.executeUpdate() != 0) {
+            System.out.println(" Deleted");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

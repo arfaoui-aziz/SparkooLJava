@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.front.Dark.DShowEventDetail">
+   <children>
+      <BorderPane layoutX="100.0" layoutY="100.0" prefHeight="1250.4" prefWidth="1830.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="70.0" style="-fx-background-color: #363d44;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="280.0" style="-fx-background-color: #363d44;" styleClass="border2D" stylesheets="@../../css/style.css">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/33.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #363d44;" styleClass="border4D" stylesheets="@../../css/style.css">
+                     <children>
+                        <HBox fx:id="btnTheme" alignment="CENTER_RIGHT" onMousePressed="#switchTheme" prefHeight="44.0" prefWidth="54.0" style="-fx-cursor: hand;">
+                           <children>
+                              <ImageView fitHeight="26.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/front/Dark/darkMode.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="940.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox maxWidth="-Infinity" prefWidth="280.0" style="-fx-background-color: #363d44;" styleClass="border1D" stylesheets="@../../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="193.0" prefWidth="280.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Circle fx:id="photo" fill="WHITE" radius="53.0" stroke="#363d44" strokeType="INSIDE">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Circle>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="lblName" text="Amen Allah Ben Ayada" textFill="WHITE">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="lblType" text="Teacher" textFill="#dadbdd">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="lblSpeciality" text="Computer Sience" textFill="#dadbdd">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="0.0" prefWidth="280.0">
+                     <children>
+                        <Line endX="130.5" startX="-100.0" stroke="#929ca7" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="282.0" prefWidth="280.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="280.0">
+                           <children>
+                              <VBox fx:id="btnHome" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoHome" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/home.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="btnInfo" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoInfo" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/info.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Information">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="280.0">
+                           <children>
+                              <VBox fx:id="btnShedule" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoShedule" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/shedule.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Shedule">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="btnCourse" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoCourses" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/cours.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="280.0">
+                           <children>
+                              <VBox fx:id="btnMessage" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoMessage" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/MessageS.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Messages">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="btnMarks" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoMarks" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/marks.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Marks">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="280.0">
+                           <children>
+                              <VBox fx:id="btnAccount" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoAccount" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/Account.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Account">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="btnSignout" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" onMousePressed="#gotoSignout" prefHeight="80.0" prefWidth="80.0" style="-fx-cursor: hand;">
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/front/Light/logout.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Signout">
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox alignment="CENTER" style="-fx-background-color: #2a2f33 #2a2f33;" styleClass="border3D" stylesheets="@../../css/style.css" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="0.0" prefWidth="959.0">
+                     <children>
+                        <Label text="Event Details" textFill="#2597ea">
+                           <font>
+                              <Font name="DIN Alternate Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="116.0" prefWidth="959.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" style="-fx-cursor: hand;" text="Name : " textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <Label fx:id="nomE" onMousePressed="#replied" prefHeight="20.0" prefWidth="74.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="23.0" prefWidth="89.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" prefHeight="20.0" prefWidth="64.0" style="-fx-cursor: hand;" text="Type:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <Label fx:id="typeE" onMousePressed="#replied" prefHeight="20.0" prefWidth="75.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="23.0" prefWidth="72.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label onMousePressed="#showSent" prefHeight="20.0" prefWidth="110.0" style="-fx-cursor: hand;" text="Description:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label onMousePressed="#replied" prefHeight="20.0" prefWidth="88.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="desc" onMousePressed="#replied" prefHeight="20.0" prefWidth="94.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" style="-fx-cursor: hand;" text="Date:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="74.0" />
+                              <Label fx:id="dateE" onMousePressed="#replied" prefHeight="16.0" prefWidth="90.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" prefHeight="20.0" prefWidth="46.0" style="-fx-cursor: hand;" text="Place:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="74.0" />
+                              <Label fx:id="place" onMousePressed="#replied" prefHeight="16.0" prefWidth="90.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" prefHeight="20.0" prefWidth="163.0" style="-fx-cursor: hand;" text="Participants:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="74.0" />
+                              <Label fx:id="nb" onMousePressed="#replied" prefHeight="16.0" prefWidth="90.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" style="-fx-cursor: hand;" text="Theme:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="74.0" />
+                              <Label fx:id="theme" onMousePressed="#replied" prefHeight="16.0" prefWidth="90.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" style="-fx-cursor: hand;" text="Destination:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="74.0" />
+                              <Label fx:id="destination" onMousePressed="#replied" prefHeight="16.0" prefWidth="90.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" style="-fx-cursor: hand;" text="Award: " textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="74.0" />
+                              <Label fx:id="award" onMousePressed="#replied" prefHeight="16.0" prefWidth="90.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Label onMousePressed="#showSent" style="-fx-cursor: hand;" text="Price:" textFill="#dadbdd">
+                                       <font>
+                                          <Font name="DIN Alternate Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="74.0" />
+                              <Label fx:id="price" onMousePressed="#replied" prefHeight="16.0" prefWidth="90.0" style="-fx-cursor: hand;" textFill="#b9babc">
+                                 <font>
+                                    <Font name="DIN Alternate Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="959.0">
+                           <children>
+                              <Button fx:id="breturn" mnemonicParsing="false" onMousePressed="#Return" prefHeight="26.0" prefWidth="66.0" styleClass="button2" stylesheets="@../../css/style.css" text="Return" />
+                              <HBox alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="71.0">
+                                 <children>
+                                    <Button onMousePressed="#participer" mnemonicParsing="false" styleClass="button2" stylesheets="@../../css/style.css" text="Participate" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="50.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

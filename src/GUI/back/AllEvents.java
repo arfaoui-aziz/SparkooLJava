@@ -4,6 +4,7 @@ import Entity.Event;
 import Service.ServiceEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,7 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-
+import javafx.scene.Node;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -91,12 +92,16 @@ public class AllEvents implements Initializable {
 
     @FXML
     private HBox btnDelete;
+    @FXML
+    private Button bmeteo;
+    @FXML
+    private HBox log;
 
     @FXML
-    private void logOut(MouseEvent event) throws IOException {
-        FXMLLoader fxml = new FXMLLoader(getClass().getResource("/sample/login.fxml"));
+    void logout(MouseEvent event) throws IOException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("../front/Dark/DShowEvent.fxml"));
         Parent root = fxml.load();
-        logout.getScene().setRoot(root);
+        log.getScene().setRoot(root);
     }
 
     @FXML
@@ -132,7 +137,7 @@ public class AllEvents implements Initializable {
             ex.printStackTrace();
         }
 
-        e_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+
         e_nom.setCellValueFactory(new PropertyValueFactory<>("nomEvent"));
         e_type.setCellValueFactory(new PropertyValueFactory<>("typeEvent"));
         e_desc.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -196,7 +201,6 @@ public class AllEvents implements Initializable {
         ServiceEvent se = new ServiceEvent();
         ObservableList<Event> data = FXCollections.observableArrayList(se.SearchEvent(nomE));
 
-        e_id.setCellValueFactory(new PropertyValueFactory<>("id"));
         e_nom.setCellValueFactory(new PropertyValueFactory<>("nomEvent"));
         e_type.setCellValueFactory(new PropertyValueFactory<>("typeEvent"));
         e_desc.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -213,7 +217,7 @@ public class AllEvents implements Initializable {
 
 
 
-    @FXML
+   /* @FXML
     private void trierEvent(MouseEvent event)  throws IOException,SQLException{
         ServiceEvent se = new ServiceEvent();
         ObservableList<Event> data = FXCollections.observableArrayList(se.trier());
@@ -236,6 +240,22 @@ public class AllEvents implements Initializable {
 
     }
 
+*/
+    @FXML
+    private void meteo(ActionEvent event) {
+        try {
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+
+            Scene scene = new Scene(FXMLLoader.load(getClass().getResource("owm.fxml")));
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+    }
 
 
 

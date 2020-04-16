@@ -1,5 +1,4 @@
 package GUI.back;
-import Utils.ControleSaisie;
 import Entity.Club;
 import Service.ServiceClub;
 import com.jfoenix.controls.JFXDatePicker;
@@ -10,13 +9,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
-import java.security.Key;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -24,6 +20,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXComboBox;
+
+import tray.notification.NotificationType;
+import tray.notification.TrayNotification;
+import javafx.util.Duration;
+import tray.animations.AnimationType;
+
 
 
 public class AddClub implements Initializable {
@@ -93,6 +95,10 @@ public class AddClub implements Initializable {
             FXMLLoader fxml = new FXMLLoader(getClass().getResource("AllClubs.fxml"));
             Parent root = fxml.load();
             addClub.getScene().setRoot(root);
+        TrayNotification tray = new TrayNotification("Successfully", "A New Club Was Added..", NotificationType.SUCCESS);
+        tray.setAnimationType(AnimationType.SLIDE);
+        tray.showAndDismiss(Duration.seconds(10));
+
         }
 
 

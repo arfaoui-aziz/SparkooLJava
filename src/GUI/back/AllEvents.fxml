@@ -22,7 +22,7 @@
          <top>
             <HBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox maxWidth="-Infinity" prefHeight="90.0" prefWidth="215.0" style="-fx-background-color: #5f8bc5;">
+                  <HBox fx:id="log" maxWidth="-Infinity" onMousePressed="#logout" prefHeight="90.0" prefWidth="215.0" style="-fx-background-color: #5f8bc5;">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
@@ -31,6 +31,7 @@
                            <HBox.margin>
                               <Insets left="35.0" top="5.0" />
                            </HBox.margin>
+
                         </ImageView>
                      </children>
                   </HBox>
@@ -45,17 +46,22 @@
                               </TextField>
                               <HBox fx:id="recherche" alignment="CENTER" onMousePressed="#recherche">
                                  <children>
-                                    <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                    <ImageView fitHeight="20.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                                        <image>
                                           <Image url="@../image/search.png" />
                                        </image>
                                     </ImageView>
                                     <HBox fx:id="recherche1" alignment="CENTER" onMousePressed="#recherche" prefHeight="90.0" prefWidth="34.0" />
-                                    <HBox fx:id="recherche11" alignment="CENTER" onMousePressed="#recherche" prefHeight="90.0" prefWidth="62.0">
+                                    <HBox fx:id="recherche11" alignment="CENTER" onMousePressed="#recherche" prefHeight="90.0" prefWidth="150.0">
                                        <children>
-                                          <Button fx:id="trierEvent" defaultButton="true" mnemonicParsing="false" onMousePressed="#trierEvent" prefHeight="26.0" prefWidth="82.0" text="Sort" />
+                                          <Button fx:id="bmeteo" defaultButton="true" mnemonicParsing="false" onAction="#meteo" prefHeight="26.0" prefWidth="118.0" text="Show Weather" />
                                        </children>
                                     </HBox>
+                                    <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" scaleX="2.3" scaleY="2.0" scaleZ="2.0" style="-fx-cursor: hand;">
+                                       <image>
+                                          <Image url="@../image/meteo.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </HBox>
                            </children>
@@ -77,7 +83,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Text>
-                        <ImageView fitHeight="15.0" fitWidth="12.0" onMousePressed="#logOut" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                        <ImageView fitHeight="15.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
                               <Image url="@../image/logout.jpg" />
                            </image>
@@ -85,7 +91,7 @@
                               <Insets right="2.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label fx:id="logout" onMousePressed="#logOut" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
+                        <Label fx:id="logout"  style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
                            <padding>
                               <Insets right="10.0" />
                            </padding>
@@ -317,6 +323,56 @@
                         <String fx:value="cursor_hand" />
                      </styleClass>
                   </HBox>
+                  <HBox alignment="CENTER_LEFT" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" stylesheets="@../css/style.css">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" stylesheets="@../css/style.css">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="hover_border" />
+                              <String fx:value="cursor_hand" />
+                           </styleClass>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="33.0" stylesheets="@../css/style.css">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <styleClass>
+                                    <String fx:value="hover_border" />
+                                    <String fx:value="cursor_hand" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <ImageView fitHeight="88.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../image/video.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="hover_border" />
+                        <String fx:value="cursor_hand" />
+                     </styleClass>
+                  </HBox>
+                  <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="             Video Of The Week" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
                </children>
             </VBox>
          </left>
@@ -450,7 +506,6 @@
                      <children>
                         <TableView fx:id="tabEvent" prefHeight="490.0" prefWidth="1010.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../css/table.css">
                            <columns>
-                              <TableColumn fx:id="e_id" prefWidth="43.20001149177551" text="ID" />
                               <TableColumn fx:id="e_nom" prefWidth="78.39999771118164" text="Name" />
                               <TableColumn fx:id="e_type" prefWidth="97.60002136230469" text="Type Of Event" />
                               <TableColumn fx:id="e_desc" prefWidth="92.79994201660156" text="Description" />
