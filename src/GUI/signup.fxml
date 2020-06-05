@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Signup">
+    <children>
+        <ImageView fx:id="cr" fitHeight="700.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@./image/Untitled-9.jpg" />
+            </image>
+        </ImageView>
+        <BorderPane layoutX="273.0" layoutY="175.0" prefHeight="375.0" prefWidth="738.0" AnchorPane.leftAnchor="273.0" AnchorPane.topAnchor="175.0">
+            <right>
+                <Pane prefHeight="426.0" prefWidth="365.0" style="-fx-background-color: #5f8bc5;" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="83.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@./image/33.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="49.0" layoutY="175.0" prefHeight="108.0" prefWidth="268.0" text="       Enter your personal details to Sign Up " textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                            <font>
+                                <Font name="Al Tarikh Regular" size="13.0" />
+                            </font>
+                        </Label>
+                  <Label fx:id="gobacklog" layoutX="122.0" layoutY="275.0" text="Go Back to Login Form"  onMouseClicked="#gotologinForm"/>
+                    </children>
+                </Pane>
+            </right>
+            <left>
+                <Pane prefHeight="395.0" prefWidth="373.0" style="-fx-background-color: fff;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="107.0" layoutY="25.0" text="Sign Up" textFill="#5f8bc5">
+                            <font>
+                                <Font name="DIN Condensed Bold" size="36.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="Username" focusTraversable="false" layoutX="13.0" layoutY="99.0" prefHeight="25.0" prefWidth="137.0" promptText="First Name" styleClass="css\style.css" stylesheets="@./css/style.css" />
+                        <Button fx:id="btn" layoutX="137.0" layoutY="323.0" mnemonicParsing="false" onAction="#signupAc" prefHeight="31.0" prefWidth="74.0" style="-fx-cursor: hand;" styleClass="button1" stylesheets="@./css/style.css" text="SIGN UP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <TextField fx:id="email" focusTraversable="false" layoutX="13.0" layoutY="146.0" prefHeight="25.0" prefWidth="137.0" promptText="Email" styleClass="field" stylesheets="@css/style.css" />
+                  <TextField fx:id="placeofbirth" focusTraversable="false" layoutX="195.0" layoutY="146.0" prefHeight="25.0" prefWidth="150.0" promptText="Place of Birth" styleClass="field" stylesheets="@css/style.css" />
+                  <TextField fx:id="phone" focusTraversable="false" layoutX="13.0" layoutY="229.0" prefHeight="25.0" prefWidth="137.0" promptText="Phone" styleClass="field" stylesheets="@css/style.css" />
+                  <DatePicker fx:id="dateofbirth" layoutX="14.0" layoutY="188.0" prefHeight="25.0" prefWidth="135.0" promptText="Date of birth" />
+                  <ChoiceBox fx:id="bloodgroup" layoutX="195.0" layoutY="229.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="academicyear" layoutX="14.0" layoutY="273.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="lastname" focusTraversable="false" layoutX="195.0" layoutY="99.0" prefHeight="25.0" prefWidth="150.0" promptText="Last Name" styleClass="field" stylesheets="@css/style.css" />
+                  <TextField fx:id="adress" focusTraversable="false" layoutX="195.0" layoutY="188.0" prefHeight="25.0" prefWidth="150.0" promptText="adress" styleClass="field" stylesheets="@css/style.css" />
+                  <ChoiceBox fx:id="gender" layoutX="195.0" layoutY="273.0" prefWidth="150.0" />
+                    </children>
+                </Pane>
+            </left>
+        </BorderPane>
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Created By SparkIT" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="560.0">
+            <font>
+                <Font name="DIN Alternate Bold" size="18.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
