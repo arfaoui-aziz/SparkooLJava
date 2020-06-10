@@ -35,6 +35,20 @@ public class ServiceForum {
         ste.executeUpdate("insert into forum (id, auteur_id, title, type, subject, dateajout, etat, solved, nbreponse) "+" VALUES ('"+random+"', '"+auteur_id+"', '"+title+"', '"+type+"', '"+subject+"', '"+timeformat.format(currentday)+"', '"+1+"', '"+0+"', '"+0+"') ;");
         return true;
     }
+
+
+    public boolean addsubfront(String auteur_id, String title, String type, String subject) throws SQLException {
+
+
+        Statement ste = cnx.createStatement();
+        int random = (int)(Math.random() * 9999999 + 1);
+        Date currentday = new Date();
+        SimpleDateFormat timeformat = new SimpleDateFormat("MM/dd/yyyy");
+        ste.executeUpdate("insert into forum (id, auteur_id, title, type, subject, dateajout, etat, solved, nbreponse) "+" VALUES ('"+random+"', '"+auteur_id+"', '"+title+"', '"+type+"', '"+subject+"', '"+timeformat.format(currentday)+"', '"+0+"', '"+0+"', '"+0+"') ;");
+        return true;
+    }
+
+
     ObservableList<Forum> data = FXCollections.observableArrayList();
 
     public List<Forum> ForumList() throws SQLException {
@@ -109,9 +123,9 @@ public class ServiceForum {
         return 0;
     }
 
-    public int voted(String voter) throws SQLException {
+    public int voted(String voter , int subjectvoted) throws SQLException {
         Connection cnx = DataBase.getInstance().getCnx();
-        String sql = " SELECT COUNT(voter) FROM votes  WHERE voter='" + voter + "'";
+        String sql = " SELECT COUNT(voter) FROM votes  WHERE voter='" + voter + "' and subjectvoted='"+subjectvoted+"'";
         PreparedStatement stat = cnx.prepareStatement(sql);
         ResultSet rs = stat.executeQuery();
 
@@ -172,10 +186,23 @@ public class ServiceForum {
     public boolean commentsubmit(String comentor_id, int subject, String commentaire) throws SQLException {
 
         Statement ste = cnx.createStatement();
+
         int random = (int)(Math.random() * 9999999 + 1);
+        int newnbr = 0;
         Date currentday = new Date();
         SimpleDateFormat timeformat = new SimpleDateFormat("MM/dd/yyyy");
         ste.executeUpdate("insert into commentaire (id, comentor_id, subject, commentaire, commentdate) "+" VALUES ('"+random+"', '"+comentor_id+"', '"+subject+"', '"+commentaire+"', '"+timeformat+"') ;");
+        String sql= "SELECT nbreponse FROM forum  WHERE id='"+subject+"' ";
+        PreparedStatement stat= cnx.prepareStatement(sql);
+        ResultSet rs = stat.executeQuery();
+        while (rs.next()){
+            newnbr = rs.getInt(1)+1;
+        }
+        PreparedStatement ste1 =cnx.prepareStatement("UPDATE Forum SET nbreponse='"+newnbr+"' WHERE id='"+subject+"';");
+        ste1.executeUpdate();
+
+       
+        
         return true;
     }
 

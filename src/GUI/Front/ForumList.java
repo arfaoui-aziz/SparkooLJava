@@ -112,7 +112,9 @@ public class ForumList implements Initializable {
                         if (empty) {
                             setGraphic(null);
                         } else {
+                            btn1.getStyleClass().add("button2");
                             setGraphic(btn1);
+
                         }
                     }
                 };

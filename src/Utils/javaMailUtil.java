@@ -16,7 +16,7 @@ public class javaMailUtil {
         proprieties.put("mail.smtp.auth","true");
         proprieties.put("mail.smtp.starttls.enable","true");
         proprieties.put("mail.smtp.host","smtp.gmail.com");
-        proprieties.put("mail.smtp.port","25");
+        proprieties.put("mail.smtp.port","465");
         proprieties.put("mail.smtp.enable","true");
         String myAccountEmail = "sparkool.project@gmail.com";
         String password = "Sparkool123";

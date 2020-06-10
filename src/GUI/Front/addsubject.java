@@ -1,5 +1,6 @@
 package GUI.Front;
 
+import Entity.AlertBox;
 import Entity.User;
 import Service.ServiceForum;
 import Service.ServiceUser;
@@ -56,7 +57,9 @@ public class addsubject implements Initializable {
         String subhectFm= subhectfm.getText();
         String typeFm= typefm.getValue().toString();
         ServiceForum Forum = new ServiceForum();
-        boolean acces = Forum.addsub(lblName.getText(),titleFm,typeFm,subhectFm);
+        boolean acces = Forum.addsubfront(lblName.getText(),titleFm,typeFm,subhectFm);
+        AlertBox dis = new AlertBox();
+        dis.display("Congratulation ","Your submission has been successfully sent");
 
     }
 

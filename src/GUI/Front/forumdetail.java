@@ -85,6 +85,7 @@ public class forumdetail implements Initializable {
         author.setText(selectedItem.getAuteur_id());
         subjectid=selectedItem.getId();
         like.setText(Integer.toString(Forum.showlike(selectedItem.getId())));
+        System.out.println(selectedItem.getSolved());
         if (selectedItem.getSolved() == 1)
         {
             commentsection.setDisable(true);
@@ -110,7 +111,6 @@ public class forumdetail implements Initializable {
 
         if( author.getText().equals(lblName.getText()))
         {
-            System.out.println("00000000000000000000000000000000000000000000000000000000000");
             solved.setVisible(true);
         }
         commentst.setItems(data);
@@ -122,9 +122,10 @@ public class forumdetail implements Initializable {
     public void votelike() throws SQLException {
         ServiceForum Forum = new ServiceForum();
 
-
-        if (Forum.voted(lblName.getText()) == 0 )
+System.out.println(Forum.voted(lblName.getText(),subjectid));
+        if (Forum.voted(lblName.getText(),subjectid) == 0 )
         {
+
 
             boolean acces = Forum.like(lblName.getText(),subjectid, (byte) 0);
         }
@@ -141,8 +142,8 @@ public class forumdetail implements Initializable {
     public void votedislike() throws SQLException {
         ServiceForum Forum = new ServiceForum();
 
-System.out.println(Forum.showstatus(subjectid,lblName.getText()));
-        if (Forum.voted(lblName.getText()) == 0 )
+        System.out.println(Forum.voted(lblName.getText(),subjectid));
+        if (Forum.voted(lblName.getText(),subjectid) == 0 )
         {
             boolean acces = Forum.dislike(lblName.getText(),subjectid, (byte) 1);
         }

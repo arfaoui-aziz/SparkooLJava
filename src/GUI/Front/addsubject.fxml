@@ -237,9 +237,9 @@
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </padding>
                      <children>
-                        <HBox alignment="CENTER" layoutX="21.0" prefHeight="341.0" prefWidth="1025.0">
+                        <HBox alignment="CENTER" layoutX="21.0" prefHeight="254.0" prefWidth="918.0">
                            <padding>
-                              <Insets bottom="20.0" left="30.0" right="20.0" top="80.0" />
+                              <Insets bottom="20.0" left="30.0" right="20.0" />
                            </padding>
                            <children>
                               <VBox fx:id="addstudentman" alignment="TOP_CENTER" prefHeight="232.0" prefWidth="325.0" spacing="30.0" stylesheets="@../css/style.css">
@@ -264,48 +264,29 @@
                                        </VBox.margin>
                                     </VBox>
                                     <TextField fx:id="titlefm" prefHeight="38.0" prefWidth="202.0" styleClass="field" stylesheets="@../css/style.css" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="StudentsList" alignment="TOP_CENTER" prefHeight="232.0" prefWidth="66.0" spacing="30.0" style="-fx-background-color: white;">
-                                 <opaqueInsets>
-                                    <Insets top="20.0" />
-                                 </opaqueInsets>
-                                 <children>
-                                    <VBox fx:id="studentlist" alignment="CENTER" prefHeight="117.0" prefWidth="200.0" />
-                                    <VBox alignment="CENTER" prefHeight="72.0" prefWidth="200.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets right="55.0" />
-                                 </HBox.margin>
-                              </VBox>
-                              <VBox alignment="TOP_CENTER" prefHeight="251.0" prefWidth="689.0" spacing="30.0">
-                                 <opaqueInsets>
-                                    <Insets top="20.0" />
-                                 </opaqueInsets>
-                                 <children>
-                                    <VBox alignment="CENTER" prefHeight="64.0" prefWidth="274.0">
+                                    <VBox alignment="TOP_CENTER" prefHeight="251.0" prefWidth="689.0" spacing="30.0">
+                                       <opaqueInsets>
+                                          <Insets top="20.0" />
+                                       </opaqueInsets>
                                        <children>
-                                          <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject" textAlignment="CENTER" wrappingWidth="143.0146484375">
-                                             <font>
-                                                <Font name="DIN Alternate Bold" size="18.0" />
-                                             </font>
-                                          </Text>
+                                          <VBox alignment="CENTER" prefHeight="64.0" prefWidth="274.0">
+                                             <children>
+                                                <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject" textAlignment="CENTER" wrappingWidth="143.0146484375">
+                                                   <font>
+                                                      <Font name="DIN Alternate Bold" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <TextField fx:id="subhectfm" prefHeight="38.0" prefWidth="202.0" styleClass="field" stylesheets="@../css/style.css" />
                                        </children>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
                                     </VBox>
-                                    <TextField fx:id="subhectfm" prefHeight="38.0" prefWidth="202.0" styleClass="field" stylesheets="@../css/style.css" />
                                  </children>
-                                 <HBox.margin>
-                                    <Insets right="55.0" />
-                                 </HBox.margin>
                               </VBox>
-                              <VBox alignment="TOP_CENTER" layoutX="784.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: white;">
+                              <VBox alignment="TOP_CENTER" layoutX="784.0" layoutY="90.0" prefHeight="208.0" prefWidth="0.0" spacing="30.0" style="-fx-background-color: white;">
                                  <opaqueInsets>
                                     <Insets top="20.0" />
                                  </opaqueInsets>
@@ -327,24 +308,28 @@
                            <children>
                               <VBox prefHeight="253.0" prefWidth="661.0">
                                  <children>
-                                    <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" wrappingWidth="201.0146484375">
-                                       <font>
-                                          <Font name="DIN Alternate Bold" size="18.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets left="20.0" top="60.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <ComboBox fx:id="typefm" prefWidth="150.0" styleClass="combo-box" stylesheets="@../css/style.css">
-                                       <VBox.margin>
-                                          <Insets left="50.0" top="60.0" />
-                                       </VBox.margin>
-                                    </ComboBox>
-                                    <Button fx:id="addsubfm" alignment="CENTER" mnemonicParsing="false" onAction="#addSubjectMan" styleClass="button1" stylesheets="@../css/style.css" text="Add Subject">
-                                       <VBox.margin>
-                                          <Insets left="500.0" />
-                                       </VBox.margin>
-                                    </Button>
+                                    <VBox prefHeight="200.0" prefWidth="505.0">
+                                       <children>
+                                          <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" textAlignment="CENTER" wrappingWidth="201.0146484375">
+                                             <font>
+                                                <Font name="DIN Alternate Bold" size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="333.0" top="50.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <ComboBox fx:id="typefm" prefWidth="150.0" stylesheets="@../css/style.css">
+                                             <VBox.margin>
+                                                <Insets left="359.0" top="50.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <Button fx:id="addsubfm" alignment="CENTER" mnemonicParsing="false" onAction="#addSubjectMan" styleClass="button1" stylesheets="@../css/style.css" text="Add Subject">
+                                             <VBox.margin>
+                                                <Insets left="395.0" top="50.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
                                  </children>
                               </VBox>
                            </children>
