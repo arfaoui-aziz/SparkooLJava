@@ -1,4 +1,7 @@
 package GUI;
+import Entity.User;
+import GUI.back.home;
+import GUI.frontAdmin.Dark.DarkHome;
 import Service.ServiceUser;
 
 import javafx.event.ActionEvent;
@@ -40,13 +43,23 @@ public class login {
         String userN = Username.getText();
         String psw = pass.getText(); ServiceUser user = new ServiceUser();
         int access = user.login(userN,psw);
-        if (access == 1) {
+        if ( access == 1) {
+            User u = user.getActiveUser(userN);
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("/GUI/frontAdmin/Dark/DarkHome.fxml"));
+            Parent root = fxml.load();
+            btn.getScene().setRoot(root);
+            DarkHome controller = fxml.getController();
+            controller.initData(u);
+
+        } else if ( access == 2) {
+            lbl.setText("MDP invalid");
+        }else if ( access == 3 ){
+            User u = user.getActiveUser(userN);
             FXMLLoader fxml = new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
             Parent root = fxml.load();
             btn.getScene().setRoot(root);
-            lbl.setText("valid");
-        } else if (access == 2) {
-            lbl.setText("MDP invalid");
+            home controller = fxml.getController();
+            controller.initData(u);
         } else {
             lbl.setText("invalid");
         }

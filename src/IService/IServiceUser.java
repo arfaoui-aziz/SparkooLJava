@@ -1,5 +1,7 @@
 package IService;
 
+import Entity.User;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -11,5 +13,6 @@ public interface IServiceUser<U> {
     void update(U u,String id) throws SQLException ;
     void ResetPassword(String Email,String pwd) throws SQLException ;
     int checkEmail(String Email) throws SQLException ;
+    User getActiveUser(String userN) throws SQLException ;
 
 }

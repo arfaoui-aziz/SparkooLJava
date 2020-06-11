@@ -140,13 +140,14 @@ public class AddUser {
         String Gender = (String) gender.getValue();
         String Roles = (String) role.getValue();
         String UserType = (String) userT.getValue();
-        String DateOfBirth= dateB.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        String JoiningDate =joiningD.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
         String Email = mail.getText();
         Float Salaire = Float.parseFloat(salaire.getText());
         String Phone = phone.getText();
         String Address = address.getText();
-        if(controleSaisie(Id, FirstName, LastName, Gender, Roles, UserType, DateOfBirth, JoiningDate, Email, Salaire, Phone, Address)) {
+        if(controleSaisie(Id, FirstName, LastName, Gender, Roles, UserType, Email, Salaire, Phone, Address)) {
+            String DateOfBirth= dateB.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            String JoiningDate =joiningD.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             ServiceUser user = new ServiceUser();
             User u = new User(Id, FirstName, LastName, Gender, Roles, UserType, DateOfBirth, JoiningDate, Email, Salaire, Phone, Address);
             user.ajouter(u);
@@ -156,7 +157,7 @@ public class AddUser {
         }
     }
 
-    public boolean controleSaisie(String Id,String FirstName,String LastName,String Gender,String Roles,String UserType,String DateOfBirth,String JoiningDate,String Email,Float Salaire,String Phone,String Address){
+    public boolean controleSaisie(String Id,String FirstName,String LastName,String Gender,String Roles,String UserType ,String Email,Float Salaire,String Phone,String Address){
         int i =0;
         if (Id.isEmpty() || Id.length()==0 || Id.length()< 3 || Id.length() >10   ){
                     lid.setText("Invalid Id");
@@ -182,11 +183,11 @@ public class AddUser {
                 luserT.setText("Choose a UserType");
                 i = 1;
             }else luserT.setText("");
-            if( dateB.getValue() == null || DateOfBirth.length()==0 ){
+            if( dateB.getValue() == null  ||  dateB.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).compareTo("2000-01-01")==2 ){
                 lDateB.setText("Invalid DateOfBirth");
                 i = 1;
             }else lDateB.setText("");
-        if( joiningD.getValue() == null || JoiningDate.length()==0){
+        if( joiningD.getValue() == null  ){
             ljoiningD.setText("Invalid JoiningDate");
             i = 1;
         }else ljoiningD.setText("");
@@ -196,7 +197,7 @@ public class AddUser {
                 "A-Z]{2,7}$")){
             lEmail.setText("Invalid Email");
             i = 1;
-        }else lEmail.setText("");
+        }  else lEmail.setText("");
 
             if ( salaire == null || Salaire <400 ){
                 lSalaire.setText("Salaire Invalid");

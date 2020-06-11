@@ -112,14 +112,15 @@ public class UpdateUser {
         this.id.setText(id);
         this.firstN.setText(firstN);
         this.lastN.setText(lastN);
-        this.gender.setValue(gender);
-        this.role.setValue(role);
-        this.userT.setValue(userT);
-        this.dateB.setValue(LocalDate.parse(dateB));
-        this.joiningD.setValue(LocalDate.parse(joiningD));
         this.mail.setText(mail);
         this.salaire.setText(String.valueOf(salaire));
         this.phone.setText(phone);
         this.address.setText(address);
+        this.dateB.setValue(LocalDate.parse(dateB));
+        this.joiningD.setValue(LocalDate.parse(joiningD));
+        this.gender.setValue(gender);
+        this.role.setValue(role);
+        this.userT.setValue(userT);
+
     }
 }

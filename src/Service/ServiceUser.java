@@ -43,9 +43,12 @@ public class ServiceUser implements IServiceUser<User> {
         ResultSet rs = ste.executeQuery("SELECT * FROM user WHERE username='"+userN+"' ;");
         while (rs.next()) {
             String crypted = rs.getString(8);
-            if (bcrypt.checkpw(psw,crypted))
-                return 1;
-            else return 2;
+            String UserType = rs.getString(16);
+            if (bcrypt.checkpw(psw,crypted)) {
+                if(UserType.equals("Administrator")){
+                    return 3;
+                } else return 1;
+            }else return 2;
         }
 
         return 0;
@@ -80,6 +83,24 @@ public class ServiceUser implements IServiceUser<User> {
         pst.executeUpdate();*/
     }
 
+    @Override
+    public User getActiveUser(String userN) throws SQLException {
+        try {
+
+            String sql= "Select * from user where username='"+userN+"'";
+            PreparedStatement stat= cnx.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+            while (rs.next()){
+                return new User(rs.getString("id"),rs.getString("username"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("gender"),rs.getString("roles"),rs.getString("userType"),rs.getString("birthDay"),rs.getString("joiningDate"),rs.getString("email"),rs.getString("password"),rs.getString("phone"),rs.getString("address"));
+
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return null;
+
+
+    }
     @Override
     public int checkEmail(String Email) throws SQLException {
         Statement ste = cnx.createStatement();
