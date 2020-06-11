@@ -61,8 +61,12 @@ public class DarkHome {
     User user = new User();
 
     @FXML
-    void gotoAccount(MouseEvent event) {
-
+    void gotoAccount(MouseEvent event) throws IOException, SQLException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("DModifyLogin.fxml"));
+        Parent root = fxml.load();
+        btnInfo.getScene().setRoot(root);
+        DModifyLogin controller = fxml.getController();
+        controller.initData(user);
     }
 
     @FXML
@@ -76,8 +80,12 @@ public class DarkHome {
     }
 
     @FXML
-    void gotoInfo(MouseEvent event) {
-
+    void gotoInfo(MouseEvent event) throws IOException, SQLException {
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("accountInformation.fxml"));
+        Parent root = fxml.load();
+        btnInfo.getScene().setRoot(root);
+        accountInformation controller = fxml.getController();
+        controller.initData(user);
     }
 
     @FXML

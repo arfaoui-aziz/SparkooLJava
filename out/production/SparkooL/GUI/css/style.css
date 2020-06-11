@@ -12,6 +12,13 @@
 }
 
 
+   .fieldD
+   {
+       -fx-background-color: #363f46;
+       -fx-background-radius :  20;
+       -fx-text-fill: #fff;
+   }
+
 
 .button1
 {
@@ -29,9 +36,25 @@
 {
     -fx-background-color :  #5f8bc5;
 }
+.button2
+{
+
+    -fx-background-color:  #2597ea;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius :  20;
+
+}
+.button2:hover
+{
+    -fx-background-color : #0f69ab;
+}
+.button2:pressed
+{
+    -fx-background-color :  #2597ea;
+}
 .lbl:hover
 {
--fx-text-fill: #5f8bc5;
+-fx-text-fill: #2597ea;
 }
 .combo-box
 {
@@ -134,5 +157,54 @@
 .cursor_hand {
     -fx-cursor: hand;
 }
+
+
+.border1 { /* modify the selector according to your needs */
+    -fx-border-style: solid solid solid solid ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #c2c8ce;
+}
+.border2 { /* modify the selector according to your needs */
+    -fx-border-style: solid solid none solid ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #c2c8ce;
+}
+.border3 { /* modify the selector according to your needs */
+    -fx-border-style: solid solid solid none ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #c2c8ce;
+}
+.border4 { /* modify the selector according to your needs */
+    -fx-border-style: solid solid none none ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #c2c8ce;
+}
+
+
+
+
+.border1D { /* modify the selector according to your needs */
+    -fx-border-style: solid solid solid solid ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #555555;
+}
+.border2D { /* modify the selector according to your needs */
+    -fx-border-style: solid solid none solid ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #555555;
+}
+.border3D { /* modify the selector according to your needs */
+    -fx-border-style: solid solid solid none ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #555555;
+}
+.border4D { /* modify the selector according to your needs */
+    -fx-border-style: solid solid none none ;
+    -fx-border-width: 0.5;
+    -fx-border-color: #555555;
+}
+
+
+
 
 

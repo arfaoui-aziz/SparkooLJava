@@ -101,6 +101,8 @@ public class ServiceUser implements IServiceUser<User> {
 
 
     }
+
+
     @Override
     public int checkEmail(String Email) throws SQLException {
         Statement ste = cnx.createStatement();
@@ -118,6 +120,13 @@ public class ServiceUser implements IServiceUser<User> {
         PreparedStatement pst=cnx.prepareStatement("UPDATE user SET password ='"+bcrypt.hashpw(pwd,bcrypt.gensalt())+"' WHERE email='"+Email+"' ;");
         pst.executeUpdate();
     }
+
+    @Override
+    public void ModifyLogin(String id, String username, String pwd) throws SQLException {
+        PreparedStatement pst=cnx.prepareStatement("UPDATE user SET username ='"+username+"', password ='"+bcrypt.hashpw(pwd,bcrypt.gensalt())+"' WHERE id='"+id+"' ;");
+        pst.executeUpdate();
+    }
+
 
 
 

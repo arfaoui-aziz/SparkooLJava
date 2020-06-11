@@ -14,5 +14,6 @@ public interface IServiceUser<U> {
     void ResetPassword(String Email,String pwd) throws SQLException ;
     int checkEmail(String Email) throws SQLException ;
     User getActiveUser(String userN) throws SQLException ;
+    void ModifyLogin(String id,String username,String pwd) throws SQLException ;
 
 }
