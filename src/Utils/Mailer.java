@@ -7,7 +7,7 @@ import javax.mail.*;
 import javax.mail.internet.*;
 
 public class Mailer {
-    public static void send(String from,String password,String to){
+    public static void send(String from,String password,String to,String verifCode){
         //Get properties object
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -302,15 +302,15 @@ public class Mailer {
                     "<!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 38px; padding-left: 38px; padding-top: 20px; padding-bottom: 15px; font-family: Arial, sans-serif\"><![endif]-->\n" +
                     "<div style=\"color:#555555;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;line-height:1.2;padding-top:20px;padding-right:38px;padding-bottom:15px;padding-left:38px;\">\n" +
                     "<div style=\"line-height: 1.2; font-size: 12px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; color: #555555; mso-line-height-alt: 14px;\">\n" +
-                    "<p style=\"font-size: 42px; line-height: 1.2; word-break: break-word; text-align: center; font-family: inherit; mso-line-height-alt: 50px; margin: 0;\"><span style=\"font-size: 42px; color: #2a272b;\"><strong>UserName & Password</strong></span></p>\n" +
+                    "<p style=\"font-size: 42px; line-height: 1.2; word-break: break-word; text-align: center; font-family: inherit; mso-line-height-alt: 50px; margin: 0;\"><span style=\"font-size: 42px; color: #2a272b;\"><strong>Reset Password</strong></span></p>\n" +
                     "</div>\n" +
                     "</div>\n" +
                     "<!--[if mso]></td></tr></table><![endif]-->\n" +
                     "<!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 38px; padding-left: 38px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif\"><![endif]-->\n" +
                     "<div style=\"color:#555555;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;line-height:1.5;padding-top:10px;padding-right:38px;padding-bottom:10px;padding-left:38px;\">\n" +
                     "<div style=\"line-height: 1.5; font-size: 12px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; color: #555555; mso-line-height-alt: 18px;\">\n" +
-                    "<p style=\"line-height: 1.5; word-break: break-word; text-align: center; font-family: inherit; mso-line-height-alt: NaNpx; margin: 0;\"><span style=\"color: #2a272b;\"><span style=\"font-size: 16px;\"><strong>Your UserName :</strong> User</span></span></p>\n" +
-                    "<p style=\"line-height: 1.5; word-break: break-word; text-align: center; font-family: inherit; mso-line-height-alt: NaNpx; margin: 0;\"><span style=\"color: #2a272b;\"><span style=\"font-size: 16px;\"><strong>  Your Password :</strong> 0000</span></span></p>\n" +
+                    "<p style=\"line-height: 1.5; word-break: break-word; text-align: center; font-family: inherit; mso-line-height-alt: NaNpx; margin: 0;\"><span style=\"color: #2a272b;\"><span style=\"font-size: 16px;\"><strong>Your Verification Code is :</strong>"+verifCode+"</span></span></p>\n" +
+
                     "<p style=\"line-height: 1.5; word-break: break-word; font-family: inherit; mso-line-height-alt: NaNpx; margin: 0;\"> </p>\n" +
                     "</div>\n" +
                     "</div>\n" +
@@ -318,15 +318,14 @@ public class Mailer {
                     "<div align=\"center\" class=\"button-container\" style=\"padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n" +
                     "<!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tr><td style=\"padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px\" align=\"center\"><v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"\" style=\"height:45pt; width:199.5pt; v-text-anchor:middle;\" arcsize=\"100%\" stroke=\"false\" fillcolor=\"#004afd\"><w:anchorlock/><v:textbox inset=\"0,0,0,0\"><center style=\"color:#ffffff; font-family:Arial, sans-serif; font-size:16px\"><![endif]-->\n" +
                     "<a href=\"#\">\n" +
-                    "<div style=\"text-decoration:none;display:inline-block;color:#ffffff;background-color:#004afd;border-radius:60px;-webkit-border-radius:60px;-moz-border-radius:60px;width:auto; width:auto;;border-top:1px solid #004afd;border-right:1px solid #004afd;border-bottom:1px solid #004afd;border-left:1px solid #004afd;padding-top:12px;padding-bottom:16px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;\"><span style=\"padding-left:32px;padding-right:32px;font-size:16px;display:inline-block;\"><span style=\"font-size: 16px; margin: 0; line-height: 2; word-break: break-word; mso-line-height-alt: 32px;\"><strong>Change Password</strong></span></span></div>\n" +
-                    "</a>\n" +
-                    "<!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->\n" +
-                    "</div>\n" +
+                    "<br>\n" +
+                    "<br>\n" +
+                    "<br>\n" +
                     "<br>\n" +
                     "<div align=\"center\" class=\"button-container\" style=\"padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n" +
                     "<!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tr><td style=\"padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px\" align=\"center\"><v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"\" style=\"height:45pt; width:203.25pt; v-text-anchor:middle;\" arcsize=\"100%\" stroke=\"false\" fillcolor=\"#004afd\"><w:anchorlock/><v:textbox inset=\"0,0,0,0\"><center style=\"color:#ffffff; font-family:Arial, sans-serif; font-size:16px\"><![endif]-->\n" +
                     "<a href=\"#\">\n" +
-                    "<div style=\"text-decoration:none;display:inline-block;color:#ffffff;background-color:#004afd;border-radius:60px;-webkit-border-radius:60px;-moz-border-radius:60px;width:auto; width:auto;;border-top:1px solid #004afd;border-right:1px solid #004afd;border-bottom:1px solid #004afd;border-left:1px solid #004afd;padding-top:12px;padding-bottom:16px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;\"><span style=\"padding-left:57px;padding-right:57px;font-size:16px;display:inline-block;\"><span style=\"font-size: 16px; margin: 0; line-height: 2; word-break: break-word; mso-line-height-alt: 32px;\"><strong>Login</strong></span></span></div>\n" +
+                    "<div style=\"text-decoration:none;display:inline-block;color:#ffffff;background-color:#004afd;border-radius:60px;-webkit-border-radius:60px;-moz-border-radius:60px;width:auto; width:auto;;border-top:1px solid #004afd;border-right:1px solid #004afd;border-bottom:1px solid #004afd;border-left:1px solid #004afd;padding-top:12px;padding-bottom:16px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;\"><span style=\"padding-left:57px;padding-right:57px;font-size:16px;display:inline-block;\"><span style=\"font-size: 16px; margin: 0; line-height: 2; word-break: break-word; mso-line-height-alt: 32px;\"><strong>Welcome To SparkooL</strong></span></span></div>\n" +
                     "</a>\n" +
                     "<!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->\n" +
                     "</div>\n" +

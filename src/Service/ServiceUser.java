@@ -46,10 +46,10 @@ public class ServiceUser implements IServiceUser<User> {
             if (bcrypt.checkpw(psw,crypted))
                 return 1;
             else return 2;
-            }
+        }
 
         return 0;
-        }
+    }
 
     @Override
     public List<User> AfficherUser() throws SQLException {
@@ -79,6 +79,26 @@ public class ServiceUser implements IServiceUser<User> {
         PreparedStatement pst = cnx.prepareStatement(requeteUpdate);
         pst.executeUpdate();*/
     }
+
+    @Override
+    public int checkEmail(String Email) throws SQLException {
+        Statement ste = cnx.createStatement();
+
+        ResultSet rs = ste.executeQuery("SELECT * FROM user WHERE email='"+Email+"' ;");
+        while (rs.next()) {
+            return rs.getInt(19);
+
+        }
+
+        return 0;
+    }
+    @Override
+    public void ResetPassword(String Email, String pwd) throws SQLException {
+        PreparedStatement pst=cnx.prepareStatement("UPDATE user SET password ='"+bcrypt.hashpw(pwd,bcrypt.gensalt())+"' WHERE email='"+Email+"' ;");
+        pst.executeUpdate();
+    }
+
+
 
 
 }

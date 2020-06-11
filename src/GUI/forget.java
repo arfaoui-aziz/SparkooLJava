@@ -1,6 +1,10 @@
 package GUI;
 
+import Service.ServiceUser;
 import Utils.Mailer;
+import Utils.sendSMS;
+import Utils.verificationCode;
+import com.twilio.type.PhoneNumber;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +17,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class forget {
     @FXML
@@ -35,15 +40,29 @@ public class forget {
         btn_back.getScene().setRoot(root);
     }
     @FXML
-    void Mailing(MouseEvent event) throws IOException {
+    void Mailing(MouseEvent event) throws IOException, SQLException {
         String Email = mail.getText();
-        Parent root = FXMLLoader.load(getClass().getResource("back/Success.fxml"));
-        Stage primaryStage = new Stage();
-        primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(new Scene(root, 280, 400));
-        primaryStage.show();
+        ServiceUser user = new ServiceUser();
+        int phoneNumber = user.checkEmail(Email);
+        if (phoneNumber == 0){
+            lbl.setText("There is no account Registred with the Entred Email");
+        }else {
+            String verifCode = verificationCode.getAlphaNumericString(8);
+            FXMLLoader fxml = new FXMLLoader(getClass().getResource("VerifCode.fxml"));
+            Parent root = fxml.load();
+            btn.getScene().setRoot(root);
+            VerifCode Vcode = fxml.getController();
+            Vcode.checkCode(verifCode, Email);
 
-        Mailer.send("sparkooL.sparkit@gmail.com","123456Admin",Email);
 
+            Parent root1 = FXMLLoader.load(getClass().getResource("back/Success.fxml"));
+            Stage primaryStage = new Stage();
+            primaryStage.initStyle(StageStyle.UNDECORATED);
+            primaryStage.setScene(new Scene(root1, 280, 400));
+            primaryStage.show();
+
+            sendSMS.sms(verifCode,phoneNumber);
+            Mailer.send("sparkooL.sparkit@gmail.com", "123456Admin", Email, verifCode);
+        }
     }
 }

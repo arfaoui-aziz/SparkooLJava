@@ -239,7 +239,7 @@ return true;
     }
     @FXML
     private void webcam(ActionEvent event) {
-       /* Webcam webcam = Webcam.getDefault();
+       Webcam webcam = Webcam.getDefault();
         webcam.open();
         Random rand = new Random();
         int alea=rand.nextInt(200000 - 10 + 1) + 200000;
@@ -252,6 +252,6 @@ return true;
             webcam.close();
         } catch (IOException ex) {
             Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
     }
 }

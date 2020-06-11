@@ -16,6 +16,8 @@ public class Suceess {
     @FXML
     private void closeButtonAction() throws IOException {
         Stage stage = (Stage) btn.getScene().getWindow();
+
         stage.close();
+
     }
 }

@@ -9,4 +9,7 @@ public interface IServiceUser<U> {
     List<U> AfficherUser() throws SQLException ;
     void supprimer(String id) throws SQLException ;
     void update(U u,String id) throws SQLException ;
+    void ResetPassword(String Email,String pwd) throws SQLException ;
+    int checkEmail(String Email) throws SQLException ;
+
 }

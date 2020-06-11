@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.login">
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.login">
     <children>
         <ImageView fitHeight="700.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -46,7 +46,7 @@
                         </Label>
                         <TextField fx:id="Username" focusTraversable="false" layoutX="67.0" layoutY="121.0" promptText="Username" styleClass="field" stylesheets="@css/style.css" />
                         <PasswordField fx:id="pass" focusTraversable="false" layoutX="67.0" layoutY="155.0" promptText="Password" styleClass="field" stylesheets="@css/style.css" />
-                        <Button fx:id="btn" layoutX="108.0" layoutY="216.0" mnemonicParsing="false" onAction="#confirm" style="-fx-cursor: hand;" styleClass="button1" stylesheets="@css/style.css" text="SIGN IN" />
+                        <Button fx:id="btn" layoutX="108.0" layoutY="216.0" mnemonicParsing="false" onAction="#confirm" onMousePressed="#confirm" style="-fx-cursor: hand;" styleClass="button1" stylesheets="@css/style.css" text="SIGN IN" />
                         <Label fx:id="lbl" layoutX="118.0" layoutY="249.0" textFill="#eb0c0c" />
                         <Label fx:id="lblForget" layoutX="95.0" layoutY="189.0" onMousePressed="#goto_forget" style="-fx-cursor: hand;" text="Forget password ?" textFill="#5f8bc5">
                             <font>

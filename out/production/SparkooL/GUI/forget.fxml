@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.forget">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.forget">
    <children>
       <ImageView fitHeight="700.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
          <image>
@@ -45,7 +45,7 @@
                   </Label>
                   <TextField fx:id="mail" focusTraversable="false" layoutX="67.0" layoutY="121.0" promptText="Email" styleClass="field" stylesheets="@../GUI/css/style.css" />
                   <Button fx:id="btn" layoutX="121.0" layoutY="160.0" mnemonicParsing="false" onMousePressed="#Mailing" style="-fx-cursor: hand;" styleClass="button1" stylesheets="@../GUI/css/style.css" text="SEND" />
-                  <Label fx:id="lbl" layoutX="134.0" layoutY="240.0" textFill="#eb0c0c" />
+                  <Label fx:id="lbl" layoutX="15.0" layoutY="235.0" textFill="#eb0c0c" />
                   <Label fx:id="btn_back" layoutX="126.0" layoutY="200.0" onMousePressed="#back" style="-fx-cursor: hand;" text="Go Back" textFill="#5f8bc5">
                      <font>
                         <Font size="10.0" />

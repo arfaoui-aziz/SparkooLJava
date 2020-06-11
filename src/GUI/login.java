@@ -38,22 +38,14 @@ public class login {
     public void confirm(ActionEvent event) throws IOException, SQLException {
 
         String userN = Username.getText();
-        String psw = pass.getText();
-// String password = bcrypt.hashpw(psw,bcrypt.gensalt(12));
-
-        //Mailer.send("sparkooL.sparkit@gmail.com","123456Admin","aziz.arfaou.98@gmail.com");
-
-
-        ServiceUser user = new ServiceUser();
-        int acces = user.login(userN, psw);
-
-        if (acces == 1) {
-
+        String psw = pass.getText(); ServiceUser user = new ServiceUser();
+        int access = user.login(userN,psw);
+        if (access == 1) {
             FXMLLoader fxml = new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
             Parent root = fxml.load();
             btn.getScene().setRoot(root);
             lbl.setText("valid");
-        } else if (acces == 2) {
+        } else if (access == 2) {
             lbl.setText("MDP invalid");
         } else {
             lbl.setText("invalid");
