@@ -228,7 +228,10 @@ public class DShowEvent extends Application {
     private Label bYoutube;
     @FXML
     private ImageView bYoutube1;
-
+    @FXML
+    private ImageView gotoClub;
+    @FXML
+    private ImageView gotoEvent;
 
     @FXML
     void OpenMail(MouseEvent event) {
@@ -546,5 +549,17 @@ public class DShowEvent extends Application {
             q.ini(tabMsg.getSelectionModel().getSelectedItem());
         }}
 
+    @FXML
+    private void gotoEvent(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("DShowEvent.fxml"));
+        Parent root=fxml.load();
+        gotoEvent.getScene().setRoot(root);
+    }
+    @FXML
+    private void gotoClub(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("DShowClub.fxml"));
+        Parent root=fxml.load();
+        gotoClub.getScene().setRoot(root);
+    }
 
 }

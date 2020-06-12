@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -108,6 +109,11 @@ public class DShowClub extends Application {
 
     @FXML
     private TableColumn<?, ?> cl_date;
+    @FXML
+    private ImageView gotoClub;
+    @FXML
+    private ImageView gotoEvent;
+
 
 
     @FXML
@@ -266,6 +272,18 @@ public class DShowClub extends Application {
         ref.getScene().setRoot(root);
     }
 
+    @FXML
+    private void gotoEvent (MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("DShowEvent.fxml"));
+        Parent root=fxml.load();
+        gotoEvent.getScene().setRoot(root);
+    }
+    @FXML
+    private void gotoClub(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("DShowClub.fxml"));
+        Parent root=fxml.load();
+        gotoClub.getScene().setRoot(root);
+    }
     @FXML
     void replied(MouseEvent event) {
 

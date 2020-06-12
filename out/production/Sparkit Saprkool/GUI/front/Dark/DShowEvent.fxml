@@ -69,7 +69,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <Label fx:id="lblName" text="Amen Allah Ben Ayada" textFill="WHITE">
+                              <Label fx:id="lblName" text=" Sonia Hadouej" textFill="WHITE">
                                  <font>
                                     <Font name="DIN Alternate Bold" size="24.0" />
                                  </font>
@@ -160,12 +160,12 @@
                                     <Insets right="20.0" />
                                  </HBox.margin>
                                  <children>
-                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="gotoEvent" fitHeight="46.0" fitWidth="54.0" onMousePressed="#gotoEvent" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../image/front/Light/shedule.png" />
                                        </image>
                                     </ImageView>
-                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Shedule">
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Eventts">
                                        <VBox.margin>
                                           <Insets top="3.0" />
                                        </VBox.margin>
@@ -230,12 +230,12 @@
                                     <Insets right="20.0" />
                                  </HBox.margin>
                                  <children>
-                                    <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="gotoClub" fitHeight="46.0" fitWidth="54.0" onMousePressed="#gotoClub" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../image/front/Light/Account.png" />
                                        </image>
                                     </ImageView>
-                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Account">
+                                    <Text fill="#dadbdd" strokeType="OUTSIDE" strokeWidth="0.0" text="Clubs">
                                        <VBox.margin>
                                           <Insets top="3.0" />
                                        </VBox.margin>

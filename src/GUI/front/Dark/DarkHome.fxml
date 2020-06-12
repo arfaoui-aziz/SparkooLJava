@@ -63,7 +63,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <Label fx:id="lblName" text="Amen Allah Ben Ayada" textFill="WHITE">
+                              <Label fx:id="lblName" text="Sonia Hadouej" textFill="WHITE">
                                  <font>
                                     <Font name="DIN Alternate Bold" size="24.0" />
                                  </font>
