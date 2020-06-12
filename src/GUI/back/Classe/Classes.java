@@ -83,12 +83,14 @@ public class Classes implements Initializable {
     @FXML
     void UpdateClasse(MouseEvent event) throws IOException {
         int ClasseId = tabClasses.getSelectionModel().getSelectedItem().getClassId();
+        String ClasseName = tabClasses.getSelectionModel().getSelectedItem().getClassName();
+        int ClasseNbr = tabClasses.getSelectionModel().getSelectedItem().getClassNbr();
         FXMLLoader fxml = new FXMLLoader(getClass().getResource("UpdateClasse.fxml"));
         Parent root = fxml.load();
         btnAdd.getScene().setRoot(root);
 
         UpdateClasse updateClasse = fxml.getController();
-        updateClasse.recupID(ClasseId);
+        updateClasse.recupID(ClasseId,ClasseName,ClasseNbr);
     }
 
     @FXML

@@ -28,6 +28,9 @@ public class home {
     private HBox gotoAccount;
     @FXML
     private HBox Classe;
+    @FXML
+    private HBox gotoSubject;
+
     User user = new User();
 
 
@@ -67,8 +70,14 @@ public class home {
         lblType.setText(u.getUserType());*/
         activeUser.setText(u.getFirstName()+' '+u.getLastName());
         user=u;
-
-
     }
+
+    @FXML
+    void gotoSubject(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("Subject/Subjects.fxml"));
+        Parent root=fxml.load();
+        gotoSubject.getScene().setRoot(root);
+    }
+
 
 }

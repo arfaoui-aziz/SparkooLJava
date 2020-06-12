@@ -1,0 +1,11 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Hello World example
+ */
+
+grammar hello;
+
+public <greet> = (Spark | Home | Account | User | Classe);
+public <greet2> = (Good morning|Hello);
+public <expression> = (go to) (My Account|Home|User Interface|sad);
