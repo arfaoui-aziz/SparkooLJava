@@ -24,6 +24,7 @@ public class User {
     private String last_login;
     private String roles;
 
+
     public User(String email, Byte enabled, String firstName, String lastName,String address, String phone, String bloodGroup) {
         this.email = email;
         this.enabled = enabled;

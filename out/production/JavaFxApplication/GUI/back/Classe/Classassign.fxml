@@ -61,7 +61,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Dayna">
+                        <Text fx:id="lblName" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Dayna">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -74,7 +74,7 @@
                               <Insets right="2.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label fx:id="logout" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
+                        <Label fx:id="logout" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5" onMouseClicked="#logOut">
                            <padding>
                               <Insets right="10.0" />
                            </padding>
@@ -162,7 +162,7 @@
                         <String fx:value="cursor_hand" />
                      </styleClass>
                   </HBox>
-                  <HBox fx:id="students" alignment="CENTER_LEFT" stylesheets="@../../css/style.css" onMouseClicked="#gotoStudent">
+                  <HBox fx:id="students" alignment="CENTER_LEFT" onMouseClicked="#gotoStudent" stylesheets="@../../css/style.css">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
@@ -349,7 +349,7 @@
                            </HBox.margin>
                         </TextField>
                         <Label text="Class" />
-                        <ComboBox fx:id="Classto" onAction="#getplacesnb" prefWidth="150.0" styleClass="combo-box" stylesheets="@../../css/style.css">
+                        <ComboBox fx:id="Classto" onAction="#getplacesnb" prefWidth="150.0" style="-fx-background-color: white;" styleClass="button1" stylesheets="@../../css/style.css">
                            <HBox.margin>
                               <Insets right="50.0" />
                            </HBox.margin>
@@ -367,7 +367,7 @@
                               <Insets right="220.0" />
                            </HBox.margin>
                         </TextField>
-                        <Button fx:id="assignbt" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" styleClass="button1" stylesheets="@../../css/style.css" text="Assign ">
+                        <Button fx:id="assignbt" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" styleClass="button1" stylesheets="@../../css/style.css" text="Assign " onMouseClicked="#assignStudent">
                            <HBox.margin>
                               <Insets right="200.0" />
                            </HBox.margin>

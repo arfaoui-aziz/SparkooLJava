@@ -1,6 +1,7 @@
 package GUI.back.Classe;
 
 import Entity.User;
+import GUI.back.Student.Students;
 import Service.ServiceClasse;
 import Service.ServiceUser;
 import javafx.fxml.FXML;
@@ -9,9 +10,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,10 +35,24 @@ public class ClassAssign implements Initializable {
 @FXML
     private HBox students;
 
-    public void maindata(User selectedItem){
+@FXML
+private Text lblName;
+
+    @FXML
+    private Label logout;
+    @FXML
+    private void logOut(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/login.fxml"));
+        Parent root=fxml.load();
+        logout.getScene().setRoot(root);
+    }
+
+
+    public void maindata(User selectedItem, String name) {
 
         stname.setText(selectedItem.getId());
-        nbrof.setText(selectedItem.getId());
+        nbrof.setText("Chose a Class");
+        lblName.setText(name);
 
     }
 
@@ -76,14 +93,34 @@ public class ClassAssign implements Initializable {
         int old_nbr = classe.getNumber(old_name);
         int classe_id = classe.getclass_id(Classto.getSelectionModel().getSelectedItem().toString());
         String classe_name = classe.getclass_name(classe_id);
+        System.out.println("afffffffffffffffffffffffffffffffffffffffffff");
         System.out.println(old_name);
         System.out.println(classe_name);
-
+        System.out.println(classe_name.substring(0));
+        System.out.println("afffffffffffffffffffffffffffffffffffffffffff");
         if (old_class != 0 && classe_id!=old_class)
         {
             user.assignStudent(classe_id,stname.getText());
             classe.updatebr(old_nbr+1,old_name);
             classe.updatebr(Integer.parseInt(nbrof.getText())-1,classe_name);
+            if (classe_name.substring(0,1).equals("1")){user.updateacademic(stname.getText(),classe_name.substring(0,1)+"st Year");}
+            else if (classe_name.substring(0,1).equals("2")){user.updateacademic(stname.getText(),classe_name.substring(0,1)+"nd Year");}
+            else if (classe_name.substring(0,1).equals("3")){user.updateacademic(stname.getText(),classe_name.substring(0,1)+"rd Year");}
+            else
+                {user.updateacademic(stname.getText(),classe_name.substring(0,1)+"th Year");}
+
+            System.out.println(classe_name.substring(0,1));
+
+            getplacesnb();
+
+        }
+        else if (old_name.equals("nothing") == true)
+        {
+            user.assignStudent(classe_id,stname.getText());
+            classe.updatebr(Integer.parseInt(nbrof.getText())-1,classe_name);
+            System.out.println(classe_name.substring(0,1));
+            user.updateacademic(stname.getText(),classe_name.substring(0,1));
+            getplacesnb();
 
         }
         else
@@ -95,9 +132,13 @@ public class ClassAssign implements Initializable {
 
     @FXML
     private void gotoStudent(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/Student/Students.fxml"));
-        Parent root=fxml.load();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/GUI/back/Student/Students.fxml"));
+        Parent root = loader.load();
         students.getScene().setRoot(root);
+        Students controller = loader.getController();
+        controller.maindata(lblName.getText());
     }
 
 

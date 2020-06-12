@@ -73,7 +73,7 @@ public class ServiceClasse {
         while (rs.next()){
             return rs.getString("class_name");
         }
-        return "nothing found";
+        return "nothing";
     }
 
 

@@ -40,6 +40,9 @@ public class addsubject implements Initializable {
     private Button addsubfm;
 
     @FXML
+    private Label erreur;
+
+    @FXML
     private VBox home;
     @FXML
     private VBox btnInfo;
@@ -53,14 +56,31 @@ public class addsubject implements Initializable {
     private VBox btnSignout;
 
     public void addSubjectMan(ActionEvent event) throws IOException, SQLException, MessagingException {
-        String titleFm= titlefm.getText();
-        String subhectFm= subhectfm.getText();
-        String typeFm= typefm.getValue().toString();
-        ServiceForum Forum = new ServiceForum();
-        boolean acces = Forum.addsubfront(lblName.getText(),titleFm,typeFm,subhectFm);
-        AlertBox dis = new AlertBox();
-        dis.display("Congratulation ","Your submission has been successfully sent");
-
+        String titleFm = titlefm.getText();
+        String subhectFm = subhectfm.getText();
+        String typeFm = typefm.getValue().toString();
+        if (titleFm.length() < 5) {
+            erreur.setVisible(true);
+            erreur.setText("Title Must have more than 5 characters ");
+        }
+        else if (subhectFm.length() < 10 )
+        {
+            erreur.setVisible(true);
+            erreur.setText("Subject Must have more than 10 characters ");
+        }
+        else  if (typeFm.equals("Select Type"))
+        {
+            erreur.setVisible(true);
+            erreur.setText("Please chose a Type");
+        }
+                else {
+            ServiceForum Forum = new ServiceForum();
+            boolean acces = Forum.addsubfront(lblName.getText(), titleFm, typeFm, subhectFm);
+            AlertBox dis = new AlertBox();
+            dis.display("Congratulation ", "Your submission has been successfully sent");
+            erreur.setVisible(true);
+            erreur.setText("Congratulations");
+        }
     }
 
     @Override

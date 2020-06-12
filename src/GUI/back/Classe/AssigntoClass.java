@@ -2,6 +2,7 @@ package GUI.back.Classe;
 
 import Entity.User;
 import GUI.back.Student.StudentModify;
+import GUI.back.Student.Students;
 import Service.ServiceClasse;
 import Service.ServiceUser;
 import javafx.collections.FXCollections;
@@ -15,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -31,16 +33,28 @@ public class AssigntoClass implements Initializable {
     private TableColumn<?, ?> firstname;
     @FXML
     private TableColumn<?, ?> lastname;
-    @FXML
-    private TableColumn<?, ?> cllass;
+
     @FXML
     private TableColumn<?, ?> academicyear;
     @FXML
     private TableColumn<User, Void> assign;
     @FXML
     private ComboBox comboclasse;
-@FXML
+    @FXML
     private HBox students;
+
+    @FXML
+    private Text lblName;
+
+    @FXML
+    private Label logout;
+    @FXML
+    private void logOut(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/login.fxml"));
+        Parent root=fxml.load();
+        logout.getScene().setRoot(root);
+    }
+
 
 
     ObservableList<User> data = FXCollections.observableArrayList();
@@ -55,7 +69,6 @@ public class AssigntoClass implements Initializable {
         }
         firstname.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         lastname.setCellValueFactory(new PropertyValueFactory<>("lastName"));
-        cllass.setCellValueFactory(new PropertyValueFactory<>("classe_id"));
         academicyear.setCellValueFactory(new PropertyValueFactory<>("academicyear"));
 
 
@@ -76,7 +89,7 @@ public class AssigntoClass implements Initializable {
                                 Parent root = loader.load();
                                 btn1.getScene().setRoot(root);
                                 ClassAssign controller = loader.getController();
-                                controller.maindata(studentstoassign.getItems().get(getIndex()));
+                                controller.maindata(studentstoassign.getItems().get(getIndex()),lblName.getText());
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -113,11 +126,19 @@ public class AssigntoClass implements Initializable {
 
     @FXML
     private void gotoStudent(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/Student/Students.fxml"));
-        Parent root=fxml.load();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/GUI/back/Student/Students.fxml"));
+        Parent root = loader.load();
         students.getScene().setRoot(root);
+        Students controller = loader.getController();
+        controller.maindata(lblName.getText());
     }
 
+    public void maindata(String UserN){
+        lblName.setText(UserN);
+        System.out.println(UserN);
+    }
 
 
 }

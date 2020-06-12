@@ -63,7 +63,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fx:id="lblName" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -381,7 +381,7 @@
                   </HBox>
                   <HBox prefHeight="219.0" prefWidth="1025.0">
                      <children>
-                        <Button fx:id="addstudent" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="47.0" prefWidth="148.0" styleClass="button1" stylesheets="@../../css/style.css" text="Add Student" onAction="#AddStudentMan">
+                        <Button fx:id="addstudent" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#AddStudentMan" prefHeight="47.0" prefWidth="148.0" styleClass="button1" stylesheets="@../../css/style.css" text="Add Student">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -391,6 +391,11 @@
                         </Button>
                      </children>
                   </HBox>
+                  <Label fx:id="erreur" prefHeight="17.0" prefWidth="1050.0" text="Label" textFill="RED" visible="false">
+                     <padding>
+                        <Insets left="460.0" />
+                     </padding>
+                  </Label>
                </children>
             </VBox>
          </center>

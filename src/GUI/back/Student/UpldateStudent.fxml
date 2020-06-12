@@ -62,7 +62,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fx:id="lblName" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -320,21 +320,41 @@
                      <children>
                         <VBox prefHeight="521.0" prefWidth="500.0">
                            <children>
+                              <Label prefHeight="17.0" prefWidth="102.0" text="First Name">
+                                 <VBox.margin>
+                                    <Insets left="210.0" />
+                                 </VBox.margin>
+                              </Label>
                               <TextField fx:id="firstnameS" alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="First Name" styleClass="field" stylesheets="@../../css/style.css">
                                  <VBox.margin>
                                     <Insets bottom="30.0" left="140.0" top="30.0" />
                                  </VBox.margin>
                               </TextField>
+                              <Label prefHeight="17.0" prefWidth="65.0" text="Email">
+                                 <VBox.margin>
+                                    <Insets left="222.0" />
+                                 </VBox.margin>
+                              </Label>
                               <TextField fx:id="emailS" alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="Email" styleClass="field" stylesheets="@../../css/style.css">
                                  <VBox.margin>
                                     <Insets bottom="30.0" left="140.0" top="30.0" />
                                  </VBox.margin>
                               </TextField>
+                              <Label prefHeight="17.0" prefWidth="103.0" text="Phone">
+                                 <VBox.margin>
+                                    <Insets left="221.0" />
+                                 </VBox.margin>
+                              </Label>
                               <TextField fx:id="phoneS" alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="Phone" styleClass="field" stylesheets="@../../css/style.css">
                                  <VBox.margin>
                                     <Insets bottom="30.0" left="140.0" top="30.0" />
                                  </VBox.margin>
                               </TextField>
+                              <Label prefHeight="17.0" prefWidth="61.0" text="Status">
+                                 <VBox.margin>
+                                    <Insets left="222.0" />
+                                 </VBox.margin>
+                              </Label>
                               <TextField fx:id="EtatS" alignment="CENTER" focusTraversable="false" layoutX="150.0" layoutY="297.0" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="Etat" styleClass="field" stylesheets="@../../css/style.css">
                                  <VBox.margin>
                                     <Insets bottom="30.0" left="140.0" top="30.0" />
@@ -344,16 +364,31 @@
                         </VBox>
                         <VBox prefHeight="468.0" prefWidth="527.0">
                            <children>
-                              <TextField fx:id="lastnameS" alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="First Name" styleClass="field" stylesheets="@../../css/style.css">
+                              <Label text="Last Name">
+                                 <VBox.margin>
+                                    <Insets left="210.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="lastnameS" alignment="CENTER" focusTraversable="false" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="Last Name" styleClass="field" stylesheets="@../../css/style.css">
                                  <VBox.margin>
                                     <Insets bottom="30.0" left="150.0" top="30.0" />
                                  </VBox.margin>
                               </TextField>
-                              <TextField fx:id="adressS" alignment="CENTER" focusTraversable="false" layoutX="160.0" layoutY="212.0" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="adress" styleClass="field" stylesheets="@../../css/style.css">
+                              <Label text="Address">
+                                 <VBox.margin>
+                                    <Insets left="221.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="adressS" alignment="CENTER" focusTraversable="false" layoutX="160.0" layoutY="212.0" maxWidth="-Infinity" prefHeight="26.0" prefWidth="201.0" promptText="Address" styleClass="field" stylesheets="@../../css/style.css">
                                  <VBox.margin>
                                     <Insets bottom="30.0" left="150.0" top="30.0" />
                                  </VBox.margin>
                               </TextField>
+                              <Label text="Blood Group">
+                                 <VBox.margin>
+                                    <Insets left="210.0" />
+                                 </VBox.margin>
+                              </Label>
                               <ChoiceBox fx:id="BloodGroupS" layoutX="190.0" layoutY="298.0" prefHeight="25.0" prefWidth="150.0">
                                  <VBox.margin>
                                     <Insets bottom="30.0" left="180.0" top="30.0" />
@@ -366,6 +401,11 @@
                   </HBox>
                   <HBox prefHeight="219.0" prefWidth="1025.0">
                      <children>
+                        <Label fx:id="erreur" prefHeight="17.0" prefWidth="296.0" text="Label" textFill="RED" visible="false">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
                         <Button fx:id="addstudent" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#updateStudent" prefHeight="47.0" prefWidth="148.0" styleClass="button1" stylesheets="@../../css/style.css" text="Update">
                            <cursor>
                               <Cursor fx:constant="HAND" />

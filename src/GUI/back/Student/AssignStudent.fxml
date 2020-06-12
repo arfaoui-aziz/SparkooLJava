@@ -2,7 +2,6 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -16,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.Users">
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.back.Classe.AssigntoClass">
    <children>
       <BorderPane layoutX="20.0" layoutY="20.0" prefHeight="730.0" prefWidth="1310.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -62,12 +61,12 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Dayna">
+                        <Text fx:id="lblName" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Dayna">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Text>
-                        <ImageView fitHeight="15.0" fitWidth="12.0" onMousePressed="#logOut" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                        <ImageView fitHeight="15.0" fitWidth="12.0"  pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
                               <Image url="@../../image/logout.jpg" />
                            </image>
@@ -75,7 +74,7 @@
                               <Insets right="2.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label fx:id="logout" onMousePressed="#logOut" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
+                        <Label fx:id="logout"  style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
                            <padding>
                               <Insets right="10.0" />
                            </padding>
@@ -163,7 +162,7 @@
                         <String fx:value="cursor_hand" />
                      </styleClass>
                   </HBox>
-                  <HBox fx:id="students" alignment="CENTER_LEFT" stylesheets="@../../css/style.css" onMouseClicked="#gotostudents">
+                  <HBox fx:id="students" alignment="CENTER_LEFT" stylesheets="@../../css/style.css">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
@@ -331,14 +330,13 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox fx:id="btnAdd" alignment="CENTER" onMousePressed="#addTeacher" prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
+                        <HBox fx:id="btnAdd" alignment="CENTER"  prefHeight="100.0" prefWidth="200.0" style="-fx-cursor: hand;">
                            <HBox.margin>
                               <Insets left="800.0" />
                            </HBox.margin>
                         </HBox>
                      </children>
                   </HBox>
-                  <ComboBox fx:id="comboclasse" prefHeight="37.0" prefWidth="117.0" styleClass="combo-box" />
                   <HBox alignment="CENTER" prefHeight="501.0" prefWidth="1025.0">
                      <children>
                         <TableView prefHeight="491.0" prefWidth="601.0" style="-fx-border-color: #e8e8e8; -fx-background-color: no;" stylesheets="@../../css/table.css">

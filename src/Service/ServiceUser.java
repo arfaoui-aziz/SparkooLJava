@@ -89,6 +89,8 @@ String usernameU= userN+LastN;
             while (rs.next()){
                 User u=new User(rs.getString("email"),rs.getByte("enabled"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("address"),rs.getString("phone"),rs.getString("bloodGroup"));
                 u.setId(rs.getString("id"));
+                u.setAcademicyear(rs.getString("academicyear"));
+                u.setClasse("classe_id");
                 data.add(u);
 
             }
@@ -187,5 +189,18 @@ String usernameU= userN+LastN;
 
         return null;
     }
+
+
+    public void updateacademic(String id, String academicyear) throws SQLException {
+        PreparedStatement ste=cnx.prepareStatement("UPDATE user SET academicyear='"+academicyear+"'  WHERE id='"+id+"' ;");
+        ste.executeUpdate();
+        System.out.println(academicyear);
+        System.out.println(ste);
+        System.out.println("academic year updated");
+
+    }
+
+
+
     }
 

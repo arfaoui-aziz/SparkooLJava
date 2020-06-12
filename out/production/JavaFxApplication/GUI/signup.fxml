@@ -35,7 +35,7 @@
                                 <Font name="Al Tarikh Regular" size="13.0" />
                             </font>
                         </Label>
-                  <Label fx:id="gobacklog" layoutX="122.0" layoutY="275.0" text="Go Back to Login Form"  onMouseClicked="#gotologinForm"/>
+                  <Label fx:id="gobacklog" layoutX="122.0" layoutY="275.0" onMouseClicked="#gotologinForm" text="Go Back to Login Form" />
                     </children>
                 </Pane>
             </right>
@@ -48,7 +48,7 @@
                             </font>
                         </Label>
                         <TextField fx:id="Username" focusTraversable="false" layoutX="13.0" layoutY="99.0" prefHeight="25.0" prefWidth="137.0" promptText="First Name" styleClass="css\style.css" stylesheets="@./css/style.css" />
-                        <Button fx:id="btn" layoutX="137.0" layoutY="323.0" mnemonicParsing="false" onAction="#signupAc" prefHeight="31.0" prefWidth="74.0" style="-fx-cursor: hand;" styleClass="button1" stylesheets="@./css/style.css" text="SIGN UP">
+                        <Button fx:id="btn" layoutX="144.0" layoutY="330.0" mnemonicParsing="false" onAction="#signupAc" prefHeight="31.0" prefWidth="74.0" style="-fx-cursor: hand;" styleClass="button1" stylesheets="@./css/style.css" text="SIGN UP">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
@@ -61,6 +61,7 @@
                   <TextField fx:id="lastname" focusTraversable="false" layoutX="195.0" layoutY="99.0" prefHeight="25.0" prefWidth="150.0" promptText="Last Name" styleClass="field" stylesheets="@css/style.css" />
                   <TextField fx:id="adress" focusTraversable="false" layoutX="195.0" layoutY="188.0" prefHeight="25.0" prefWidth="150.0" promptText="adress" styleClass="field" stylesheets="@css/style.css" />
                   <ChoiceBox fx:id="gender" layoutX="195.0" layoutY="273.0" prefWidth="150.0" />
+                  <Label fx:id="erreur" layoutX="72.0" layoutY="307.0" prefHeight="17.0" prefWidth="219.0" text="Label" textAlignment="CENTER" textFill="RED" visible="false" />
                     </children>
                 </Pane>
             </left>

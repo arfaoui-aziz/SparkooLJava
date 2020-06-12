@@ -61,7 +61,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Dayna">
+                        <Text fx:id="lblName" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -74,7 +74,7 @@
                               <Insets right="2.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label fx:id="logout" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
+                        <Label fx:id="logout" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5" onMouseClicked="#logOut">
                            <padding>
                               <Insets right="10.0" />
                            </padding>
@@ -310,7 +310,7 @@
             </VBox>
          </left>
          <center>
-            <VBox BorderPane.alignment="CENTER">
+            <VBox style="-fx-background-color: white;" stylesheets="@../../css/style.css" BorderPane.alignment="CENTER">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>

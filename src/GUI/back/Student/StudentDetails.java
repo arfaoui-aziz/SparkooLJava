@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 
 import java.awt.*;
 import java.io.File;
@@ -67,6 +68,9 @@ public class StudentDetails {
     private Label logout;
 
     @FXML
+    private Text lblName;
+
+    @FXML
     private void gotoTeatcher(MouseEvent event) throws IOException {
         FXMLLoader fxml=new FXMLLoader(getClass().getResource("../Users.fxml"));
         Parent root=fxml.load();
@@ -75,16 +79,19 @@ public class StudentDetails {
 
     @FXML
     private void logOut(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/sample/login.fxml"));
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/login.fxml"));
         Parent root=fxml.load();
         logout.getScene().setRoot(root);
     }
 
     @FXML
     private void gotoStudent(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("Students.fxml"));
-        Parent root=fxml.load();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/GUI/back/Student/Students.fxml"));
+        Parent root = loader.load();
         gotoStudt.getScene().setRoot(root);
+        Students controller = loader.getController();
+        controller.maindata(lblName.getText());
     }
 
 String id;
@@ -92,7 +99,7 @@ String id;
 
 
 
-    public void maindata(User selectedItem){
+    public void maindata(User selectedItem, String name){
         showfn.setText(selectedItem.getFirstName());
         showln.setText(selectedItem.getFirstName());
         showgd.setText(selectedItem.getGender());
@@ -108,14 +115,18 @@ String id;
         showbd.setText(selectedItem.getBirthDay());
         showpb.setText(selectedItem.getPlaceofbirth());
         showay.setText(selectedItem.getAcademicyear());
+        lblName.setText(name);
     }
 
     @FXML
     private void activatedaccount(MouseEvent event) throws IOException, SQLException {
         ServiceUser usr = new ServiceUser();
         usr.enableStudent(id);
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/Student/Verify.fxml"));
-        Parent root=fxml.load();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/GUI/back/Student/Verify.fxml"));
+        Parent root = loader.load();
         enable.getScene().setRoot(root);
+        StudentVerify controller = loader.getController();
+        controller.maindata(lblName.getText());
     }
 }

@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -58,17 +59,31 @@ public class StudentVerify  implements Initializable
         private HBox gotoTeacher;
 
         @FXML
-        private HBox gotoStudt;
+        private HBox students;
 
         @FXML
         private VBox StudentsList;
 
     @FXML
+    private Text lblName;
+
+
+
+    public void maindata(String UserN){
+        lblName.setText(UserN);
+        System.out.println(UserN);
+    }
+
+
+    @FXML
     private void gotoStudent(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/GUI/back/Student/Students.fxml"));
         Parent root = loader.load();
-        gotoStudt.getScene().setRoot(root);
+        students.getScene().setRoot(root);
+        Students controller = loader.getController();
+        controller.maindata(lblName.getText());
     }
 
     ObservableList<User> data = FXCollections.observableArrayList();
@@ -106,7 +121,7 @@ public class StudentVerify  implements Initializable
                                 Parent root = loader.load();
                                 btn1.getScene().setRoot(root);
                                 StudentDetails controller = loader.getController();
-                                controller.maindata(StudentsTable.getItems().get(getIndex()));
+                                controller.maindata(StudentsTable.getItems().get(getIndex()) , lblName.getText());
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -145,7 +160,7 @@ public class StudentVerify  implements Initializable
 
     @FXML
     private void logOut(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/sample/login.fxml"));
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/login.fxml"));
         Parent root=fxml.load();
         logout.getScene().setRoot(root);
     }

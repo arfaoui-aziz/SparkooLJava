@@ -1,5 +1,6 @@
 package GUI;
 import GUI.Front.Home;
+import GUI.back.Student.Students;
 import Service.ServiceUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,10 +50,12 @@ public class login {
         System.out.println(role);
         if ( acces == 1){
 if (role == 1 ) {
-    FXMLLoader fxml = new FXMLLoader(getClass().getResource("/GUI/back/home.fxml"));
-    Parent root = fxml.load();
+    FXMLLoader loader = new FXMLLoader();
+    loader.setLocation(getClass().getResource("/GUI/back/home.fxml"));
+    Parent root = loader.load();
     btn.getScene().setRoot(root);
-    lbl.setText("valid");
+    GUI.back.home controller = loader.getController();
+    controller.maindata(userN);
 }
 else if (role == 2)
             {

@@ -61,7 +61,7 @@
                               <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Amen Allah Ben Ayada">
+                        <Text fx:id="lblName" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" text="Dayna">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -74,7 +74,7 @@
                               <Insets right="2.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label fx:id="logout" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5">
+                        <Label fx:id="logout" style="-fx-cursor: hand;" text="Log Out" textFill="#5f8bc5" onMouseClicked="#logOut">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
@@ -320,7 +320,7 @@
                         <Insets bottom="20.0" left="30.0" right="20.0" top="80.0" />
                      </padding>
                      <children>
-                        <VBox fx:id="addstudentman" alignment="TOP_CENTER" prefHeight="232.0" prefWidth="325.0" spacing="30.0" style="-fx-background-color: white;">
+                        <VBox fx:id="addstudentman" alignment="TOP_CENTER" prefHeight="232.0" prefWidth="325.0" spacing="30.0">
                            <opaqueInsets>
                               <Insets top="20.0" />
                            </opaqueInsets>
@@ -344,7 +344,7 @@
                               <TextField fx:id="titleup" prefHeight="38.0" prefWidth="202.0" styleClass="field" stylesheets="@../../css/style.css" />
                            </children>
                         </VBox>
-                        <VBox fx:id="StudentsList" alignment="TOP_CENTER" prefHeight="232.0" prefWidth="66.0" spacing="30.0" style="-fx-background-color: white;">
+                        <VBox fx:id="StudentsList" alignment="TOP_CENTER" prefHeight="232.0" prefWidth="66.0" spacing="30.0">
                            <opaqueInsets>
                               <Insets top="20.0" />
                            </opaqueInsets>
@@ -360,7 +360,7 @@
                               <Insets right="55.0" />
                            </HBox.margin>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" prefHeight="251.0" prefWidth="689.0" spacing="30.0" style="-fx-background-color: white;">
+                        <VBox alignment="TOP_CENTER" prefHeight="251.0" prefWidth="689.0" spacing="30.0">
                            <opaqueInsets>
                               <Insets top="20.0" />
                            </opaqueInsets>
@@ -377,13 +377,16 @@
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
                               </VBox>
-                              <TextField fx:id="Subjectup" prefHeight="38.0" prefWidth="202.0" styleClass="field" stylesheets="@../../css/style.css" />
+                              <TextField fx:id="Subjectup" prefHeight="38.0" prefWidth="202.0" styleClass="field" stylesheets="@../../css/style.css">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></TextField>
                            </children>
                            <HBox.margin>
                               <Insets right="55.0" />
                            </HBox.margin>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" layoutX="784.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: white;">
+                        <VBox alignment="TOP_CENTER" layoutX="784.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" spacing="30.0">
                            <opaqueInsets>
                               <Insets top="20.0" />
                            </opaqueInsets>
@@ -398,7 +401,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox fx:id="addstudentman1" prefHeight="277.0" prefWidth="1025.0" spacing="30.0" style="-fx-background-color: white;">
+                  <VBox fx:id="addstudentman1" prefHeight="277.0" prefWidth="1025.0" spacing="30.0">
                      <opaqueInsets>
                         <Insets top="20.0" />
                      </opaqueInsets>
@@ -417,7 +420,7 @@
                                                 <Insets top="50.0" />
                                              </VBox.margin>
                                           </Text>
-                                          <ComboBox fx:id="typeip" prefWidth="150.0" styleClass="combo-box" stylesheets="@../../css/style.css">
+                                          <ComboBox fx:id="typeip" prefWidth="150.0" style="-fx-background-color: white;" styleClass="combo-box" stylesheets="@../../css/style.css">
                                              <VBox.margin>
                                                 <Insets left="30.0" top="50.0" />
                                              </VBox.margin>
@@ -437,7 +440,7 @@
                                                 <Insets top="50.0" />
                                              </VBox.margin>
                                           </Text>
-                                          <ComboBox fx:id="statusup" prefWidth="150.0" styleClass="combo-box" stylesheets="@../../css/style.css">
+                                          <ComboBox fx:id="statusup" prefWidth="150.0" style="-fx-background-color: white;" styleClass="combo-box" stylesheets="@../../css/style.css">
                                              <VBox.margin>
                                                 <Insets left="30.0" top="50.0" />
                                              </VBox.margin>
@@ -457,7 +460,7 @@
                                                 <Insets top="50.0" />
                                              </VBox.margin>
                                           </Text>
-                                          <ComboBox fx:id="solvedup" prefWidth="150.0" styleClass="combo-box" stylesheets="@../../css/style.css">
+                                          <ComboBox fx:id="solvedup" prefWidth="150.0" style="-fx-background-color: white;" styleClass="combo-box" stylesheets="@../../css/style.css">
                                              <VBox.margin>
                                                 <Insets left="30.0" top="50.0" />
                                              </VBox.margin>
@@ -467,17 +470,22 @@
                                           <Insets right="20.0" />
                                        </HBox.margin>
                                     </VBox>
-                                    <VBox prefHeight="253.0" prefWidth="300.0">
+                                    <VBox prefHeight="243.0" prefWidth="300.0">
                                        <children>
                                           <TextField fx:id="forumid" opacity="0.0" />
-                                          <Button fx:id="addsubfm" alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="117.0" styleClass="button1" stylesheets="@../../css/style.css" text="Update">
+                                          <Button fx:id="addsubfm" alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="117.0" styleClass="button1" stylesheets="@../../css/style.css" text="Update" onAction="#updateSub">
                                              <VBox.margin>
-                                                <Insets left="100.0" top="120.0" />
+                                                <Insets left="100.0" top="100.0" />
                                              </VBox.margin>
                                           </Button>
+                                          <Label fx:id="erreur" prefHeight="18.0" prefWidth="286.0" text="Label" textFill="RED" visible="false">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
                                        </children>
                                        <HBox.margin>
-                                          <Insets right="20.0" />
+                                          <Insets left="10.0" top="-20.0" />
                                        </HBox.margin>
                                     </VBox>
                                  </children>

@@ -16,7 +16,7 @@ public class javaMailUtil {
         proprieties.put("mail.smtp.auth","true");
         proprieties.put("mail.smtp.starttls.enable","true");
         proprieties.put("mail.smtp.host","smtp.gmail.com");
-        proprieties.put("mail.smtp.port","465");
+        proprieties.put("mail.smtp.port","587");
         proprieties.put("mail.smtp.enable","true");
         String myAccountEmail = "sparkool.project@gmail.com";
         String password = "Sparkool123";
@@ -42,7 +42,7 @@ public class javaMailUtil {
             message.setRecipient(Message.RecipientType.TO,new InternetAddress(reception));
             message.setSubject("Registration");
             String htmlCode = "<img src="+ "https://media1.tenor.com/images/06ae072fb343a704ee80c2c55d2da80a/tenor.gif?itemid=14090897"+">"+"<br>"+"<h1>congratulations your registration has been successfully submitted</h1>"
-                    +"<br>"+"Your login informations"+"<br>"+"<h1>"+UserName+"<br>"+"Password"+UserName;
+                    +"<br>"+"Your login informations"+"<br>"+"<h1> USERNAME : "+UserName+"<br>"+"Password  :"+UserName;
 
             message.setContent(htmlCode,"text/html");
             return message;

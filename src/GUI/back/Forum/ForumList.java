@@ -2,6 +2,7 @@ package GUI.back.Forum;
 
 import Entity.User;
 import GUI.back.Student.StudentModify;
+import GUI.back.Student.Students;
 import Service.ServiceForum;
 import Service.ServiceUser;
 import javafx.collections.FXCollections;
@@ -11,13 +12,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -26,6 +25,8 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ForumList implements Initializable {
+
+
 
     @FXML
     private TableView<Entity.Forum> Forumlist ;
@@ -50,15 +51,32 @@ public class ForumList implements Initializable {
     private TableColumn<?, ?> auteurfm;
     @FXML
     private TableColumn<Forum, Void> deletefm;
-
+    @FXML
+    private Text lblName;
 
     @FXML
     private HBox gotoStudt;
+
+    @FXML
+    private Label logout;
+
+
+    public void maindata(String UserN){
+        lblName.setText(UserN);
+        System.out.println(UserN);
+    }
+
+
+
+
     @FXML
     private void gotoStudent(MouseEvent event) throws IOException {
-        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/back/Student/Students.fxml"));
-        Parent root=fxml.load();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/GUI/back/Student/Students.fxml"));
+        Parent root = loader.load();
         gotoStudt.getScene().setRoot(root);
+        Students controller = loader.getController();
+        controller.maindata(lblName.getText());
     }
     @FXML
     private TableColumn<Forum, Void> modifyfm;
@@ -96,7 +114,7 @@ public class ForumList implements Initializable {
                                 Parent root = loader.load();
                                 btn1.getScene().setRoot(root);
                                 ModifySubject controller = loader.getController();
-                                controller.maindata(Forumlist.getItems().get(getIndex()));
+                                controller.maindata(Forumlist.getItems().get(getIndex()),lblName.getText());
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -164,5 +182,11 @@ public class ForumList implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ListForum();
+    }
+    @FXML
+    private void logOut(MouseEvent event) throws IOException {
+        FXMLLoader fxml=new FXMLLoader(getClass().getResource("/GUI/login.fxml"));
+        Parent root=fxml.load();
+        logout.getScene().setRoot(root);
     }
 }
